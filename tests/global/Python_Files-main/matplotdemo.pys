@@ -1,0 +1,567 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/matplotdemo.py"
+.set name		 "<module>"
+.set stack_size		 14
+.set arg_count		 0
+
+.interned
+	"mountainsjson"
+	"encoding"
+	"utf8"
+	"Elevation"
+	"facecolor"
+	"cyan"
+	"alpha"
+	"Histogramoftheheightsofnamedmountains"
+	"Mountainheight"
+	"Mountaincount"
+	"path_effects"
+	"Heightsofthemountainsoftheworld"
+	"countriesjson"
+	"Population"
+	"GDP"
+	"enable"
+	"axis"
+	"x"
+	"tight"
+	"c"
+	"g"
+	"marker"
+	"."
+	"GDPperson"
+	"ScatterplotofcountriesGDPPersonandopulation"
+	"Name"
+	"Continent"
+	"labels"
+	"explode"
+	"Portionofworldpopulationineachcontinent"
+	"numpy"
+	"np"
+	"matplotlib.pyplot"
+	"pyplot"
+	"plt"
+	"matplotlib.patheffects"
+	"patheffects"
+	"json"
+	"open"
+	"data_file"
+	"load"
+	"mountains"
+	"array"
+	"m"
+	"extract"
+	"hts"
+	"xkcd"
+	"hist"
+	"figure"
+	"xlabel"
+	"ylabel"
+	"show"
+	"SimpleLineShadow"
+	"Normal"
+	"pef"
+	"plot"
+	"sort"
+	"countries"
+	"pops"
+	"gdp"
+	"gdppc"
+	"log"
+	"pops_log"
+	"autoscale"
+	"True"
+	"False"
+	"scatter"
+	"continental_pops"
+	"country"
+	"name"
+	"continent"
+	"pop"
+	"get"
+	"keys"
+	"cp"
+	"axes"
+	"pie"
+	"<module>"
+
+.consts
+	-1
+	None
+	"mountainsjson"
+	"encoding"
+	"utf8"
+	"Elevation"
+	20
+	"facecolor"
+	"cyan"
+	"alpha"
+	0.75
+	1
+	"Histogramoftheheightsofnamedmountains"
+	"Mountainheight"
+	"Mountaincount"
+	2
+	"--"
+	"path_effects"
+	"Heightsofthemountainsoftheworld"
+	"countriesjson"
+	"utf-8"
+	"Population"
+	"GDP"
+	10
+	3
+	"enable"
+	"axis"
+	"x"
+	"tight"
+	"c"
+	"g"
+	"marker"
+	"."
+	"GDPperson"
+	"ScatterplotofcountriesGDPPersonandopulation"
+	"Name"
+	"Continent"
+	0
+	4
+	"labels"
+	"explode"
+	0.1
+	0.3
+	"Portionofworldpopulationineachcontinent"
+
+.names
+	"numpy"
+	"np"
+	"matplotlib.pyplot"
+	"pyplot"
+	"plt"
+	"matplotlib.patheffects"
+	"patheffects"
+	"path_effects"
+	"json"
+	"open"
+	"data_file"
+	"load"
+	"mountains"
+	"array"
+	"m"
+	"extract"
+	"hts"
+	"xkcd"
+	"hist"
+	"figure"
+	"xlabel"
+	"ylabel"
+	"show"
+	"SimpleLineShadow"
+	"Normal"
+	"pef"
+	"plot"
+	"sort"
+	"countries"
+	"c"
+	"pops"
+	"gdp"
+	"gdppc"
+	"log"
+	"pops_log"
+	"autoscale"
+	"True"
+	"False"
+	"scatter"
+	"continental_pops"
+	"country"
+	"name"
+	"continent"
+	"pop"
+	"get"
+	"keys"
+	"cp"
+	"axes"
+	"pie"
+
+.text
+.line 1
+	LOAD_CONST            0	# -1
+	LOAD_CONST            1	# None
+	IMPORT_NAME           0
+	STORE_NAME            1	# "np"
+.line 2
+	LOAD_CONST            0	# -1
+	LOAD_CONST            1	# None
+	IMPORT_NAME           2
+	LOAD_ATTR             3
+	STORE_NAME            4	# "plt"
+.line 3
+	LOAD_CONST            0	# -1
+	LOAD_CONST            1	# None
+	IMPORT_NAME           5
+	LOAD_ATTR             6
+	STORE_NAME            7	# "path_effects"
+.line 4
+	LOAD_CONST            0	# -1
+	LOAD_CONST            1	# None
+	IMPORT_NAME           8
+	STORE_NAME            8	# "json"
+.line 6
+	LOAD_NAME             9	# "open"
+	LOAD_CONST            2	# "mountainsjson"
+	LOAD_CONST            3	# "encoding"
+	LOAD_CONST            4	# "utf8"
+	CALL_FUNCTION         257
+	SETUP_WITH            label_0
+	STORE_NAME            10	# "data_file"
+.line 7
+	LOAD_NAME             8	# "json"
+	LOAD_ATTR             11
+	LOAD_NAME             10	# "data_file"
+	CALL_FUNCTION         1
+	STORE_NAME            12	# "mountains"
+	POP_BLOCK             
+	LOAD_CONST            1	# None
+label_0:
+	WITH_CLEANUP          
+	END_FINALLY           
+.line 16
+	LOAD_NAME             1	# "np"
+	LOAD_ATTR             13
+	BUILD_LIST            0
+	LOAD_NAME             12	# "mountains"
+	GET_ITER              
+label_1:
+	FOR_ITER              label_2
+	STORE_NAME            14	# "m"
+	LOAD_NAME             15	# "extract"
+	LOAD_NAME             14	# "m"
+	LOAD_CONST            5	# "Elevation"
+	CALL_FUNCTION         2
+	LIST_APPEND           2
+	JUMP_ABSOLUTE         label_1
+label_2:
+	CALL_FUNCTION         1
+	STORE_NAME            16	# "hts"
+.line 20
+	LOAD_NAME             4	# "plt"
+	LOAD_ATTR             17
+	CALL_FUNCTION         0
+	SETUP_WITH            label_3
+	POP_TOP               
+.line 21
+	LOAD_NAME             4	# "plt"
+	LOAD_ATTR             18
+	LOAD_NAME             16	# "hts"
+	LOAD_CONST            6	# 20
+	LOAD_CONST            7	# "facecolor"
+	LOAD_CONST            8	# "cyan"
+	LOAD_CONST            9	# "alpha"
+	LOAD_CONST            10	# 0.75
+	CALL_FUNCTION         514
+	POP_TOP               
+.line 22
+	LOAD_NAME             4	# "plt"
+	LOAD_ATTR             19
+	LOAD_CONST            11	# 1
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 23
+	LOAD_CONST            12	# "Histogramoftheheightsofnamedmountains"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 24
+	LOAD_NAME             4	# "plt"
+	LOAD_ATTR             20
+	LOAD_CONST            13	# "Mountainheight"
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 25
+	LOAD_NAME             4	# "plt"
+	LOAD_ATTR             21
+	LOAD_CONST            14	# "Mountaincount"
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 26
+	LOAD_NAME             4	# "plt"
+	LOAD_ATTR             22
+	LOAD_CONST            11	# 1
+	CALL_FUNCTION         1
+	POP_TOP               
+	POP_BLOCK             
+	LOAD_CONST            1	# None
+label_3:
+	WITH_CLEANUP          
+	END_FINALLY           
+.line 30
+	LOAD_NAME             4	# "plt"
+	LOAD_ATTR             19
+	LOAD_CONST            15	# 2
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 31
+	LOAD_NAME             7	# "path_effects"
+	LOAD_ATTR             23
+	CALL_FUNCTION         0
+	LOAD_NAME             7	# "path_effects"
+	LOAD_ATTR             24
+	CALL_FUNCTION         0
+	BUILD_LIST            2
+	STORE_NAME            25	# "pef"
+.line 32
+	LOAD_NAME             4	# "plt"
+	LOAD_ATTR             26
+	LOAD_NAME             1	# "np"
+	LOAD_ATTR             27
+	LOAD_NAME             16	# "hts"
+	CALL_FUNCTION         1
+	LOAD_CONST            16	# "--"
+	LOAD_CONST            17	# "path_effects"
+	LOAD_NAME             25	# "pef"
+	CALL_FUNCTION         258
+	POP_TOP               
+.line 33
+	LOAD_CONST            18	# "Heightsofthemountainsoftheworld"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 34
+	LOAD_NAME             4	# "plt"
+	LOAD_ATTR             22
+	LOAD_CONST            15	# 2
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 36
+	LOAD_NAME             9	# "open"
+	LOAD_CONST            19	# "countriesjson"
+	LOAD_CONST            3	# "encoding"
+	LOAD_CONST            20	# "utf-8"
+	CALL_FUNCTION         257
+	SETUP_WITH            label_4
+	STORE_NAME            10	# "data_file"
+.line 37
+	LOAD_NAME             8	# "json"
+	LOAD_ATTR             11
+	LOAD_NAME             10	# "data_file"
+	CALL_FUNCTION         1
+	STORE_NAME            28	# "countries"
+	POP_BLOCK             
+	LOAD_CONST            1	# None
+label_4:
+	WITH_CLEANUP          
+	END_FINALLY           
+.line 39
+	LOAD_NAME             1	# "np"
+	LOAD_ATTR             13
+	BUILD_LIST            0
+	LOAD_NAME             28	# "countries"
+	GET_ITER              
+label_5:
+	FOR_ITER              label_6
+	STORE_NAME            29	# "c"
+	LOAD_NAME             15	# "extract"
+	LOAD_NAME             29	# "c"
+	LOAD_CONST            21	# "Population"
+	CALL_FUNCTION         2
+	LIST_APPEND           2
+	JUMP_ABSOLUTE         label_5
+label_6:
+	CALL_FUNCTION         1
+	STORE_NAME            30	# "pops"
+.line 40
+	LOAD_NAME             1	# "np"
+	LOAD_ATTR             13
+	BUILD_LIST            0
+	LOAD_NAME             28	# "countries"
+	GET_ITER              
+label_7:
+	FOR_ITER              label_8
+	STORE_NAME            29	# "c"
+	LOAD_NAME             15	# "extract"
+	LOAD_NAME             29	# "c"
+	LOAD_CONST            22	# "GDP"
+	CALL_FUNCTION         2
+	LIST_APPEND           2
+	JUMP_ABSOLUTE         label_7
+label_8:
+	CALL_FUNCTION         1
+	STORE_NAME            31	# "gdp"
+.line 41
+	LOAD_NAME             31	# "gdp"
+	LOAD_NAME             30	# "pops"
+	BINARY_DIVIDE         
+	STORE_NAME            32	# "gdppc"
+.line 42
+	LOAD_NAME             1	# "np"
+	LOAD_ATTR             33
+	LOAD_NAME             30	# "pops"
+	CALL_FUNCTION         1
+	LOAD_NAME             1	# "np"
+	LOAD_ATTR             33
+	LOAD_CONST            23	# 10
+	CALL_FUNCTION         1
+	BINARY_DIVIDE         
+	STORE_NAME            34	# "pops_log"
+.line 46
+	LOAD_NAME             4	# "plt"
+	LOAD_ATTR             19
+	LOAD_CONST            24	# 3
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 47
+	LOAD_NAME             4	# "plt"
+	LOAD_ATTR             35
+	LOAD_CONST            25	# "enable"
+	LOAD_NAME             36	# "True"
+	LOAD_CONST            26	# "axis"
+	LOAD_CONST            27	# "x"
+	LOAD_CONST            28	# "tight"
+	LOAD_NAME             37	# "False"
+	CALL_FUNCTION         768
+	POP_TOP               
+.line 48
+	LOAD_NAME             4	# "plt"
+	LOAD_ATTR             38
+	LOAD_NAME             34	# "pops_log"
+	LOAD_NAME             32	# "gdppc"
+	LOAD_CONST            29	# "c"
+	LOAD_CONST            30	# "g"
+	LOAD_CONST            31	# "marker"
+	LOAD_CONST            32	# "."
+	CALL_FUNCTION         514
+	POP_TOP               
+.line 49
+	LOAD_NAME             4	# "plt"
+	LOAD_ATTR             20
+	LOAD_CONST            21	# "Population"
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 50
+	LOAD_NAME             4	# "plt"
+	LOAD_ATTR             21
+	LOAD_CONST            33	# "GDPperson"
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 51
+	LOAD_NAME             4	# "plt"
+	LOAD_ATTR             22
+	LOAD_CONST            24	# 3
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 52
+	LOAD_CONST            34	# "ScatterplotofcountriesGDPPersonandopulation"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 56
+	BUILD_MAP             0
+	STORE_NAME            39	# "continental_pops"
+.line 57
+	SETUP_LOOP            label_11
+	LOAD_NAME             28	# "countries"
+	GET_ITER              
+label_9:
+	FOR_ITER              label_10
+	STORE_NAME            40	# "country"
+.line 58
+	LOAD_NAME             40	# "country"
+	LOAD_CONST            35	# "Name"
+	BINARY_SUBSCR         
+	LOAD_NAME             40	# "country"
+	LOAD_CONST            36	# "Continent"
+	BINARY_SUBSCR         
+	ROT_TWO               
+	STORE_NAME            41	# "name"
+	STORE_NAME            42	# "continent"
+.line 59
+	LOAD_NAME             15	# "extract"
+	LOAD_NAME             40	# "country"
+	LOAD_CONST            21	# "Population"
+	LOAD_CONST            37	# 0
+	CALL_FUNCTION         3
+	STORE_NAME            43	# "pop"
+.line 60
+	LOAD_NAME             39	# "continental_pops"
+	LOAD_ATTR             44
+	LOAD_NAME             42	# "continent"
+	LOAD_CONST            37	# 0
+	CALL_FUNCTION         2
+	LOAD_NAME             43	# "pop"
+	BINARY_ADD            
+	LOAD_NAME             39	# "continental_pops"
+	LOAD_NAME             42	# "continent"
+	STORE_SUBSCR          
+	JUMP_ABSOLUTE         label_9
+label_10:
+	POP_BLOCK             
+.line 62
+label_11:
+	LOAD_NAME             39	# "continental_pops"
+	LOAD_ATTR             45
+	CALL_FUNCTION         0
+	STORE_NAME            45	# "keys"
+.line 63
+	LOAD_NAME             1	# "np"
+	LOAD_ATTR             13
+	BUILD_LIST            0
+	LOAD_NAME             45	# "keys"
+	GET_ITER              
+label_12:
+	FOR_ITER              label_13
+	STORE_NAME            42	# "continent"
+	LOAD_NAME             39	# "continental_pops"
+	LOAD_NAME             42	# "continent"
+	BINARY_SUBSCR         
+	LIST_APPEND           2
+	JUMP_ABSOLUTE         label_12
+label_13:
+	CALL_FUNCTION         1
+	STORE_NAME            46	# "cp"
+.line 67
+	LOAD_NAME             4	# "plt"
+	LOAD_ATTR             19
+	LOAD_CONST            38	# 4
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 68
+	LOAD_NAME             4	# "plt"
+	LOAD_ATTR             47
+	LOAD_CONST            11	# 1
+	LOAD_CONST            11	# 1
+	LOAD_CONST            11	# 1
+	LOAD_CONST            11	# 1
+	BUILD_LIST            4
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 69
+	LOAD_NAME             4	# "plt"
+	LOAD_ATTR             48
+	LOAD_NAME             46	# "cp"
+	LOAD_CONST            39	# "labels"
+	LOAD_NAME             45	# "keys"
+	LOAD_CONST            40	# "explode"
+	LOAD_CONST            37	# 0
+	LOAD_CONST            37	# 0
+	LOAD_CONST            41	# 0.1
+	LOAD_CONST            37	# 0
+	LOAD_CONST            37	# 0
+	LOAD_CONST            42	# 0.3
+	BUILD_LIST            6
+	CALL_FUNCTION         513
+	POP_TOP               
+.line 70
+	LOAD_CONST            43	# "Portionofworldpopulationineachcontinent"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 71
+	LOAD_NAME             4	# "plt"
+	LOAD_ATTR             22
+	LOAD_CONST            38	# 4
+	CALL_FUNCTION         1
+	POP_TOP               
+	LOAD_CONST            1	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

@@ -1,0 +1,52 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/python.py"
+.set name		 "<module>"
+.set stack_size		 2
+.set arg_count		 0
+
+.interned
+	"3"
+	"int"
+	"x"
+	"y"
+	"z"
+	"<module>"
+
+.consts
+	1
+	2.8
+	"3"
+	None
+
+.names
+	"int"
+	"x"
+	"y"
+	"z"
+
+.text
+.line 1
+	LOAD_NAME             0	# "int"
+	LOAD_CONST            0	# 1
+	CALL_FUNCTION         1
+	STORE_NAME            1	# "x"
+.line 2
+	LOAD_NAME             0	# "int"
+	LOAD_CONST            1	# 2.8
+	CALL_FUNCTION         1
+	STORE_NAME            2	# "y"
+.line 3
+	LOAD_NAME             0	# "int"
+	LOAD_CONST            2	# "3"
+	CALL_FUNCTION         1
+	STORE_NAME            3	# "z"
+	LOAD_CONST            3	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

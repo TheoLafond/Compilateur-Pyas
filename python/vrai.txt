@@ -1,0 +1,33 @@
+Python2.7a0 bytecode (62211)
+
+  timestamp    : 0x056a6163 [Tue Nov  1 14:48:37 2022]
+  #args        : 0
+  #locals      : 0
+  stack size   : 1
+  flags        : 0x00000040 { NOFREE }
+   - "coucou"
+   - "range"
+   - "b"
+   - "c"
+   - "d"
+   - "i"
+   - "coucou2"
+   - "a"
+   - "<module>"
+  bytecode     : 40 bytes
+  #consts      : 4
+   - <code"coucou">
+   - <code"coucou2">
+   - 5
+   - None
+  #names       : 3
+   - "coucou"
+   - "coucou2"
+   - "a"
+  #varnames    : 0
+  #freevars    : 0
+  #cellvars    : 0
+  filename     : "function.py"
+  name         : "<module>"
+  firstlineno  : 1
+  lnotab       : 8 bytes (9,6) (9,5) (6,1) (5,1)

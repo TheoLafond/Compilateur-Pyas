@@ -1,0 +1,158 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/pymid-python pyramid.py"
+.set name		 "<module>"
+.set stack_size		 5
+.set arg_count		 0
+
+.interned
+	" "
+	"True"
+	"int"
+	"input"
+	"high"
+	"ValueError"
+	"block"
+	"range"
+	"i"
+	"format"
+	"<module>"
+
+.consts
+	" Please enter the expected high for the python pyramid! "
+	1
+	"Invalid input, expecting integer value!"
+	" Please choose your pyramid block! Select between X, *, -, and +. The default is X. "
+	" "
+	"X "
+	"* "
+	"- "
+	"+ "
+	"Invalid input for pyramid block, continue with default block (X)."
+	2
+	"{:^150}"
+	None
+	( "X " "* " "- " "+ " )
+
+.names
+	"True"
+	"int"
+	"input"
+	"high"
+	"ValueError"
+	"block"
+	"range"
+	"i"
+	"format"
+
+.text
+.line 3
+	SETUP_LOOP            label_5
+label_0:
+	LOAD_NAME             0	# "True"
+	POP_JUMP_IF_FALSE     label_4
+.line 4
+	SETUP_EXCEPT          label_1
+.line 5
+	LOAD_NAME             1	# "int"
+	LOAD_NAME             2	# "input"
+	LOAD_CONST            0	# " Please enter the expected high for the python pyramid! "
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	LOAD_CONST            1	# 1
+	BINARY_ADD            
+	STORE_NAME            3	# "high"
+	POP_BLOCK             
+	JUMP_FORWARD          label_3
+.line 6
+label_1:
+	DUP_TOP               
+	LOAD_NAME             4	# "ValueError"
+	COMPARE_OP            10	# "Unknown operator"
+	POP_JUMP_IF_FALSE     label_2
+	POP_TOP               
+	POP_TOP               
+	POP_TOP               
+.line 7
+	LOAD_CONST            2	# "Invalid input, expecting integer value!"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_ABSOLUTE         label_0
+label_2:
+	END_FINALLY           
+.line 9
+label_3:
+	BREAK_LOOP            
+	JUMP_ABSOLUTE         label_0
+label_4:
+	POP_BLOCK             
+.line 11
+label_5:
+	LOAD_NAME             2	# "input"
+	LOAD_CONST            3	# " Please choose your pyramid block! Select between X, *, -, and +. The default is X. "
+	CALL_FUNCTION         1
+	LOAD_CONST            4	# " "
+	BINARY_ADD            
+	STORE_NAME            5	# "block"
+.line 12
+	LOAD_NAME             5	# "block"
+	LOAD_CONST            13	# ( "X " "* " "- " "+ " )
+	COMPARE_OP            7	# "Unknown operator"
+	POP_JUMP_IF_FALSE     label_6
+.line 13
+	LOAD_CONST            9	# "Invalid input for pyramid block, continue with default block (X)."
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 14
+	LOAD_CONST            5	# "X "
+	STORE_NAME            5	# "block"
+	JUMP_FORWARD          label_6
+.line 16
+label_6:
+	SETUP_LOOP            label_10
+	LOAD_NAME             6	# "range"
+	LOAD_CONST            1	# 1
+	LOAD_NAME             3	# "high"
+	CALL_FUNCTION         2
+	GET_ITER              
+label_7:
+	FOR_ITER              label_9
+	STORE_NAME            7	# "i"
+.line 17
+	LOAD_NAME             7	# "i"
+	LOAD_CONST            10	# 2
+	BINARY_MODULO         
+	POP_JUMP_IF_FALSE     label_8
+.line 18
+	LOAD_CONST            11	# "{:^150}"
+	LOAD_ATTR             8
+	LOAD_NAME             5	# "block"
+	LOAD_NAME             7	# "i"
+	BINARY_MULTIPLY       
+	CALL_FUNCTION         1
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_ABSOLUTE         label_7
+.line 20
+label_8:
+	LOAD_CONST            11	# "{:^150}"
+	LOAD_ATTR             8
+	LOAD_NAME             5	# "block"
+	LOAD_NAME             7	# "i"
+	BINARY_MULTIPLY       
+	CALL_FUNCTION         1
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_ABSOLUTE         label_7
+label_9:
+	POP_BLOCK             
+label_10:
+	LOAD_CONST            12	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

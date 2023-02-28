@@ -1,0 +1,102 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/funcInFunc.py"
+.set name		 "<module>"
+.set stack_size		 2
+.set arg_count		 0
+
+.interned
+	"x"
+	"c"
+	"multiplier_by_c"
+	"multiplier_generator"
+	"multiplier_by_5"
+	"<module>"
+
+.consts
+.code_start 1
+.set version_pyvm	 62211
+.set flags		 0x00000003
+.set filename		 "Python_Files-main/funcInFunc.py"
+.set name		 "multiplier_generator"
+.set stack_size		 2
+.set arg_count		 1
+
+.consts
+	None
+.code_start 2
+.set version_pyvm	 62211
+.set flags		 0x00000013
+.set filename		 "Python_Files-main/funcInFunc.py"
+.set name		 "multiplier_by_c"
+.set stack_size		 2
+.set arg_count		 1
+
+.consts
+	None
+
+.varnames
+	"x"
+
+.freevars
+	"c"
+
+.text
+.line 3
+	LOAD_DEREF            0
+	LOAD_FAST             0	# "x"
+	BINARY_MULTIPLY       
+	RETURN_VALUE          
+.code_end
+
+.varnames
+	"c"
+	"multiplier_by_c"
+
+.cellvars
+	"c"
+
+.text
+.line 2
+	LOAD_CLOSURE          0
+	BUILD_TUPLE           1
+	LOAD_CONST            1	# <code:"multiplier_by_c">
+	MAKE_CLOSURE          0
+	STORE_FAST            1	# "multiplier_by_c"
+.line 4
+	LOAD_FAST             1	# "multiplier_by_c"
+	RETURN_VALUE          
+.code_end
+	5
+	4
+	None
+
+.names
+	"multiplier_generator"
+	"multiplier_by_5"
+
+.text
+.line 1
+	LOAD_CONST            0	# <code:"multiplier_generator">
+	MAKE_FUNCTION         0
+	STORE_NAME            0	# "multiplier_generator"
+.line 6
+	LOAD_NAME             0	# "multiplier_generator"
+	LOAD_CONST            1	# 5
+	CALL_FUNCTION         1
+	STORE_NAME            1	# "multiplier_by_5"
+.line 7
+	LOAD_NAME             1	# "multiplier_by_5"
+	LOAD_CONST            2	# 4
+	CALL_FUNCTION         1
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            3	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

@@ -1,0 +1,63 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/freevar.py"
+.set name		 "<module>"
+.set stack_size		 1
+.set arg_count		 0
+
+.interned
+	"a"
+	"coucou"
+	"<module>"
+
+.consts
+.code_start 1
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/freevar.py"
+.set name		 "coucou"
+.set stack_size		 1
+.set arg_count		 0
+
+.consts
+	None
+
+.names
+	"a"
+
+.text
+.line 2
+	LOAD_GLOBAL           0
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+	2
+	None
+
+.names
+	"coucou"
+	"a"
+
+.text
+.line 1
+	LOAD_CONST            0	# <code:"coucou">
+	MAKE_FUNCTION         0
+	STORE_NAME            0	# "coucou"
+.line 3
+	LOAD_CONST            1	# 2
+	STORE_NAME            1	# "a"
+.line 5
+	LOAD_NAME             0	# "coucou"
+	CALL_FUNCTION         0
+	POP_TOP               
+	LOAD_CONST            2	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

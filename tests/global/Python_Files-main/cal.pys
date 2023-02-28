@@ -1,0 +1,333 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/cal.py"
+.set name		 "<module>"
+.set stack_size		 7
+.set arg_count		 0
+
+.interned
+	"x"
+	"y"
+	"add"
+	"subtract"
+	"multiply"
+	"divide"
+	"1"
+	"2"
+	"3"
+	"4"
+	"+"
+	"="
+	"-"
+	"*"
+	"/"
+	"no"
+	"True"
+	"input"
+	"choice"
+	"float"
+	"num1"
+	"num2"
+	"next_calculation"
+	"<module>"
+
+.consts
+.code_start 4
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/cal.py"
+.set name		 "add"
+.set stack_size		 2
+.set arg_count		 2
+
+.consts
+	None
+
+.varnames
+	"x"
+	"y"
+
+.text
+.line 5
+	LOAD_FAST             0	# "x"
+	LOAD_FAST             1	# "y"
+	BINARY_ADD            
+	RETURN_VALUE          
+.code_end
+.code_start 8
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/cal.py"
+.set name		 "subtract"
+.set stack_size		 2
+.set arg_count		 2
+
+.consts
+	None
+
+.varnames
+	"x"
+	"y"
+
+.text
+.line 9
+	LOAD_FAST             0	# "x"
+	LOAD_FAST             1	# "y"
+	BINARY_SUBTRACT       
+	RETURN_VALUE          
+.code_end
+.code_start 12
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/cal.py"
+.set name		 "multiply"
+.set stack_size		 2
+.set arg_count		 2
+
+.consts
+	None
+
+.varnames
+	"x"
+	"y"
+
+.text
+.line 13
+	LOAD_FAST             0	# "x"
+	LOAD_FAST             1	# "y"
+	BINARY_MULTIPLY       
+	RETURN_VALUE          
+.code_end
+.code_start 16
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/cal.py"
+.set name		 "divide"
+.set stack_size		 2
+.set arg_count		 2
+
+.consts
+	None
+
+.varnames
+	"x"
+	"y"
+
+.text
+.line 17
+	LOAD_FAST             0	# "x"
+	LOAD_FAST             1	# "y"
+	BINARY_DIVIDE         
+	RETURN_VALUE          
+.code_end
+	"Select operation."
+	"1.Add"
+	"2.Subtract"
+	"3.Multiply"
+	"4.Divide"
+	"Enter choice(1/2/3/4): "
+	"1"
+	"2"
+	"3"
+	"4"
+	"Enter first number: "
+	"Enter second number: "
+	"+"
+	"="
+	"-"
+	"*"
+	"/"
+	"Let's do next calculation? (yes/no): "
+	"no"
+	"Invalid Input"
+	None
+	( "1" "2" "3" "4" )
+
+.names
+	"add"
+	"subtract"
+	"multiply"
+	"divide"
+	"True"
+	"input"
+	"choice"
+	"float"
+	"num1"
+	"num2"
+	"next_calculation"
+
+.text
+.line 4
+	LOAD_CONST            0	# <code:"add">
+	MAKE_FUNCTION         0
+	STORE_NAME            0	# "add"
+.line 8
+	LOAD_CONST            1	# <code:"subtract">
+	MAKE_FUNCTION         0
+	STORE_NAME            1	# "subtract"
+.line 12
+	LOAD_CONST            2	# <code:"multiply">
+	MAKE_FUNCTION         0
+	STORE_NAME            2	# "multiply"
+.line 16
+	LOAD_CONST            3	# <code:"divide">
+	MAKE_FUNCTION         0
+	STORE_NAME            3	# "divide"
+.line 20
+	LOAD_CONST            4	# "Select operation."
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 21
+	LOAD_CONST            5	# "1.Add"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 22
+	LOAD_CONST            6	# "2.Subtract"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 23
+	LOAD_CONST            7	# "3.Multiply"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 24
+	LOAD_CONST            8	# "4.Divide"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 26
+	SETUP_LOOP            label_8
+label_0:
+	LOAD_NAME             4	# "True"
+	POP_JUMP_IF_FALSE     label_7
+.line 28
+	LOAD_NAME             5	# "input"
+	LOAD_CONST            9	# "Enter choice(1/2/3/4): "
+	CALL_FUNCTION         1
+	STORE_NAME            6	# "choice"
+.line 31
+	LOAD_NAME             6	# "choice"
+	LOAD_CONST            25	# ( "1" "2" "3" "4" )
+	COMPARE_OP            6	# "Unknown operator"
+	POP_JUMP_IF_FALSE     label_5
+.line 32
+	LOAD_NAME             7	# "float"
+	LOAD_NAME             5	# "input"
+	LOAD_CONST            14	# "Enter first number: "
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            8	# "num1"
+.line 33
+	LOAD_NAME             7	# "float"
+	LOAD_NAME             5	# "input"
+	LOAD_CONST            15	# "Enter second number: "
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            9	# "num2"
+.line 35
+	LOAD_NAME             6	# "choice"
+	LOAD_CONST            10	# "1"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_1
+.line 36
+	LOAD_NAME             8	# "num1"
+	LOAD_CONST            16	# "+"
+	LOAD_NAME             9	# "num2"
+	LOAD_CONST            17	# "="
+	LOAD_NAME             0	# "add"
+	LOAD_NAME             8	# "num1"
+	LOAD_NAME             9	# "num2"
+	CALL_FUNCTION         2
+	BUILD_TUPLE           5
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_4
+.line 38
+label_1:
+	LOAD_NAME             6	# "choice"
+	LOAD_CONST            11	# "2"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_2
+.line 39
+	LOAD_NAME             8	# "num1"
+	LOAD_CONST            18	# "-"
+	LOAD_NAME             9	# "num2"
+	LOAD_CONST            17	# "="
+	LOAD_NAME             1	# "subtract"
+	LOAD_NAME             8	# "num1"
+	LOAD_NAME             9	# "num2"
+	CALL_FUNCTION         2
+	BUILD_TUPLE           5
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_4
+.line 41
+label_2:
+	LOAD_NAME             6	# "choice"
+	LOAD_CONST            12	# "3"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_3
+.line 42
+	LOAD_NAME             8	# "num1"
+	LOAD_CONST            19	# "*"
+	LOAD_NAME             9	# "num2"
+	LOAD_CONST            17	# "="
+	LOAD_NAME             2	# "multiply"
+	LOAD_NAME             8	# "num1"
+	LOAD_NAME             9	# "num2"
+	CALL_FUNCTION         2
+	BUILD_TUPLE           5
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_4
+.line 44
+label_3:
+	LOAD_NAME             6	# "choice"
+	LOAD_CONST            13	# "4"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_4
+.line 45
+	LOAD_NAME             8	# "num1"
+	LOAD_CONST            20	# "/"
+	LOAD_NAME             9	# "num2"
+	LOAD_CONST            17	# "="
+	LOAD_NAME             3	# "divide"
+	LOAD_NAME             8	# "num1"
+	LOAD_NAME             9	# "num2"
+	CALL_FUNCTION         2
+	BUILD_TUPLE           5
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_4
+.line 49
+label_4:
+	LOAD_NAME             5	# "input"
+	LOAD_CONST            21	# "Let's do next calculation? (yes/no): "
+	CALL_FUNCTION         1
+	STORE_NAME            10	# "next_calculation"
+.line 50
+	LOAD_NAME             10	# "next_calculation"
+	LOAD_CONST            22	# "no"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_6
+.line 51
+	BREAK_LOOP            
+	JUMP_ABSOLUTE         label_6
+	JUMP_ABSOLUTE         label_0
+.line 54
+label_5:
+	LOAD_CONST            23	# "Invalid Input"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+label_6:
+	JUMP_ABSOLUTE         label_0
+label_7:
+	POP_BLOCK             
+label_8:
+	LOAD_CONST            24	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

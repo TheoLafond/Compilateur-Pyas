@@ -1,0 +1,57 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/johsn.py"
+.set name		 "<module>"
+.set stack_size		 2
+.set arg_count		 0
+
+.interned
+	"age"
+	"json"
+	"x"
+	"loads"
+	"y"
+	"<module>"
+
+.consts
+	-1
+	None
+	"{ "name":"John", "age":30, "city":"New York"}"
+	"age"
+
+.names
+	"json"
+	"x"
+	"loads"
+	"y"
+
+.text
+.line 1
+	LOAD_CONST            0	# -1
+	LOAD_CONST            1	# None
+	IMPORT_NAME           0
+	STORE_NAME            0	# "json"
+.line 4
+	LOAD_CONST            2	# "{ "name":"John", "age":30, "city":"New York"}"
+	STORE_NAME            1	# "x"
+.line 7
+	LOAD_NAME             0	# "json"
+	LOAD_ATTR             2
+	LOAD_NAME             1	# "x"
+	CALL_FUNCTION         1
+	STORE_NAME            3	# "y"
+.line 10
+	LOAD_NAME             3	# "y"
+	LOAD_CONST            3	# "age"
+	BINARY_SUBSCR         
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            1	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

@@ -1,0 +1,63 @@
+
+
+# TEST START ###################################################################
+# Test args              : ../../definitionLexeme.txt 03_test_lexer/03_errors_01_KO.pys
+# Test return code       : EXIT_FAILURE
+# Test stdout and stderr :
+Expression line 1 column 5 is not a lexem
+# END Test stdout and stderr
+# TEST END   ###################################################################
+
+
+# TEST START ###################################################################
+# Test args              : ../../definitionLexeme.txt 03_test_lexer/03_errors_02_KO.pys
+# Test return code       : EXIT_FAILURE
+# Test stdout and stderr :
+Expression line 1 column 5 is not a lexem
+# END Test stdout and stderr
+# TEST END   ###################################################################
+
+
+# TEST START ###################################################################
+# Test args              : ../../definitionLexeme.txt 03_test_lexer/03_errors_03_KO.pys
+# Test return code       : EXIT_FAILURE
+# Test stdout and stderr :
+Expression line 1 column 5 is not a lexem
+# END Test stdout and stderr
+# TEST END   ###################################################################
+
+
+# TEST START ###################################################################
+# Test args              : ../../definitionLexeme.txt 03_test_lexer/03_errors_04_KO.pys
+# Test return code       : EXIT_FAILURE
+# Test stdout and stderr :
+Expression line 1 column 5 is not a lexem
+# END Test stdout and stderr
+# TEST END   ###################################################################
+
+
+# TEST START ###################################################################
+# Test args              : ../../definitionLexeme.txt 03_test_lexer/03_errors_05_KO.pys
+# Test return code       : EXIT_FAILURE
+# Test stdout and stderr :
+Expression line 1 column 5 is not a lexem
+# END Test stdout and stderr
+# TEST END   ###################################################################
+
+
+# TEST START ###################################################################
+# Test args              : ../../definitionLexeme.txt 03_test_lexer/03_errors_06_KO.pys
+# Test return code       : EXIT_FAILURE
+# Test stdout and stderr :
+Expression line 1 column 5 is not a lexem
+# END Test stdout and stderr
+# TEST END   ###################################################################
+
+
+# TEST START ###################################################################
+# Test args              : ../../definitionLexeme.txt 03_test_lexer/03_errors_07_KO.pys
+# Test return code       : EXIT_FAILURE
+# Test stdout and stderr :
+Expression line 2 column 5 is not a lexem
+# END Test stdout and stderr
+# TEST END   ###################################################################

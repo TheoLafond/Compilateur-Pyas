@@ -1,0 +1,5 @@
+../../definitionLexeme.txt 03_test_lexer/04_miscelaneous_01_float_OK.pys
+../../definitionLexeme.txt 03_test_lexer/04_miscelaneous_02_complex_OK.pys
+../../definitionLexeme.txt 03_test_lexer/04_miscelaneous_03_strings_verylong_OK.pys
+../../definitionLexeme.txt 03_test_lexer/04_miscelaneous_04_label_verylong_OK.pys
+../../definitionLexeme.txt 03_test_lexer/04_miscelaneous_05_strings_excaped_OK.pys

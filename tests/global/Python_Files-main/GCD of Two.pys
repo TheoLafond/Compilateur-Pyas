@@ -1,0 +1,108 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/GCD of Two.py"
+.set name		 "<module>"
+.set stack_size		 5
+.set arg_count		 0
+
+.interned
+	"float"
+	"input"
+	"a"
+	"b"
+	"i"
+	"val"
+	"format"
+	"<module>"
+
+.consts
+	" Please Enter the First Value a: "
+	" Please Enter the Second Value b: "
+	1
+	0
+	"\n HCF of {0} and {1} = {2}"
+	None
+
+.names
+	"float"
+	"input"
+	"a"
+	"b"
+	"i"
+	"val"
+	"format"
+
+.text
+.line 1
+	LOAD_NAME             0	# "float"
+	LOAD_NAME             1	# "input"
+	LOAD_CONST            0	# " Please Enter the First Value a: "
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            2	# "a"
+.line 2
+	LOAD_NAME             0	# "float"
+	LOAD_NAME             1	# "input"
+	LOAD_CONST            1	# " Please Enter the Second Value b: "
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            3	# "b"
+.line 4
+	LOAD_CONST            2	# 1
+	STORE_NAME            4	# "i"
+.line 5
+	SETUP_LOOP            label_3
+label_0:
+	LOAD_NAME             4	# "i"
+	LOAD_NAME             2	# "a"
+	COMPARE_OP            1	# "<="
+	POP_JUMP_IF_FALSE     label_2
+	LOAD_NAME             4	# "i"
+	LOAD_NAME             3	# "b"
+	COMPARE_OP            1	# "<="
+	POP_JUMP_IF_FALSE     label_2
+.line 6
+	LOAD_NAME             2	# "a"
+	LOAD_NAME             4	# "i"
+	BINARY_MODULO         
+	LOAD_CONST            3	# 0
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_1
+	LOAD_NAME             3	# "b"
+	LOAD_NAME             4	# "i"
+	BINARY_MODULO         
+	LOAD_CONST            3	# 0
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_1
+.line 7
+	LOAD_NAME             4	# "i"
+	STORE_NAME            5	# "val"
+	JUMP_FORWARD          label_1
+.line 8
+label_1:
+	LOAD_NAME             4	# "i"
+	LOAD_CONST            2	# 1
+	BINARY_ADD            
+	STORE_NAME            4	# "i"
+	JUMP_ABSOLUTE         label_0
+label_2:
+	POP_BLOCK             
+.line 10
+label_3:
+	LOAD_CONST            4	# "\n HCF of {0} and {1} = {2}"
+	LOAD_ATTR             6
+	LOAD_NAME             2	# "a"
+	LOAD_NAME             3	# "b"
+	LOAD_NAME             5	# "val"
+	CALL_FUNCTION         3
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            5	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

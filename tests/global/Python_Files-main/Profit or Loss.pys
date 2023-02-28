@@ -1,0 +1,99 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/Profit or Loss.py"
+.set name		 "<module>"
+.set stack_size		 3
+.set arg_count		 0
+
+.interned
+	"float"
+	"input"
+	"actual_cost"
+	"sale_amount"
+	"amount"
+	"format"
+	"<module>"
+
+.consts
+	" Please Enter the Actual Product Price: "
+	" Please Enter the Sales Amount: "
+	"Total Loss Amount = {0}"
+	"Total Profit = {0}"
+	"No Profit No Loss!!!"
+	None
+
+.names
+	"float"
+	"input"
+	"actual_cost"
+	"sale_amount"
+	"amount"
+	"format"
+
+.text
+.line 3
+	LOAD_NAME             0	# "float"
+	LOAD_NAME             1	# "input"
+	LOAD_CONST            0	# " Please Enter the Actual Product Price: "
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            2	# "actual_cost"
+.line 4
+	LOAD_NAME             0	# "float"
+	LOAD_NAME             1	# "input"
+	LOAD_CONST            1	# " Please Enter the Sales Amount: "
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            3	# "sale_amount"
+.line 6
+	LOAD_NAME             2	# "actual_cost"
+	LOAD_NAME             3	# "sale_amount"
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     label_0
+.line 7
+	LOAD_NAME             2	# "actual_cost"
+	LOAD_NAME             3	# "sale_amount"
+	BINARY_SUBTRACT       
+	STORE_NAME            4	# "amount"
+.line 8
+	LOAD_CONST            2	# "Total Loss Amount = {0}"
+	LOAD_ATTR             5
+	LOAD_NAME             4	# "amount"
+	CALL_FUNCTION         1
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_2
+.line 9
+label_0:
+	LOAD_NAME             3	# "sale_amount"
+	LOAD_NAME             2	# "actual_cost"
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     label_1
+.line 10
+	LOAD_NAME             3	# "sale_amount"
+	LOAD_NAME             2	# "actual_cost"
+	BINARY_SUBTRACT       
+	STORE_NAME            4	# "amount"
+.line 11
+	LOAD_CONST            3	# "Total Profit = {0}"
+	LOAD_ATTR             5
+	LOAD_NAME             4	# "amount"
+	CALL_FUNCTION         1
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_2
+.line 13
+label_1:
+	LOAD_CONST            4	# "No Profit No Loss!!!"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+label_2:
+	LOAD_CONST            5	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

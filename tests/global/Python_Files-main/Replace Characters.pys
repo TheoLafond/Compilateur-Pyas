@@ -1,0 +1,76 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/Replace Characters.py"
+.set name		 "<module>"
+.set stack_size		 3
+.set arg_count		 0
+
+.interned
+	"input"
+	"str1"
+	"ch"
+	"newch"
+	"replace"
+	"str2"
+	"<module>"
+
+.consts
+	"Please Enter your Own String : "
+	"Please Enter your Own Character : "
+	"Please Enter the New Character : "
+	"\nOriginal String :  "
+	"Modified String :  "
+	None
+
+.names
+	"input"
+	"str1"
+	"ch"
+	"newch"
+	"replace"
+	"str2"
+
+.text
+.line 3
+	LOAD_NAME             0	# "input"
+	LOAD_CONST            0	# "Please Enter your Own String : "
+	CALL_FUNCTION         1
+	STORE_NAME            1	# "str1"
+.line 4
+	LOAD_NAME             0	# "input"
+	LOAD_CONST            1	# "Please Enter your Own Character : "
+	CALL_FUNCTION         1
+	STORE_NAME            2	# "ch"
+.line 5
+	LOAD_NAME             0	# "input"
+	LOAD_CONST            2	# "Please Enter the New Character : "
+	CALL_FUNCTION         1
+	STORE_NAME            3	# "newch"
+.line 7
+	LOAD_NAME             1	# "str1"
+	LOAD_ATTR             4
+	LOAD_NAME             2	# "ch"
+	LOAD_NAME             3	# "newch"
+	CALL_FUNCTION         2
+	STORE_NAME            5	# "str2"
+.line 9
+	LOAD_CONST            3	# "\nOriginal String :  "
+	LOAD_NAME             1	# "str1"
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 10
+	LOAD_CONST            4	# "Modified String :  "
+	LOAD_NAME             5	# "str2"
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            5	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

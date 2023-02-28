@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="md__r_e_a_d_m_e.html"><param name="Name" value="README Projet informatique SEI SICOM 2021"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="md_tests_integration__r_e_a_d_m_e.html"><param name="Name" value="Scripts de test Python3 pour les increments 1 et 2 du projet informatique 2022-23"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="class_tic___tac___toe_1_1_tic___tac___toe.html"><param name="Name" value="Tic_Tac_Toe::Tic_Tac_Toe"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structalready__interned.html"><param name="Name" value="already_interned"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structchar__group.html"><param name="Name" value="char_group"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structdeflex.html"><param name="Name" value="deflex"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="doclex_8h.html#a8a940004defcf5bb8f5810724270aebd"><param name="Name" value="doclex.h"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="doclex_8h.html#a8a940004defcf5bb8f5810724270aebd"><param name="Name" value="doclex_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classinheritance_1_1_person.html"><param name="Name" value="inheritance::Person"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structlabel__def.html"><param name="Name" value="label_def"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structlexem.html"><param name="Name" value="lexem"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structlink__t.html"><param name="Name" value="link_t"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structpy__codeblock.html"><param name="Name" value="py_codeblock"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structpyobj.html"><param name="Name" value="pyobj"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="regexp_8c.html#a8ac39e8c3f535a228f2cb8911ba232b7"><param name="Name" value="re_match_one_or_more(char *tab, char *source, char **end)"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="regexp_8c.html#a8ac39e8c3f535a228f2cb8911ba232b7"><param name="Name" value="regexp.c"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classstack_1_1_node.html"><param name="Name" value="stack::Node"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classstack_1_1_stack.html"><param name="Name" value="stack::Stack"></OBJECT>
+</UL>
+</BODY>
+</HTML>

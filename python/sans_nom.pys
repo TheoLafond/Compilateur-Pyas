@@ -1,0 +1,28 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "sans_nom.py"
+.set name		 "<module>"
+.set stack_size		 1
+.set arg_count		 0
+
+.interned
+	"<module>"
+
+.consts
+	2
+	None
+
+.text
+.line 1
+	LOAD_CONST            0	# 2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            1	# None
+	RETURN_VALUE          
+
+# Disassembled Tue Oct 18 07:47:03 2022
+

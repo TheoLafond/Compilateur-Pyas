@@ -1,0 +1,84 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "complexe2.py"
+.set name		 "<module>"
+.set stack_size		 2
+.set arg_count		 0
+
+.interned
+	"a"
+	"b"
+	"c"
+	"d"
+	"e"
+	"<module>"
+
+.consts
+	1
+	0+5j
+	1.00896
+	0+3.14159j
+	2.8e-07
+	0+3.5e+09j
+	5
+	7
+	None
+	1+5j
+	1.00896-3.14159j
+	2.8e-07+3.5e+09j
+	12
+
+.names
+	"a"
+	"b"
+	"c"
+	"d"
+	"e"
+
+.text
+.line 1
+	LOAD_CONST            9	# 1+5j
+	STORE_NAME            0	# "a"
+.line 2
+	LOAD_CONST            10	# 1.00896-3.14159j
+	STORE_NAME            1	# "b"
+.line 3
+	LOAD_CONST            11	# 2.8e-07+3.5e+09j
+	STORE_NAME            2	# "c"
+.line 4
+	LOAD_CONST            12	# 12
+	STORE_NAME            3	# "d"
+.line 5
+	LOAD_NAME             2	# "c"
+	LOAD_NAME             1	# "b"
+	BINARY_MULTIPLY       
+	STORE_NAME            4	# "e"
+.line 6
+	LOAD_NAME             0	# "a"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 7
+	LOAD_NAME             1	# "b"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 8
+	LOAD_NAME             2	# "c"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 9
+	LOAD_NAME             3	# "d"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 10
+	LOAD_NAME             4	# "e"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            8	# None
+	RETURN_VALUE          
+
+# Disassembled Fri Nov  4 18:26:10 2022
+

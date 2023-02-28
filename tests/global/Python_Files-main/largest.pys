@@ -1,0 +1,84 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/largest.py"
+.set name		 "<module>"
+.set stack_size		 4
+.set arg_count		 0
+
+.interned
+	"num1"
+	"num2"
+	"num3"
+	"largest"
+	"<module>"
+
+.consts
+	10
+	14
+	12
+	"The largest number is"
+	None
+
+.names
+	"num1"
+	"num2"
+	"num3"
+	"largest"
+
+.text
+.line 5
+	LOAD_CONST            0	# 10
+	STORE_NAME            0	# "num1"
+.line 6
+	LOAD_CONST            1	# 14
+	STORE_NAME            1	# "num2"
+.line 7
+	LOAD_CONST            2	# 12
+	STORE_NAME            2	# "num3"
+.line 14
+	LOAD_NAME             0	# "num1"
+	LOAD_NAME             1	# "num2"
+	COMPARE_OP            5	# ">="
+	POP_JUMP_IF_FALSE     label_0
+	LOAD_NAME             0	# "num1"
+	LOAD_NAME             2	# "num3"
+	COMPARE_OP            5	# ">="
+	POP_JUMP_IF_FALSE     label_0
+.line 15
+	LOAD_NAME             0	# "num1"
+	STORE_NAME            3	# "largest"
+	JUMP_FORWARD          label_2
+.line 16
+label_0:
+	LOAD_NAME             1	# "num2"
+	LOAD_NAME             0	# "num1"
+	COMPARE_OP            5	# ">="
+	POP_JUMP_IF_FALSE     label_1
+	LOAD_NAME             1	# "num2"
+	LOAD_NAME             2	# "num3"
+	COMPARE_OP            5	# ">="
+	POP_JUMP_IF_FALSE     label_1
+.line 17
+	LOAD_NAME             1	# "num2"
+	STORE_NAME            3	# "largest"
+	JUMP_FORWARD          label_2
+.line 19
+label_1:
+	LOAD_NAME             2	# "num3"
+	STORE_NAME            3	# "largest"
+.line 21
+label_2:
+	LOAD_CONST            3	# "The largest number is"
+	LOAD_NAME             3	# "largest"
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            4	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

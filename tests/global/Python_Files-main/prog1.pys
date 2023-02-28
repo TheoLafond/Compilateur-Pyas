@@ -1,0 +1,73 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/prog1.py"
+.set name		 "<module>"
+.set stack_size		 1
+.set arg_count		 0
+
+.interned
+	"coucou"
+	"<module>"
+
+.consts
+	"coucou"
+	None
+
+.text
+.line 2
+	LOAD_CONST            0	# "coucou"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 3
+	LOAD_CONST            0	# "coucou"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 4
+	LOAD_CONST            0	# "coucou"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 5
+	LOAD_CONST            0	# "coucou"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 6
+	LOAD_CONST            0	# "coucou"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 7
+	LOAD_CONST            0	# "coucou"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 8
+	LOAD_CONST            0	# "coucou"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 9
+	LOAD_CONST            0	# "coucou"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 10
+	LOAD_CONST            0	# "coucou"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 11
+	LOAD_CONST            0	# "coucou"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 12
+	LOAD_CONST            0	# "coucou"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 13
+	LOAD_CONST            0	# "coucou"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            1	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

@@ -1,0 +1,107 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/Find the length.py"
+.set name		 "<module>"
+.set stack_size		 5
+.set arg_count		 0
+
+.interned
+	"len"
+	"newList"
+	"size"
+	"temp"
+	"swapList"
+	"<module>"
+
+.consts
+.code_start 5
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/Find the length.py"
+.set name		 "swapList"
+.set stack_size		 4
+.set arg_count		 1
+
+.consts
+	None
+	0
+	1
+
+.names
+	"len"
+
+.varnames
+	"newList"
+	"size"
+	"temp"
+
+.text
+.line 6
+	LOAD_GLOBAL           0
+	LOAD_FAST             0	# "newList"
+	CALL_FUNCTION         1
+	STORE_FAST            1	# "size"
+.line 9
+	LOAD_FAST             0	# "newList"
+	LOAD_CONST            1	# 0
+	BINARY_SUBSCR         
+	STORE_FAST            2	# "temp"
+.line 10
+	LOAD_FAST             0	# "newList"
+	LOAD_FAST             1	# "size"
+	LOAD_CONST            2	# 1
+	BINARY_SUBTRACT       
+	BINARY_SUBSCR         
+	LOAD_FAST             0	# "newList"
+	LOAD_CONST            1	# 0
+	STORE_SUBSCR          
+.line 11
+	LOAD_FAST             2	# "temp"
+	LOAD_FAST             0	# "newList"
+	LOAD_FAST             1	# "size"
+	LOAD_CONST            2	# 1
+	BINARY_SUBTRACT       
+	STORE_SUBSCR          
+.line 13
+	LOAD_FAST             0	# "newList"
+	RETURN_VALUE          
+.code_end
+	12
+	35
+	9
+	56
+	24
+	None
+
+.names
+	"swapList"
+	"newList"
+
+.text
+.line 5
+	LOAD_CONST            0	# <code:"swapList">
+	MAKE_FUNCTION         0
+	STORE_NAME            0	# "swapList"
+.line 16
+	LOAD_CONST            1	# 12
+	LOAD_CONST            2	# 35
+	LOAD_CONST            3	# 9
+	LOAD_CONST            4	# 56
+	LOAD_CONST            5	# 24
+	BUILD_LIST            5
+	STORE_NAME            1	# "newList"
+.line 18
+	LOAD_NAME             0	# "swapList"
+	LOAD_NAME             1	# "newList"
+	CALL_FUNCTION         1
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            6	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

@@ -1,0 +1,111 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/Swap the first and last elements.py"
+.set name		 "<module>"
+.set stack_size		 5
+.set arg_count		 0
+
+.interned
+	"pop"
+	"insert"
+	"append"
+	"list"
+	"first"
+	"last"
+	"swapList"
+	"newList"
+	"<module>"
+
+.consts
+.code_start 5
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/Swap the first and last elements.py"
+.set name		 "swapList"
+.set stack_size		 3
+.set arg_count		 1
+
+.consts
+	None
+	0
+	-1
+
+.names
+	"pop"
+	"insert"
+	"append"
+
+.varnames
+	"list"
+	"first"
+	"last"
+
+.text
+.line 7
+	LOAD_FAST             0	# "list"
+	LOAD_ATTR             0
+	LOAD_CONST            1	# 0
+	CALL_FUNCTION         1
+	STORE_FAST            1	# "first"
+.line 8
+	LOAD_FAST             0	# "list"
+	LOAD_ATTR             0
+	LOAD_CONST            2	# -1
+	CALL_FUNCTION         1
+	STORE_FAST            2	# "last"
+.line 10
+	LOAD_FAST             0	# "list"
+	LOAD_ATTR             1
+	LOAD_CONST            1	# 0
+	LOAD_FAST             2	# "last"
+	CALL_FUNCTION         2
+	POP_TOP               
+.line 11
+	LOAD_FAST             0	# "list"
+	LOAD_ATTR             2
+	LOAD_FAST             1	# "first"
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 13
+	LOAD_FAST             0	# "list"
+	RETURN_VALUE          
+.code_end
+	12
+	35
+	9
+	56
+	24
+	None
+
+.names
+	"swapList"
+	"newList"
+
+.text
+.line 5
+	LOAD_CONST            0	# <code:"swapList">
+	MAKE_FUNCTION         0
+	STORE_NAME            0	# "swapList"
+.line 16
+	LOAD_CONST            1	# 12
+	LOAD_CONST            2	# 35
+	LOAD_CONST            3	# 9
+	LOAD_CONST            4	# 56
+	LOAD_CONST            5	# 24
+	BUILD_LIST            5
+	STORE_NAME            1	# "newList"
+.line 18
+	LOAD_NAME             0	# "swapList"
+	LOAD_NAME             1	# "newList"
+	CALL_FUNCTION         1
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            6	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

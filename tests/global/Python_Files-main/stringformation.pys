@@ -1,0 +1,46 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/stringformation.py"
+.set name		 "<module>"
+.set stack_size		 2
+.set arg_count		 0
+
+.interned
+	"price"
+	"txt"
+	"format"
+	"<module>"
+
+.consts
+	49
+	"The price is {} dollars"
+	None
+
+.names
+	"price"
+	"txt"
+	"format"
+
+.text
+.line 1
+	LOAD_CONST            0	# 49
+	STORE_NAME            0	# "price"
+.line 2
+	LOAD_CONST            1	# "The price is {} dollars"
+	STORE_NAME            1	# "txt"
+.line 3
+	LOAD_NAME             1	# "txt"
+	LOAD_ATTR             2
+	LOAD_NAME             0	# "price"
+	CALL_FUNCTION         1
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            2	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

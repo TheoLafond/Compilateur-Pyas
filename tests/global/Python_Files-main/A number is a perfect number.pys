@@ -1,0 +1,156 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/A number is a perfect number.py"
+.set name		 "<module>"
+.set stack_size		 3
+.set arg_count		 0
+
+.interned
+	"True"
+	"False"
+	"n"
+	"sum"
+	"i"
+	"isPerfect"
+	"range"
+	"<module>"
+
+.consts
+.code_start 5
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/A number is a perfect number.py"
+.set name		 "isPerfect"
+.set stack_size		 3
+.set arg_count		 1
+
+.consts
+	None
+	1
+	2
+	0
+
+.names
+	"True"
+	"False"
+
+.varnames
+	"n"
+	"sum"
+	"i"
+
+.text
+.line 8
+	LOAD_CONST            1	# 1
+	STORE_FAST            1	# "sum"
+.line 11
+	LOAD_CONST            2	# 2
+	STORE_FAST            2	# "i"
+.line 12
+	SETUP_LOOP            label_3
+label_0:
+	LOAD_FAST             2	# "i"
+	LOAD_FAST             2	# "i"
+	BINARY_MULTIPLY       
+	LOAD_FAST             0	# "n"
+	COMPARE_OP            1	# "<="
+	POP_JUMP_IF_FALSE     label_2
+.line 13
+	LOAD_FAST             0	# "n"
+	LOAD_FAST             2	# "i"
+	BINARY_MODULO         
+	LOAD_CONST            3	# 0
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_1
+.line 14
+	LOAD_FAST             1	# "sum"
+	LOAD_FAST             2	# "i"
+	BINARY_ADD            
+	LOAD_FAST             0	# "n"
+	LOAD_FAST             2	# "i"
+	BINARY_DIVIDE         
+	BINARY_ADD            
+	STORE_FAST            1	# "sum"
+	JUMP_FORWARD          label_1
+.line 15
+label_1:
+	LOAD_FAST             2	# "i"
+	LOAD_CONST            1	# 1
+	INPLACE_ADD           
+	STORE_FAST            2	# "i"
+	JUMP_ABSOLUTE         label_0
+label_2:
+	POP_BLOCK             
+.line 20
+label_3:
+	LOAD_FAST             1	# "sum"
+	LOAD_FAST             0	# "n"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_4
+	LOAD_FAST             0	# "n"
+	LOAD_CONST            1	# 1
+	COMPARE_OP            3	# "!="
+	POP_JUMP_IF_FALSE     label_4
+	LOAD_GLOBAL           0
+	RETURN_VALUE          
+label_4:
+	LOAD_GLOBAL           1
+	RETURN_VALUE          
+.code_end
+	"Below are all perfect numbers till 10000"
+	2
+	10000
+	" is a perfect number"
+	None
+
+.names
+	"isPerfect"
+	"n"
+	"range"
+
+.text
+.line 5
+	LOAD_CONST            0	# <code:"isPerfect">
+	MAKE_FUNCTION         0
+	STORE_NAME            0	# "isPerfect"
+.line 23
+	LOAD_CONST            1	# "Below are all perfect numbers till 10000"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 24
+	LOAD_CONST            2	# 2
+	STORE_NAME            1	# "n"
+.line 25
+	SETUP_LOOP            label_2
+	LOAD_NAME             2	# "range"
+	LOAD_CONST            3	# 10000
+	CALL_FUNCTION         1
+	GET_ITER              
+label_0:
+	FOR_ITER              label_1
+	STORE_NAME            1	# "n"
+.line 26
+	LOAD_NAME             0	# "isPerfect"
+	LOAD_NAME             1	# "n"
+	CALL_FUNCTION         1
+	POP_JUMP_IF_FALSE     label_0
+.line 27
+	LOAD_NAME             1	# "n"
+	LOAD_CONST            4	# " is a perfect number"
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_ABSOLUTE         label_0
+	JUMP_ABSOLUTE         label_0
+label_1:
+	POP_BLOCK             
+label_2:
+	LOAD_CONST            5	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

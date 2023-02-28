@@ -1,0 +1,107 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/n-th Fibonacci number.py"
+.set name		 "<module>"
+.set stack_size		 2
+.set arg_count		 0
+
+.interned
+	"Fibonacci"
+	"n"
+	"<module>"
+
+.consts
+.code_start 3
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/n-th Fibonacci number.py"
+.set name		 "Fibonacci"
+.set stack_size		 4
+.set arg_count		 1
+
+.consts
+	None
+	0
+	"Incorrect input"
+	1
+	2
+
+.names
+	"Fibonacci"
+
+.varnames
+	"n"
+
+.text
+.line 4
+	LOAD_FAST             0	# "n"
+	LOAD_CONST            1	# 0
+	COMPARE_OP            1	# "<="
+	POP_JUMP_IF_FALSE     label_0
+.line 5
+	LOAD_CONST            2	# "Incorrect input"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_3
+.line 7
+label_0:
+	LOAD_FAST             0	# "n"
+	LOAD_CONST            3	# 1
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_1
+.line 8
+	LOAD_CONST            1	# 0
+	RETURN_VALUE          
+.line 10
+label_1:
+	LOAD_FAST             0	# "n"
+	LOAD_CONST            4	# 2
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_2
+.line 11
+	LOAD_CONST            3	# 1
+	RETURN_VALUE          
+.line 13
+label_2:
+	LOAD_GLOBAL           0
+	LOAD_FAST             0	# "n"
+	LOAD_CONST            3	# 1
+	BINARY_SUBTRACT       
+	CALL_FUNCTION         1
+	LOAD_GLOBAL           0
+	LOAD_FAST             0	# "n"
+	LOAD_CONST            4	# 2
+	BINARY_SUBTRACT       
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	RETURN_VALUE          
+label_3:
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+	10
+	None
+
+.names
+	"Fibonacci"
+
+.text
+.line 3
+	LOAD_CONST            0	# <code:"Fibonacci">
+	MAKE_FUNCTION         0
+	STORE_NAME            0	# "Fibonacci"
+.line 17
+	LOAD_NAME             0	# "Fibonacci"
+	LOAD_CONST            1	# 10
+	CALL_FUNCTION         1
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            2	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

@@ -1,0 +1,167 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/hellobunny.py"
+.set name		 "<module>"
+.set stack_size		 4
+.set arg_count		 0
+
+.interned
+	"*"
+	"pygame"
+	"pygame.locals"
+	"init"
+	"width"
+	"height"
+	"display"
+	"set_mode"
+	"screen"
+	"image"
+	"load"
+	"player"
+	"fill"
+	"blit"
+	"flip"
+	"event"
+	"get"
+	"type"
+	"QUIT"
+	"quit"
+	"exit"
+	"<module>"
+
+.consts
+	-1
+	None
+	( "*" )
+	640
+	480
+	"resources/images/dude.png"
+	0
+	100
+	( 640 480 )
+	( 100 100 )
+
+.names
+	"pygame"
+	"pygame.locals"
+	"init"
+	"width"
+	"height"
+	"display"
+	"set_mode"
+	"screen"
+	"image"
+	"load"
+	"player"
+	"fill"
+	"blit"
+	"flip"
+	"event"
+	"get"
+	"type"
+	"QUIT"
+	"quit"
+	"exit"
+
+.text
+.line 2
+	LOAD_CONST            0	# -1
+	LOAD_CONST            1	# None
+	IMPORT_NAME           0
+	STORE_NAME            0	# "pygame"
+.line 3
+	LOAD_CONST            0	# -1
+	LOAD_CONST            2	# ( "*" )
+	IMPORT_NAME           1
+	IMPORT_STAR           
+.line 6
+	LOAD_NAME             0	# "pygame"
+	LOAD_ATTR             2
+	CALL_FUNCTION         0
+	POP_TOP               
+.line 7
+	LOAD_CONST            8	# ( 640 480 )
+	UNPACK_SEQUENCE       2
+	STORE_NAME            3	# "width"
+	STORE_NAME            4	# "height"
+.line 8
+	LOAD_NAME             0	# "pygame"
+	LOAD_ATTR             5
+	LOAD_ATTR             6
+	LOAD_NAME             3	# "width"
+	LOAD_NAME             4	# "height"
+	BUILD_TUPLE           2
+	CALL_FUNCTION         1
+	STORE_NAME            7	# "screen"
+.line 11
+	LOAD_NAME             0	# "pygame"
+	LOAD_ATTR             8
+	LOAD_ATTR             9
+	LOAD_CONST            5	# "resources/images/dude.png"
+	CALL_FUNCTION         1
+	STORE_NAME            10	# "player"
+.line 14
+	SETUP_LOOP            label_4
+.line 16
+label_0:
+	LOAD_NAME             7	# "screen"
+	LOAD_ATTR             11
+	LOAD_CONST            6	# 0
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 18
+	LOAD_NAME             7	# "screen"
+	LOAD_ATTR             12
+	LOAD_NAME             10	# "player"
+	LOAD_CONST            9	# ( 100 100 )
+	CALL_FUNCTION         2
+	POP_TOP               
+.line 20
+	LOAD_NAME             0	# "pygame"
+	LOAD_ATTR             5
+	LOAD_ATTR             13
+	CALL_FUNCTION         0
+	POP_TOP               
+.line 22
+	SETUP_LOOP            label_3
+	LOAD_NAME             0	# "pygame"
+	LOAD_ATTR             14
+	LOAD_ATTR             15
+	CALL_FUNCTION         0
+	GET_ITER              
+label_1:
+	FOR_ITER              label_2
+	STORE_NAME            14	# "event"
+.line 24
+	LOAD_NAME             14	# "event"
+	LOAD_ATTR             16
+	LOAD_NAME             0	# "pygame"
+	LOAD_ATTR             17
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_1
+.line 26
+	LOAD_NAME             0	# "pygame"
+	LOAD_ATTR             18
+	CALL_FUNCTION         0
+	POP_TOP               
+.line 27
+	LOAD_NAME             19	# "exit"
+	LOAD_CONST            6	# 0
+	CALL_FUNCTION         1
+	POP_TOP               
+	JUMP_ABSOLUTE         label_1
+	JUMP_ABSOLUTE         label_1
+label_2:
+	POP_BLOCK             
+label_3:
+	JUMP_ABSOLUTE         label_0
+label_4:
+	LOAD_CONST            1	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

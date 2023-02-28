@@ -1,0 +1,997 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/Nunmber_Guessing_Game_Python.py"
+.set name		 "<module>"
+.set stack_size		 5
+.set arg_count		 0
+
+.interned
+	"abs_tol"
+	"random"
+	"r"
+	"math"
+	"int"
+	"input"
+	"a"
+	"b"
+	"randint"
+	"random_number"
+	"str"
+	"guess"
+	"score"
+	"q"
+	"isclose"
+	"range"
+	"i"
+	"div"
+	"count"
+	"j"
+	"k"
+	"<module>"
+
+.consts
+	-1
+	None
+	" **********     NUMBER GUESSING GAME  ************          "
+	" ********           HI WLECOME TO PYTHONVERSE!!!      ************          ********   This is a number guessing game. ***********        "
+	"************ You have 7 chances to guess the number    **************"
+	"************ If you cannot guess the number in 7 guesses then you will lose the game ***********"
+	"************          Maximum score is 7    ***********"
+	"**********  Please enter your bound for the game to start  *********     "
+	"***************************************************************************"
+	"Enter lower bound of the range in which you want to play the game : "
+	"Enter upper bound of the range in which you want to play the game : "
+	"Enter the guessed number between "
+	" and "
+	": "
+	7
+	"*********   CONGRATULATIONS YOU HAVE WON   ***************"
+	"*********   It is a correct guess    ******************"
+	"*********   Your final score is "
+	"   *******"
+	"-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+	2
+	"abs_tol"
+	3
+	"You are very very very close to the number"
+	"The number is less than "
+	"Your score becomes "
+	1
+	"You have "
+	" guesses left now "
+	"**********************************************************"
+	"The number is greater than "
+	"Enter new guess: "
+	"You are not even close to the number "
+	0
+	"It is an even number"
+	"It is an odd number"
+	"Enter new guess"
+	"The number is divisible by "
+	"It is  a Composite Number"
+	"It is a Prime Number"
+	"Enter new guess : "
+	"The number is a multiple of "
+	"It is your last chance to guess the number otherwise you will lose the game"
+	"***********   SORRY YOU LOST THE GAME ***********************"
+	"***********   The number was : "
+	"**********"
+	"***********  Your final score is "
+	"***********"
+
+.names
+	"random"
+	"r"
+	"math"
+	"int"
+	"input"
+	"a"
+	"b"
+	"randint"
+	"random_number"
+	"str"
+	"guess"
+	"score"
+	"q"
+	"isclose"
+	"range"
+	"i"
+	"div"
+	"count"
+	"j"
+	"k"
+
+.text
+.line 6
+	LOAD_CONST            0	# -1
+	LOAD_CONST            1	# None
+	IMPORT_NAME           0
+	STORE_NAME            1	# "r"
+.line 7
+	LOAD_CONST            0	# -1
+	LOAD_CONST            1	# None
+	IMPORT_NAME           2
+	STORE_NAME            2	# "math"
+.line 8
+	LOAD_CONST            2	# " **********     NUMBER GUESSING GAME  ************          "
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 9
+	LOAD_CONST            3	# " ********           HI WLECOME TO PYTHONVERSE!!!      ************          ********   This is a number guessing game. ***********        "
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 11
+	LOAD_CONST            4	# "************ You have 7 chances to guess the number    **************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 12
+	LOAD_CONST            5	# "************ If you cannot guess the number in 7 guesses then you will lose the game ***********"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 13
+	LOAD_CONST            6	# "************          Maximum score is 7    ***********"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 14
+	LOAD_CONST            7	# "**********  Please enter your bound for the game to start  *********     "
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 15
+	LOAD_CONST            8	# "***************************************************************************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 17
+	LOAD_NAME             3	# "int"
+	LOAD_NAME             4	# "input"
+	LOAD_CONST            9	# "Enter lower bound of the range in which you want to play the game : "
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            5	# "a"
+.line 18
+	LOAD_NAME             3	# "int"
+	LOAD_NAME             4	# "input"
+	LOAD_CONST            10	# "Enter upper bound of the range in which you want to play the game : "
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            6	# "b"
+.line 19
+	LOAD_NAME             1	# "r"
+	LOAD_ATTR             7
+	LOAD_NAME             5	# "a"
+	LOAD_NAME             6	# "b"
+	CALL_FUNCTION         2
+	STORE_NAME            8	# "random_number"
+.line 20
+	LOAD_NAME             3	# "int"
+	LOAD_NAME             4	# "input"
+	LOAD_CONST            11	# "Enter the guessed number between "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             5	# "a"
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	LOAD_CONST            12	# " and "
+	BINARY_ADD            
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             6	# "b"
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	LOAD_CONST            13	# ": "
+	BINARY_ADD            
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            10	# "guess"
+.line 21
+	LOAD_CONST            14	# 7
+	STORE_NAME            11	# "score"
+.line 22
+	LOAD_NAME             10	# "guess"
+	LOAD_NAME             8	# "random_number"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_0
+.line 23
+	LOAD_CONST            15	# "*********   CONGRATULATIONS YOU HAVE WON   ***************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 24
+	LOAD_CONST            16	# "*********   It is a correct guess    ******************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 25
+	LOAD_CONST            17	# "*********   Your final score is "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	LOAD_CONST            18	# "   *******"
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 26
+	LOAD_CONST            19	# "-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_30
+.line 28
+label_0:
+	LOAD_NAME             5	# "a"
+	LOAD_NAME             6	# "b"
+	BINARY_ADD            
+	LOAD_CONST            20	# 2
+	BINARY_FLOOR_DIVIDE   
+	STORE_NAME            12	# "q"
+.line 29
+	LOAD_NAME             8	# "random_number"
+	LOAD_NAME             12	# "q"
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_FALSE     label_2
+.line 30
+	LOAD_NAME             2	# "math"
+	LOAD_ATTR             13
+	LOAD_NAME             8	# "random_number"
+	LOAD_NAME             10	# "guess"
+	LOAD_CONST            21	# "abs_tol"
+	LOAD_CONST            22	# 3
+	CALL_FUNCTION         258
+	POP_JUMP_IF_FALSE     label_1
+.line 31
+	LOAD_CONST            23	# "You are very very very close to the number"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_1
+.line 32
+label_1:
+	LOAD_CONST            24	# "The number is less than "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             12	# "q"
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 33
+	LOAD_CONST            25	# "Your score becomes "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 34
+	LOAD_CONST            27	# "You have "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	LOAD_CONST            28	# " guesses left now "
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 35
+	LOAD_CONST            29	# "**********************************************************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_4
+.line 36
+label_2:
+	LOAD_NAME             8	# "random_number"
+	LOAD_NAME             12	# "q"
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     label_4
+.line 37
+	LOAD_NAME             2	# "math"
+	LOAD_ATTR             13
+	LOAD_NAME             8	# "random_number"
+	LOAD_NAME             10	# "guess"
+	LOAD_CONST            21	# "abs_tol"
+	LOAD_CONST            22	# 3
+	CALL_FUNCTION         258
+	POP_JUMP_IF_FALSE     label_3
+.line 38
+	LOAD_CONST            23	# "You are very very very close to the number"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_3
+.line 39
+label_3:
+	LOAD_CONST            30	# "The number is greater than "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             12	# "q"
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 40
+	LOAD_CONST            25	# "Your score becomes "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 41
+	LOAD_CONST            27	# "You have "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	LOAD_CONST            28	# " guesses left now "
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 42
+	LOAD_CONST            29	# "**********************************************************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_4
+.line 43
+label_4:
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	STORE_NAME            11	# "score"
+.line 44
+	LOAD_NAME             3	# "int"
+	LOAD_NAME             4	# "input"
+	LOAD_CONST            31	# "Enter new guess: "
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            10	# "guess"
+.line 45
+	LOAD_NAME             10	# "guess"
+	LOAD_NAME             8	# "random_number"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_5
+.line 46
+	LOAD_CONST            15	# "*********   CONGRATULATIONS YOU HAVE WON   ***************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 47
+	LOAD_CONST            16	# "*********   It is a correct guess    ******************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 48
+	LOAD_CONST            17	# "*********   Your final score is "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	LOAD_CONST            18	# "   *******"
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 49
+	LOAD_CONST            19	# "-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_30
+.line 51
+label_5:
+	LOAD_NAME             2	# "math"
+	LOAD_ATTR             13
+	LOAD_NAME             8	# "random_number"
+	LOAD_NAME             10	# "guess"
+	LOAD_CONST            21	# "abs_tol"
+	LOAD_CONST            22	# 3
+	CALL_FUNCTION         258
+	POP_JUMP_IF_FALSE     label_6
+.line 52
+	LOAD_CONST            23	# "You are very very very close to the number"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 53
+	LOAD_CONST            25	# "Your score becomes "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 54
+	LOAD_CONST            27	# "You have "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	LOAD_CONST            28	# " guesses left now "
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 55
+	LOAD_CONST            29	# "**********************************************************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_7
+.line 57
+label_6:
+	LOAD_CONST            32	# "You are not even close to the number "
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 58
+	LOAD_CONST            25	# "Your score becomes "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 59
+	LOAD_CONST            27	# "You have "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	LOAD_CONST            28	# " guesses left now "
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 60
+	LOAD_CONST            29	# "**********************************************************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 62
+label_7:
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	STORE_NAME            11	# "score"
+.line 63
+	LOAD_NAME             3	# "int"
+	LOAD_NAME             4	# "input"
+	LOAD_CONST            31	# "Enter new guess: "
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            10	# "guess"
+.line 64
+	LOAD_NAME             10	# "guess"
+	LOAD_NAME             8	# "random_number"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_8
+.line 65
+	LOAD_CONST            15	# "*********   CONGRATULATIONS YOU HAVE WON   ***************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 66
+	LOAD_CONST            16	# "*********   It is a correct guess    ******************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 67
+	LOAD_CONST            17	# "*********   Your final score is "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	LOAD_CONST            18	# "   *******"
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 68
+	LOAD_CONST            19	# "-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_30
+.line 70
+label_8:
+	LOAD_NAME             8	# "random_number"
+	LOAD_CONST            20	# 2
+	BINARY_MODULO         
+	LOAD_CONST            33	# 0
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_9
+.line 71
+	LOAD_CONST            34	# "It is an even number"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_10
+.line 73
+label_9:
+	LOAD_CONST            35	# "It is an odd number"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 74
+label_10:
+	LOAD_NAME             2	# "math"
+	LOAD_ATTR             13
+	LOAD_NAME             8	# "random_number"
+	LOAD_NAME             10	# "guess"
+	LOAD_CONST            21	# "abs_tol"
+	LOAD_CONST            22	# 3
+	CALL_FUNCTION         258
+	POP_JUMP_IF_FALSE     label_11
+.line 75
+	LOAD_CONST            23	# "You are very very very close to the number"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_11
+.line 76
+label_11:
+	LOAD_CONST            25	# "Your score becomes "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 77
+	LOAD_CONST            27	# "You have "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	LOAD_CONST            28	# " guesses left now "
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 78
+	LOAD_CONST            29	# "**********************************************************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 79
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	STORE_NAME            11	# "score"
+.line 80
+	LOAD_NAME             3	# "int"
+	LOAD_NAME             4	# "input"
+	LOAD_CONST            36	# "Enter new guess"
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            10	# "guess"
+.line 81
+	LOAD_NAME             10	# "guess"
+	LOAD_NAME             8	# "random_number"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_12
+.line 82
+	LOAD_CONST            15	# "*********   CONGRATULATIONS YOU HAVE WON   ***************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 83
+	LOAD_CONST            16	# "*********   It is a correct guess    ******************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 84
+	LOAD_CONST            17	# "*********   Your final score is "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	LOAD_CONST            18	# "   *******"
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 85
+	LOAD_CONST            19	# "-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_30
+.line 87
+label_12:
+	SETUP_LOOP            label_15
+	LOAD_NAME             14	# "range"
+	LOAD_CONST            20	# 2
+	LOAD_NAME             8	# "random_number"
+	LOAD_CONST            26	# 1
+	BINARY_ADD            
+	CALL_FUNCTION         2
+	GET_ITER              
+label_13:
+	FOR_ITER              label_14
+	STORE_NAME            15	# "i"
+.line 88
+	LOAD_NAME             8	# "random_number"
+	LOAD_NAME             15	# "i"
+	BINARY_MODULO         
+	LOAD_CONST            33	# 0
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_13
+.line 89
+	LOAD_NAME             15	# "i"
+	STORE_NAME            16	# "div"
+.line 90
+	BREAK_LOOP            
+	JUMP_ABSOLUTE         label_13
+	JUMP_ABSOLUTE         label_13
+label_14:
+	POP_BLOCK             
+.line 91
+label_15:
+	LOAD_NAME             2	# "math"
+	LOAD_ATTR             13
+	LOAD_NAME             8	# "random_number"
+	LOAD_NAME             10	# "guess"
+	LOAD_CONST            21	# "abs_tol"
+	LOAD_CONST            22	# 3
+	CALL_FUNCTION         258
+	POP_JUMP_IF_FALSE     label_16
+.line 92
+	LOAD_CONST            23	# "You are very very very close to the number"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_16
+.line 93
+label_16:
+	LOAD_CONST            37	# "The number is divisible by "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             16	# "div"
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 95
+	LOAD_CONST            25	# "Your score becomes "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 96
+	LOAD_CONST            27	# "You have "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	LOAD_CONST            28	# " guesses left now "
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 97
+	LOAD_CONST            29	# "**********************************************************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 98
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	STORE_NAME            11	# "score"
+.line 99
+	LOAD_NAME             3	# "int"
+	LOAD_NAME             4	# "input"
+	LOAD_CONST            31	# "Enter new guess: "
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            10	# "guess"
+.line 100
+	LOAD_NAME             10	# "guess"
+	LOAD_NAME             8	# "random_number"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_17
+.line 101
+	LOAD_CONST            15	# "*********   CONGRATULATIONS YOU HAVE WON   ***************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 102
+	LOAD_CONST            16	# "*********   It is a correct guess    ******************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 103
+	LOAD_CONST            17	# "*********   Your final score is "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	LOAD_CONST            18	# "   *******"
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 104
+	LOAD_CONST            19	# "-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_30
+.line 106
+label_17:
+	LOAD_CONST            33	# 0
+	STORE_NAME            17	# "count"
+.line 107
+	SETUP_LOOP            label_20
+	LOAD_NAME             14	# "range"
+	LOAD_CONST            20	# 2
+	LOAD_NAME             8	# "random_number"
+	CALL_FUNCTION         2
+	GET_ITER              
+label_18:
+	FOR_ITER              label_19
+	STORE_NAME            18	# "j"
+.line 108
+	LOAD_NAME             8	# "random_number"
+	LOAD_NAME             18	# "j"
+	BINARY_MODULO         
+	LOAD_CONST            33	# 0
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_18
+.line 109
+	LOAD_NAME             17	# "count"
+	LOAD_CONST            26	# 1
+	INPLACE_ADD           
+	STORE_NAME            17	# "count"
+	JUMP_ABSOLUTE         label_18
+	JUMP_ABSOLUTE         label_18
+label_19:
+	POP_BLOCK             
+.line 110
+label_20:
+	LOAD_NAME             17	# "count"
+	LOAD_CONST            26	# 1
+	COMPARE_OP            5	# ">="
+	POP_JUMP_IF_FALSE     label_21
+.line 111
+	LOAD_CONST            38	# "It is  a Composite Number"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_22
+.line 113
+label_21:
+	LOAD_CONST            39	# "It is a Prime Number"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 115
+label_22:
+	LOAD_NAME             2	# "math"
+	LOAD_ATTR             13
+	LOAD_NAME             8	# "random_number"
+	LOAD_NAME             10	# "guess"
+	LOAD_CONST            21	# "abs_tol"
+	LOAD_CONST            22	# 3
+	CALL_FUNCTION         258
+	POP_JUMP_IF_FALSE     label_23
+.line 116
+	LOAD_CONST            23	# "You are very very very close to the number"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_23
+.line 118
+label_23:
+	LOAD_CONST            25	# "Your score becomes "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 119
+	LOAD_CONST            27	# "You have "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	LOAD_CONST            28	# " guesses left now "
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 120
+	LOAD_CONST            29	# "**********************************************************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 121
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	STORE_NAME            11	# "score"
+.line 123
+	LOAD_NAME             3	# "int"
+	LOAD_NAME             4	# "input"
+	LOAD_CONST            40	# "Enter new guess : "
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            10	# "guess"
+.line 124
+	LOAD_NAME             10	# "guess"
+	LOAD_NAME             8	# "random_number"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_24
+.line 125
+	LOAD_CONST            15	# "*********   CONGRATULATIONS YOU HAVE WON   ***************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 126
+	LOAD_CONST            16	# "*********   It is a correct guess    ******************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 127
+	LOAD_CONST            17	# "*********   Your final score is "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	LOAD_CONST            18	# "   *******"
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 128
+	LOAD_CONST            19	# "-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_30
+.line 130
+label_24:
+	SETUP_LOOP            label_27
+	LOAD_NAME             14	# "range"
+	LOAD_CONST            20	# 2
+	LOAD_NAME             8	# "random_number"
+	LOAD_CONST            26	# 1
+	BINARY_ADD            
+	CALL_FUNCTION         2
+	GET_ITER              
+label_25:
+	FOR_ITER              label_26
+	STORE_NAME            19	# "k"
+.line 131
+	LOAD_NAME             8	# "random_number"
+	LOAD_NAME             19	# "k"
+	BINARY_MODULO         
+	LOAD_CONST            33	# 0
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_25
+.line 132
+	LOAD_CONST            41	# "The number is a multiple of "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             19	# "k"
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 133
+	BREAK_LOOP            
+	JUMP_ABSOLUTE         label_25
+	JUMP_ABSOLUTE         label_25
+label_26:
+	POP_BLOCK             
+.line 134
+label_27:
+	LOAD_NAME             2	# "math"
+	LOAD_ATTR             13
+	LOAD_NAME             8	# "random_number"
+	LOAD_NAME             10	# "guess"
+	LOAD_CONST            21	# "abs_tol"
+	LOAD_CONST            22	# 3
+	CALL_FUNCTION         258
+	POP_JUMP_IF_FALSE     label_28
+.line 135
+	LOAD_CONST            23	# "You are very very very close to the number"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_28
+.line 136
+label_28:
+	LOAD_CONST            25	# "Your score becomes "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 137
+	LOAD_CONST            27	# "You have "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	LOAD_CONST            28	# " guesses left now "
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 138
+	LOAD_CONST            29	# "**********************************************************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 139
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	STORE_NAME            11	# "score"
+.line 140
+	LOAD_CONST            42	# "It is your last chance to guess the number otherwise you will lose the game"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 141
+	LOAD_NAME             3	# "int"
+	LOAD_NAME             4	# "input"
+	LOAD_CONST            31	# "Enter new guess: "
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            10	# "guess"
+.line 142
+	LOAD_NAME             10	# "guess"
+	LOAD_NAME             8	# "random_number"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_29
+.line 143
+	LOAD_CONST            15	# "*********   CONGRATULATIONS YOU HAVE WON   ***************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 144
+	LOAD_CONST            16	# "*********   It is a correct guess    ******************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 145
+	LOAD_CONST            17	# "*********   Your final score is "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	LOAD_CONST            18	# "   *******"
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 146
+	LOAD_CONST            19	# "-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_30
+.line 148
+label_29:
+	LOAD_CONST            43	# "***********   SORRY YOU LOST THE GAME ***********************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 149
+	LOAD_NAME             11	# "score"
+	LOAD_CONST            26	# 1
+	BINARY_SUBTRACT       
+	STORE_NAME            11	# "score"
+.line 150
+	LOAD_CONST            44	# "***********   The number was : "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             8	# "random_number"
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	LOAD_CONST            45	# "**********"
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 151
+	LOAD_CONST            46	# "***********  Your final score is "
+	LOAD_NAME             9	# "str"
+	LOAD_NAME             11	# "score"
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	LOAD_CONST            47	# "***********"
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 152
+	LOAD_CONST            29	# "**********************************************************"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+label_30:
+	LOAD_CONST            1	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

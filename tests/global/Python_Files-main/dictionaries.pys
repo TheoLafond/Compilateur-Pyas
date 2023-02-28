@@ -1,0 +1,57 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/dictionaries.py"
+.set name		 "<module>"
+.set stack_size		 3
+.set arg_count		 0
+
+.interned
+	"Ford"
+	"brand"
+	"Mustang"
+	"model"
+	"year"
+	"thisdict"
+	"<module>"
+
+.consts
+	"Ford"
+	"brand"
+	"Mustang"
+	"model"
+	1964
+	"year"
+	None
+
+.names
+	"thisdict"
+
+.text
+.line 1
+	BUILD_MAP             3
+.line 2
+	LOAD_CONST            0	# "Ford"
+	LOAD_CONST            1	# "brand"
+	STORE_MAP             
+.line 3
+	LOAD_CONST            2	# "Mustang"
+	LOAD_CONST            3	# "model"
+	STORE_MAP             
+.line 4
+	LOAD_CONST            4	# 1964
+	LOAD_CONST            5	# "year"
+	STORE_MAP             
+	STORE_NAME            0	# "thisdict"
+.line 6
+	LOAD_NAME             0	# "thisdict"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            6	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

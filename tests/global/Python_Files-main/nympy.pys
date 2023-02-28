@@ -1,0 +1,67 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/nympy.py"
+.set name		 "<module>"
+.set stack_size		 6
+.set arg_count		 0
+
+.interned
+	"numpy"
+	"np"
+	"array"
+	"arr"
+	"type"
+	"<module>"
+
+.consts
+	-1
+	None
+	1
+	2
+	3
+	4
+	5
+
+.names
+	"numpy"
+	"np"
+	"array"
+	"arr"
+	"type"
+
+.text
+.line 1
+	LOAD_CONST            0	# -1
+	LOAD_CONST            1	# None
+	IMPORT_NAME           0
+	STORE_NAME            1	# "np"
+.line 3
+	LOAD_NAME             1	# "np"
+	LOAD_ATTR             2
+	LOAD_CONST            2	# 1
+	LOAD_CONST            3	# 2
+	LOAD_CONST            4	# 3
+	LOAD_CONST            5	# 4
+	LOAD_CONST            6	# 5
+	BUILD_LIST            5
+	CALL_FUNCTION         1
+	STORE_NAME            3	# "arr"
+.line 5
+	LOAD_NAME             3	# "arr"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 7
+	LOAD_NAME             4	# "type"
+	LOAD_NAME             3	# "arr"
+	CALL_FUNCTION         1
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            1	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

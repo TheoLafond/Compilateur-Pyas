@@ -1,0 +1,3 @@
+hexa_prefixed_with_plus_or_minus__either_invalid_or_reported_as_two_lexems
+tuv -0x12AB
+EITHER_MAY_STOP_BEFORE_OR_REPORT_PLUS_AND_MINUS_AS_DISTINCT_LEXEMS

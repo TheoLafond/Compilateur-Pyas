@@ -1,0 +1,1696 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/Tic_Tac_Toe.py"
+.set name		 "<module>"
+.set stack_size		 3
+.set arg_count		 0
+
+.interned
+	"*"
+	"Tic_Tac_Toe"
+	"width"
+	"height"
+	"shape"
+	"Tk"
+	"window"
+	"title"
+	"Canvas"
+	"size_of_board"
+	"canvas"
+	"pack"
+	"bind"
+	"click"
+	"initialize_board"
+	"True"
+	"player_X_turns"
+	"np"
+	"zeros"
+	"board_status"
+	"player_X_starts"
+	"False"
+	"reset_board"
+	"gameover"
+	"tie"
+	"X_wins"
+	"O_wins"
+	"X_score"
+	"O_score"
+	"tie_score"
+	"self"
+	"__init__"
+	"mainloop"
+	"range"
+	"create_line"
+	"i"
+	"play_again"
+	"outline"
+	"array"
+	"convert_logical_to_grid_position"
+	"create_oval"
+	"symbol_size"
+	"symbol_thickness"
+	"symbol_O_color"
+	"logical_position"
+	"grid_position"
+	"draw_O"
+	"fill"
+	"symbol_X_color"
+	"draw_X"
+	"gray"
+	"all"
+	"font"
+	"text"
+	"delete"
+	"create_text"
+	"Green_color"
+	"str"
+	"color"
+	"score_text"
+	"display_gameover"
+	"dtype"
+	"int"
+	"convert_grid_to_logical_position"
+	"is_grid_occupied"
+	"X"
+	"player"
+	"is_winner"
+	"where"
+	"len"
+	"r"
+	"c"
+	"is_tie"
+	"O"
+	"is_gameover"
+	"x"
+	"y"
+	"event"
+	"__name__"
+	"__module__"
+	"tkinter"
+	"numpy"
+	"game_instance"
+	"<module>"
+
+.consts
+	-1
+	( "*" )
+	None
+	600
+	3
+	8
+	2
+	50
+	"#EE4035"
+	"#0492CF"
+	"#7BC043"
+	"Tic_Tac_Toe"
+.code_start 14
+.set version_pyvm	 62211
+.set flags		 0x00000042
+.set filename		 "Python_Files-main/Tic_Tac_Toe.py"
+.set name		 "Tic_Tac_Toe"
+.set stack_size		 1
+.set arg_count		 0
+
+.consts
+.code_start 18
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/Tic_Tac_Toe.py"
+.set name		 "__init__"
+.set stack_size		 6
+.set arg_count		 1
+
+.consts
+	None
+	"Tic-Tac-Toe"
+	"width"
+	"height"
+	"<Button-1>"
+	"shape"
+	3
+	0
+	( 3 3 )
+
+.names
+	"Tk"
+	"window"
+	"title"
+	"Canvas"
+	"size_of_board"
+	"canvas"
+	"pack"
+	"bind"
+	"click"
+	"initialize_board"
+	"True"
+	"player_X_turns"
+	"np"
+	"zeros"
+	"board_status"
+	"player_X_starts"
+	"False"
+	"reset_board"
+	"gameover"
+	"tie"
+	"X_wins"
+	"O_wins"
+	"X_score"
+	"O_score"
+	"tie_score"
+
+.varnames
+	"self"
+
+.text
+.line 19
+	LOAD_GLOBAL           0
+	CALL_FUNCTION         0
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            1
+.line 20
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	LOAD_ATTR             2
+	LOAD_CONST            1	# "Tic-Tac-Toe"
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 21
+	LOAD_GLOBAL           3
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	LOAD_CONST            2	# "width"
+	LOAD_GLOBAL           4
+	LOAD_CONST            3	# "height"
+	LOAD_GLOBAL           4
+	CALL_FUNCTION         513
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            5
+.line 22
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             5
+	LOAD_ATTR             6
+	CALL_FUNCTION         0
+	POP_TOP               
+.line 24
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	LOAD_ATTR             7
+	LOAD_CONST            4	# "<Button-1>"
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             8
+	CALL_FUNCTION         2
+	POP_TOP               
+.line 26
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             9
+	CALL_FUNCTION         0
+	POP_TOP               
+.line 27
+	LOAD_GLOBAL           10
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            11
+.line 28
+	LOAD_GLOBAL           12
+	LOAD_ATTR             13
+	LOAD_CONST            5	# "shape"
+	LOAD_CONST            8	# ( 3 3 )
+	CALL_FUNCTION         256
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            14
+.line 30
+	LOAD_GLOBAL           10
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            15
+.line 31
+	LOAD_GLOBAL           16
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            17
+.line 32
+	LOAD_GLOBAL           16
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            18
+.line 33
+	LOAD_GLOBAL           16
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            19
+.line 34
+	LOAD_GLOBAL           16
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            20
+.line 35
+	LOAD_GLOBAL           16
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            21
+.line 37
+	LOAD_CONST            7	# 0
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            22
+.line 38
+	LOAD_CONST            7	# 0
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            23
+.line 39
+	LOAD_CONST            7	# 0
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            24
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+.code_start 41
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/Tic_Tac_Toe.py"
+.set name		 "mainloop"
+.set stack_size		 1
+.set arg_count		 1
+
+.consts
+	None
+
+.names
+	"window"
+	"mainloop"
+
+.varnames
+	"self"
+
+.text
+.line 42
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             0
+	LOAD_ATTR             1
+	CALL_FUNCTION         0
+	POP_TOP               
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+.code_start 44
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/Tic_Tac_Toe.py"
+.set name		 "initialize_board"
+.set stack_size		 7
+.set arg_count		 1
+
+.consts
+	None
+	2
+	1
+	3
+	0
+
+.names
+	"range"
+	"canvas"
+	"create_line"
+	"size_of_board"
+
+.varnames
+	"self"
+	"i"
+
+.text
+.line 45
+	SETUP_LOOP            label_2
+	LOAD_GLOBAL           0
+	LOAD_CONST            1	# 2
+	CALL_FUNCTION         1
+	GET_ITER              
+label_0:
+	FOR_ITER              label_1
+	STORE_FAST            1	# "i"
+.line 46
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	LOAD_ATTR             2
+	LOAD_FAST             1	# "i"
+	LOAD_CONST            2	# 1
+	BINARY_ADD            
+	LOAD_GLOBAL           3
+	BINARY_MULTIPLY       
+	LOAD_CONST            3	# 3
+	BINARY_DIVIDE         
+	LOAD_CONST            4	# 0
+	LOAD_FAST             1	# "i"
+	LOAD_CONST            2	# 1
+	BINARY_ADD            
+	LOAD_GLOBAL           3
+	BINARY_MULTIPLY       
+	LOAD_CONST            3	# 3
+	BINARY_DIVIDE         
+	LOAD_GLOBAL           3
+	CALL_FUNCTION         4
+	POP_TOP               
+	JUMP_ABSOLUTE         label_0
+label_1:
+	POP_BLOCK             
+.line 48
+label_2:
+	SETUP_LOOP            label_5
+	LOAD_GLOBAL           0
+	LOAD_CONST            1	# 2
+	CALL_FUNCTION         1
+	GET_ITER              
+label_3:
+	FOR_ITER              label_4
+	STORE_FAST            1	# "i"
+.line 49
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	LOAD_ATTR             2
+	LOAD_CONST            4	# 0
+	LOAD_FAST             1	# "i"
+	LOAD_CONST            2	# 1
+	BINARY_ADD            
+	LOAD_GLOBAL           3
+	BINARY_MULTIPLY       
+	LOAD_CONST            3	# 3
+	BINARY_DIVIDE         
+	LOAD_GLOBAL           3
+	LOAD_FAST             1	# "i"
+	LOAD_CONST            2	# 1
+	BINARY_ADD            
+	LOAD_GLOBAL           3
+	BINARY_MULTIPLY       
+	LOAD_CONST            3	# 3
+	BINARY_DIVIDE         
+	CALL_FUNCTION         4
+	POP_TOP               
+	JUMP_ABSOLUTE         label_3
+label_4:
+	POP_BLOCK             
+label_5:
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+.code_start 51
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/Tic_Tac_Toe.py"
+.set name		 "play_again"
+.set stack_size		 4
+.set arg_count		 1
+
+.consts
+	None
+	"shape"
+	3
+	( 3 3 )
+
+.names
+	"initialize_board"
+	"player_X_starts"
+	"player_X_turns"
+	"np"
+	"zeros"
+	"board_status"
+
+.varnames
+	"self"
+
+.text
+.line 52
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             0
+	CALL_FUNCTION         0
+	POP_TOP               
+.line 53
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	UNARY_NOT             
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            1
+.line 54
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            2
+.line 55
+	LOAD_GLOBAL           3
+	LOAD_ATTR             4
+	LOAD_CONST            1	# "shape"
+	LOAD_CONST            3	# ( 3 3 )
+	CALL_FUNCTION         256
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            5
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+.code_start 62
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/Tic_Tac_Toe.py"
+.set name		 "draw_O"
+.set stack_size		 9
+.set arg_count		 2
+
+.consts
+	None
+	0
+	1
+	"width"
+	"outline"
+
+.names
+	"np"
+	"array"
+	"convert_logical_to_grid_position"
+	"canvas"
+	"create_oval"
+	"symbol_size"
+	"symbol_thickness"
+	"symbol_O_color"
+
+.varnames
+	"self"
+	"logical_position"
+	"grid_position"
+
+.text
+.line 63
+	LOAD_GLOBAL           0
+	LOAD_ATTR             1
+	LOAD_FAST             1	# "logical_position"
+	CALL_FUNCTION         1
+	STORE_FAST            1	# "logical_position"
+.line 66
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             2
+	LOAD_FAST             1	# "logical_position"
+	CALL_FUNCTION         1
+	STORE_FAST            2	# "grid_position"
+.line 67
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             3
+	LOAD_ATTR             4
+	LOAD_FAST             2	# "grid_position"
+	LOAD_CONST            1	# 0
+	BINARY_SUBSCR         
+	LOAD_GLOBAL           5
+	BINARY_SUBTRACT       
+	LOAD_FAST             2	# "grid_position"
+	LOAD_CONST            2	# 1
+	BINARY_SUBSCR         
+	LOAD_GLOBAL           5
+	BINARY_SUBTRACT       
+.line 68
+	LOAD_FAST             2	# "grid_position"
+	LOAD_CONST            1	# 0
+	BINARY_SUBSCR         
+	LOAD_GLOBAL           5
+	BINARY_ADD            
+	LOAD_FAST             2	# "grid_position"
+	LOAD_CONST            2	# 1
+	BINARY_SUBSCR         
+	LOAD_GLOBAL           5
+	BINARY_ADD            
+	LOAD_CONST            3	# "width"
+	LOAD_GLOBAL           6
+	LOAD_CONST            4	# "outline"
+.line 69
+	LOAD_GLOBAL           7
+	CALL_FUNCTION         516
+	POP_TOP               
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+.code_start 71
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/Tic_Tac_Toe.py"
+.set name		 "draw_X"
+.set stack_size		 9
+.set arg_count		 2
+
+.consts
+	None
+	0
+	1
+	"width"
+	"fill"
+
+.names
+	"convert_logical_to_grid_position"
+	"canvas"
+	"create_line"
+	"symbol_size"
+	"symbol_thickness"
+	"symbol_X_color"
+
+.varnames
+	"self"
+	"logical_position"
+	"grid_position"
+
+.text
+.line 72
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             0
+	LOAD_FAST             1	# "logical_position"
+	CALL_FUNCTION         1
+	STORE_FAST            2	# "grid_position"
+.line 73
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	LOAD_ATTR             2
+	LOAD_FAST             2	# "grid_position"
+	LOAD_CONST            1	# 0
+	BINARY_SUBSCR         
+	LOAD_GLOBAL           3
+	BINARY_SUBTRACT       
+	LOAD_FAST             2	# "grid_position"
+	LOAD_CONST            2	# 1
+	BINARY_SUBSCR         
+	LOAD_GLOBAL           3
+	BINARY_SUBTRACT       
+.line 74
+	LOAD_FAST             2	# "grid_position"
+	LOAD_CONST            1	# 0
+	BINARY_SUBSCR         
+	LOAD_GLOBAL           3
+	BINARY_ADD            
+	LOAD_FAST             2	# "grid_position"
+	LOAD_CONST            2	# 1
+	BINARY_SUBSCR         
+	LOAD_GLOBAL           3
+	BINARY_ADD            
+	LOAD_CONST            3	# "width"
+	LOAD_GLOBAL           4
+	LOAD_CONST            4	# "fill"
+.line 75
+	LOAD_GLOBAL           5
+	CALL_FUNCTION         516
+	POP_TOP               
+.line 76
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	LOAD_ATTR             2
+	LOAD_FAST             2	# "grid_position"
+	LOAD_CONST            1	# 0
+	BINARY_SUBSCR         
+	LOAD_GLOBAL           3
+	BINARY_SUBTRACT       
+	LOAD_FAST             2	# "grid_position"
+	LOAD_CONST            2	# 1
+	BINARY_SUBSCR         
+	LOAD_GLOBAL           3
+	BINARY_ADD            
+.line 77
+	LOAD_FAST             2	# "grid_position"
+	LOAD_CONST            1	# 0
+	BINARY_SUBSCR         
+	LOAD_GLOBAL           3
+	BINARY_ADD            
+	LOAD_FAST             2	# "grid_position"
+	LOAD_CONST            2	# 1
+	BINARY_SUBSCR         
+	LOAD_GLOBAL           3
+	BINARY_SUBTRACT       
+	LOAD_CONST            3	# "width"
+	LOAD_GLOBAL           4
+	LOAD_CONST            4	# "fill"
+.line 78
+	LOAD_GLOBAL           5
+	CALL_FUNCTION         516
+	POP_TOP               
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+.code_start 80
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/Tic_Tac_Toe.py"
+.set name		 "display_gameover"
+.set stack_size		 9
+.set arg_count		 1
+
+.consts
+	None
+	1
+	"Winner: Player 1 (X)"
+	"Winner: Player 2 (O)"
+	"Its a tie"
+	"gray"
+	"all"
+	2
+	3
+	"font"
+	"cmr 60 bold"
+	"fill"
+	"text"
+	"Scores \n"
+	5
+	8
+	"cmr 40 bold"
+	"Player 1 (X) : "
+	"\n"
+	"Player 2 (O): "
+	"Tie                    : "
+	4
+	"cmr 30 bold"
+	"Click to play again \n"
+	15
+	16
+	"cmr 20 bold"
+
+.names
+	"X_wins"
+	"X_score"
+	"symbol_X_color"
+	"O_wins"
+	"O_score"
+	"symbol_O_color"
+	"tie_score"
+	"canvas"
+	"delete"
+	"create_text"
+	"size_of_board"
+	"Green_color"
+	"str"
+	"True"
+	"reset_board"
+
+.varnames
+	"self"
+	"text"
+	"color"
+	"score_text"
+
+.text
+.line 82
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             0
+	POP_JUMP_IF_FALSE     label_0
+.line 83
+	LOAD_FAST             0	# "self"
+	DUP_TOP               
+	LOAD_ATTR             1
+	LOAD_CONST            1	# 1
+	INPLACE_ADD           
+	ROT_TWO               
+	STORE_ATTR            1
+.line 84
+	LOAD_CONST            2	# "Winner: Player 1 (X)"
+	STORE_FAST            1	# "text"
+.line 85
+	LOAD_GLOBAL           2
+	STORE_FAST            2	# "color"
+	JUMP_FORWARD          label_2
+.line 86
+label_0:
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             3
+	POP_JUMP_IF_FALSE     label_1
+.line 87
+	LOAD_FAST             0	# "self"
+	DUP_TOP               
+	LOAD_ATTR             4
+	LOAD_CONST            1	# 1
+	INPLACE_ADD           
+	ROT_TWO               
+	STORE_ATTR            4
+.line 88
+	LOAD_CONST            3	# "Winner: Player 2 (O)"
+	STORE_FAST            1	# "text"
+.line 89
+	LOAD_GLOBAL           5
+	STORE_FAST            2	# "color"
+	JUMP_FORWARD          label_2
+.line 91
+label_1:
+	LOAD_FAST             0	# "self"
+	DUP_TOP               
+	LOAD_ATTR             6
+	LOAD_CONST            1	# 1
+	INPLACE_ADD           
+	ROT_TWO               
+	STORE_ATTR            6
+.line 92
+	LOAD_CONST            4	# "Its a tie"
+	STORE_FAST            1	# "text"
+.line 93
+	LOAD_CONST            5	# "gray"
+	STORE_FAST            2	# "color"
+.line 95
+label_2:
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             7
+	LOAD_ATTR             8
+	LOAD_CONST            6	# "all"
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 96
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             7
+	LOAD_ATTR             9
+	LOAD_GLOBAL           10
+	LOAD_CONST            7	# 2
+	BINARY_DIVIDE         
+	LOAD_GLOBAL           10
+	LOAD_CONST            8	# 3
+	BINARY_DIVIDE         
+	LOAD_CONST            9	# "font"
+	LOAD_CONST            10	# "cmr 60 bold"
+	LOAD_CONST            11	# "fill"
+	LOAD_FAST             2	# "color"
+	LOAD_CONST            12	# "text"
+	LOAD_FAST             1	# "text"
+	CALL_FUNCTION         770
+	POP_TOP               
+.line 98
+	LOAD_CONST            13	# "Scores \n"
+	STORE_FAST            3	# "score_text"
+.line 99
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             7
+	LOAD_ATTR             9
+	LOAD_GLOBAL           10
+	LOAD_CONST            7	# 2
+	BINARY_DIVIDE         
+	LOAD_CONST            14	# 5
+	LOAD_GLOBAL           10
+	BINARY_MULTIPLY       
+	LOAD_CONST            15	# 8
+	BINARY_DIVIDE         
+	LOAD_CONST            9	# "font"
+	LOAD_CONST            16	# "cmr 40 bold"
+	LOAD_CONST            11	# "fill"
+	LOAD_GLOBAL           11
+	LOAD_CONST            12	# "text"
+.line 100
+	LOAD_FAST             3	# "score_text"
+	CALL_FUNCTION         770
+	POP_TOP               
+.line 102
+	LOAD_CONST            17	# "Player 1 (X) : "
+	LOAD_GLOBAL           12
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	LOAD_CONST            18	# "\n"
+	BINARY_ADD            
+	STORE_FAST            3	# "score_text"
+.line 103
+	LOAD_FAST             3	# "score_text"
+	LOAD_CONST            19	# "Player 2 (O): "
+	LOAD_GLOBAL           12
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             4
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	LOAD_CONST            18	# "\n"
+	BINARY_ADD            
+	INPLACE_ADD           
+	STORE_FAST            3	# "score_text"
+.line 104
+	LOAD_FAST             3	# "score_text"
+	LOAD_CONST            20	# "Tie                    : "
+	LOAD_GLOBAL           12
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             6
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	INPLACE_ADD           
+	STORE_FAST            3	# "score_text"
+.line 105
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             7
+	LOAD_ATTR             9
+	LOAD_GLOBAL           10
+	LOAD_CONST            7	# 2
+	BINARY_DIVIDE         
+	LOAD_CONST            8	# 3
+	LOAD_GLOBAL           10
+	BINARY_MULTIPLY       
+	LOAD_CONST            21	# 4
+	BINARY_DIVIDE         
+	LOAD_CONST            9	# "font"
+	LOAD_CONST            22	# "cmr 30 bold"
+	LOAD_CONST            11	# "fill"
+	LOAD_GLOBAL           11
+	LOAD_CONST            12	# "text"
+.line 106
+	LOAD_FAST             3	# "score_text"
+	CALL_FUNCTION         770
+	POP_TOP               
+.line 107
+	LOAD_GLOBAL           13
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            14
+.line 109
+	LOAD_CONST            23	# "Click to play again \n"
+	STORE_FAST            3	# "score_text"
+.line 110
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             7
+	LOAD_ATTR             9
+	LOAD_GLOBAL           10
+	LOAD_CONST            7	# 2
+	BINARY_DIVIDE         
+	LOAD_CONST            24	# 15
+	LOAD_GLOBAL           10
+	BINARY_MULTIPLY       
+	LOAD_CONST            25	# 16
+	BINARY_DIVIDE         
+	LOAD_CONST            9	# "font"
+	LOAD_CONST            26	# "cmr 20 bold"
+	LOAD_CONST            11	# "fill"
+	LOAD_CONST            5	# "gray"
+	LOAD_CONST            12	# "text"
+.line 111
+	LOAD_FAST             3	# "score_text"
+	CALL_FUNCTION         770
+	POP_TOP               
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+.code_start 118
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/Tic_Tac_Toe.py"
+.set name		 "convert_logical_to_grid_position"
+.set stack_size		 4
+.set arg_count		 2
+
+.consts
+	None
+	"dtype"
+	3
+	6
+
+.names
+	"np"
+	"array"
+	"int"
+	"size_of_board"
+
+.varnames
+	"self"
+	"logical_position"
+
+.text
+.line 119
+	LOAD_GLOBAL           0
+	LOAD_ATTR             1
+	LOAD_FAST             1	# "logical_position"
+	LOAD_CONST            1	# "dtype"
+	LOAD_GLOBAL           2
+	CALL_FUNCTION         257
+	STORE_FAST            1	# "logical_position"
+.line 120
+	LOAD_GLOBAL           3
+	LOAD_CONST            2	# 3
+	BINARY_DIVIDE         
+	LOAD_FAST             1	# "logical_position"
+	BINARY_MULTIPLY       
+	LOAD_GLOBAL           3
+	LOAD_CONST            3	# 6
+	BINARY_DIVIDE         
+	BINARY_ADD            
+	RETURN_VALUE          
+.code_end
+.code_start 122
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/Tic_Tac_Toe.py"
+.set name		 "convert_grid_to_logical_position"
+.set stack_size		 4
+.set arg_count		 2
+
+.consts
+	None
+	3
+	"dtype"
+
+.names
+	"np"
+	"array"
+	"size_of_board"
+	"int"
+
+.varnames
+	"self"
+	"grid_position"
+
+.text
+.line 123
+	LOAD_GLOBAL           0
+	LOAD_ATTR             1
+	LOAD_FAST             1	# "grid_position"
+	CALL_FUNCTION         1
+	STORE_FAST            1	# "grid_position"
+.line 124
+	LOAD_GLOBAL           0
+	LOAD_ATTR             1
+	LOAD_FAST             1	# "grid_position"
+	LOAD_GLOBAL           2
+	LOAD_CONST            1	# 3
+	BINARY_DIVIDE         
+	BINARY_FLOOR_DIVIDE   
+	LOAD_CONST            2	# "dtype"
+	LOAD_GLOBAL           3
+	CALL_FUNCTION         257
+	RETURN_VALUE          
+.code_end
+.code_start 126
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/Tic_Tac_Toe.py"
+.set name		 "is_grid_occupied"
+.set stack_size		 3
+.set arg_count		 2
+
+.consts
+	None
+	0
+	1
+
+.names
+	"board_status"
+	"False"
+	"True"
+
+.varnames
+	"self"
+	"logical_position"
+
+.text
+.line 127
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             0
+	LOAD_FAST             1	# "logical_position"
+	LOAD_CONST            1	# 0
+	BINARY_SUBSCR         
+	BINARY_SUBSCR         
+	LOAD_FAST             1	# "logical_position"
+	LOAD_CONST            2	# 1
+	BINARY_SUBSCR         
+	BINARY_SUBSCR         
+	LOAD_CONST            1	# 0
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_0
+.line 128
+	LOAD_GLOBAL           1
+	RETURN_VALUE          
+.line 130
+label_0:
+	LOAD_GLOBAL           2
+	RETURN_VALUE          
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+.code_start 132
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/Tic_Tac_Toe.py"
+.set name		 "is_winner"
+.set stack_size		 7
+.set arg_count		 2
+
+.consts
+	None
+	"X"
+	-1
+	1
+	3
+	0
+	2
+
+.names
+	"range"
+	"board_status"
+	"True"
+	"False"
+
+.varnames
+	"self"
+	"player"
+	"i"
+
+.text
+.line 134
+	LOAD_FAST             1	# "player"
+	LOAD_CONST            1	# "X"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_0
+	LOAD_CONST            2	# -1
+	JUMP_FORWARD          label_1
+label_0:
+	LOAD_CONST            3	# 1
+label_1:
+	STORE_FAST            1	# "player"
+.line 137
+	SETUP_LOOP            label_9
+	LOAD_GLOBAL           0
+	LOAD_CONST            4	# 3
+	CALL_FUNCTION         1
+	GET_ITER              
+label_2:
+	FOR_ITER              label_8
+	STORE_FAST            2	# "i"
+.line 138
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	LOAD_FAST             2	# "i"
+	BINARY_SUBSCR         
+	LOAD_CONST            5	# 0
+	BINARY_SUBSCR         
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	LOAD_FAST             2	# "i"
+	BINARY_SUBSCR         
+	LOAD_CONST            3	# 1
+	BINARY_SUBSCR         
+	DUP_TOP               
+	ROT_THREE             
+	COMPARE_OP            2	# "=="
+	JUMP_IF_FALSE_OR_POP  label_3
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	LOAD_FAST             2	# "i"
+	BINARY_SUBSCR         
+	LOAD_CONST            6	# 2
+	BINARY_SUBSCR         
+	DUP_TOP               
+	ROT_THREE             
+	COMPARE_OP            2	# "=="
+	JUMP_IF_FALSE_OR_POP  label_3
+	LOAD_FAST             1	# "player"
+	COMPARE_OP            2	# "=="
+	JUMP_FORWARD          label_4
+label_3:
+	ROT_TWO               
+	POP_TOP               
+label_4:
+	POP_JUMP_IF_FALSE     label_5
+.line 139
+	LOAD_GLOBAL           2
+	RETURN_VALUE          
+.line 140
+label_5:
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	LOAD_CONST            5	# 0
+	BINARY_SUBSCR         
+	LOAD_FAST             2	# "i"
+	BINARY_SUBSCR         
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	LOAD_CONST            3	# 1
+	BINARY_SUBSCR         
+	LOAD_FAST             2	# "i"
+	BINARY_SUBSCR         
+	DUP_TOP               
+	ROT_THREE             
+	COMPARE_OP            2	# "=="
+	JUMP_IF_FALSE_OR_POP  label_6
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	LOAD_CONST            6	# 2
+	BINARY_SUBSCR         
+	LOAD_FAST             2	# "i"
+	BINARY_SUBSCR         
+	DUP_TOP               
+	ROT_THREE             
+	COMPARE_OP            2	# "=="
+	JUMP_IF_FALSE_OR_POP  label_6
+	LOAD_FAST             1	# "player"
+	COMPARE_OP            2	# "=="
+	JUMP_FORWARD          label_7
+label_6:
+	ROT_TWO               
+	POP_TOP               
+label_7:
+	POP_JUMP_IF_FALSE     label_2
+.line 141
+	LOAD_GLOBAL           2
+	RETURN_VALUE          
+	JUMP_ABSOLUTE         label_2
+label_8:
+	POP_BLOCK             
+.line 144
+label_9:
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	LOAD_CONST            5	# 0
+	BINARY_SUBSCR         
+	LOAD_CONST            5	# 0
+	BINARY_SUBSCR         
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	LOAD_CONST            3	# 1
+	BINARY_SUBSCR         
+	LOAD_CONST            3	# 1
+	BINARY_SUBSCR         
+	DUP_TOP               
+	ROT_THREE             
+	COMPARE_OP            2	# "=="
+	JUMP_IF_FALSE_OR_POP  label_10
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	LOAD_CONST            6	# 2
+	BINARY_SUBSCR         
+	LOAD_CONST            6	# 2
+	BINARY_SUBSCR         
+	DUP_TOP               
+	ROT_THREE             
+	COMPARE_OP            2	# "=="
+	JUMP_IF_FALSE_OR_POP  label_10
+	LOAD_FAST             1	# "player"
+	COMPARE_OP            2	# "=="
+	JUMP_FORWARD          label_11
+label_10:
+	ROT_TWO               
+	POP_TOP               
+label_11:
+	POP_JUMP_IF_FALSE     label_12
+.line 145
+	LOAD_GLOBAL           2
+	RETURN_VALUE          
+.line 147
+label_12:
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	LOAD_CONST            5	# 0
+	BINARY_SUBSCR         
+	LOAD_CONST            6	# 2
+	BINARY_SUBSCR         
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	LOAD_CONST            3	# 1
+	BINARY_SUBSCR         
+	LOAD_CONST            3	# 1
+	BINARY_SUBSCR         
+	DUP_TOP               
+	ROT_THREE             
+	COMPARE_OP            2	# "=="
+	JUMP_IF_FALSE_OR_POP  label_13
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	LOAD_CONST            6	# 2
+	BINARY_SUBSCR         
+	LOAD_CONST            5	# 0
+	BINARY_SUBSCR         
+	DUP_TOP               
+	ROT_THREE             
+	COMPARE_OP            2	# "=="
+	JUMP_IF_FALSE_OR_POP  label_13
+	LOAD_FAST             1	# "player"
+	COMPARE_OP            2	# "=="
+	JUMP_FORWARD          label_14
+label_13:
+	ROT_TWO               
+	POP_TOP               
+label_14:
+	POP_JUMP_IF_FALSE     label_15
+.line 148
+	LOAD_GLOBAL           2
+	RETURN_VALUE          
+.line 150
+label_15:
+	LOAD_GLOBAL           3
+	RETURN_VALUE          
+.code_end
+.code_start 152
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/Tic_Tac_Toe.py"
+.set name		 "is_tie"
+.set stack_size		 3
+.set arg_count		 1
+
+.consts
+	None
+	0
+
+.names
+	"np"
+	"where"
+	"board_status"
+	"False"
+	"len"
+	"True"
+
+.varnames
+	"self"
+	"r"
+	"c"
+	"tie"
+
+.text
+.line 154
+	LOAD_GLOBAL           0
+	LOAD_ATTR             1
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             2
+	LOAD_CONST            1	# 0
+	COMPARE_OP            2	# "=="
+	CALL_FUNCTION         1
+	UNPACK_SEQUENCE       2
+	STORE_FAST            1	# "r"
+	STORE_FAST            2	# "c"
+.line 155
+	LOAD_GLOBAL           3
+	STORE_FAST            3	# "tie"
+.line 156
+	LOAD_GLOBAL           4
+	LOAD_FAST             1	# "r"
+	CALL_FUNCTION         1
+	LOAD_CONST            1	# 0
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_0
+.line 157
+	LOAD_GLOBAL           5
+	STORE_FAST            3	# "tie"
+	JUMP_FORWARD          label_0
+.line 159
+label_0:
+	LOAD_FAST             3	# "tie"
+	RETURN_VALUE          
+.code_end
+.code_start 161
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/Tic_Tac_Toe.py"
+.set name		 "is_gameover"
+.set stack_size		 3
+.set arg_count		 1
+
+.consts
+	None
+	"X"
+	"O"
+	"X wins"
+	"O wins"
+	"Its a tie"
+
+.names
+	"is_winner"
+	"X_wins"
+	"O_wins"
+	"is_tie"
+	"tie"
+
+.varnames
+	"self"
+	"gameover"
+
+.text
+.line 163
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             0
+	LOAD_CONST            1	# "X"
+	CALL_FUNCTION         1
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            1
+.line 164
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	POP_JUMP_IF_TRUE      label_0
+.line 165
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             0
+	LOAD_CONST            2	# "O"
+	CALL_FUNCTION         1
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            2
+	JUMP_FORWARD          label_0
+.line 167
+label_0:
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             2
+	POP_JUMP_IF_TRUE      label_1
+.line 168
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             3
+	CALL_FUNCTION         0
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            4
+	JUMP_FORWARD          label_1
+.line 170
+label_1:
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	JUMP_IF_TRUE_OR_POP 
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             2
+	JUMP_IF_TRUE_OR_POP 
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             4
+label_2:
+	STORE_FAST            1	# "gameover"
+.line 172
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	POP_JUMP_IF_FALSE     label_3
+.line 173
+	LOAD_CONST            3	# "X wins"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_3
+.line 174
+label_3:
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             2
+	POP_JUMP_IF_FALSE     label_4
+.line 175
+	LOAD_CONST            4	# "O wins"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_4
+.line 176
+label_4:
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             4
+	POP_JUMP_IF_FALSE     label_5
+.line 177
+	LOAD_CONST            5	# "Its a tie"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_5
+.line 179
+label_5:
+	LOAD_FAST             1	# "gameover"
+	RETURN_VALUE          
+.code_end
+.code_start 185
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/Tic_Tac_Toe.py"
+.set name		 "click"
+.set stack_size		 4
+.set arg_count		 2
+
+.consts
+	None
+	-1
+	0
+	1
+	"all"
+
+.names
+	"x"
+	"y"
+	"convert_grid_to_logical_position"
+	"reset_board"
+	"player_X_turns"
+	"is_grid_occupied"
+	"draw_X"
+	"board_status"
+	"draw_O"
+	"is_gameover"
+	"display_gameover"
+	"canvas"
+	"delete"
+	"play_again"
+	"False"
+
+.varnames
+	"self"
+	"event"
+	"grid_position"
+	"logical_position"
+
+.text
+.line 186
+	LOAD_FAST             1	# "event"
+	LOAD_ATTR             0
+	LOAD_FAST             1	# "event"
+	LOAD_ATTR             1
+	BUILD_LIST            2
+	STORE_FAST            2	# "grid_position"
+.line 187
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             2
+	LOAD_FAST             2	# "grid_position"
+	CALL_FUNCTION         1
+	STORE_FAST            3	# "logical_position"
+.line 189
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             3
+	POP_JUMP_IF_TRUE      label_2
+.line 190
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             4
+	POP_JUMP_IF_FALSE     label_0
+.line 191
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             5
+	LOAD_FAST             3	# "logical_position"
+	CALL_FUNCTION         1
+	POP_JUMP_IF_TRUE      label_1
+.line 192
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             6
+	LOAD_FAST             3	# "logical_position"
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 193
+	LOAD_CONST            1	# -1
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             7
+	LOAD_FAST             3	# "logical_position"
+	LOAD_CONST            2	# 0
+	BINARY_SUBSCR         
+	BINARY_SUBSCR         
+	LOAD_FAST             3	# "logical_position"
+	LOAD_CONST            3	# 1
+	BINARY_SUBSCR         
+	STORE_SUBSCR          
+.line 194
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             4
+	UNARY_NOT             
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            4
+	JUMP_ABSOLUTE         label_1
+	JUMP_FORWARD          label_1
+.line 196
+label_0:
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             5
+	LOAD_FAST             3	# "logical_position"
+	CALL_FUNCTION         1
+	POP_JUMP_IF_TRUE      label_1
+.line 197
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             8
+	LOAD_FAST             3	# "logical_position"
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 198
+	LOAD_CONST            3	# 1
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             7
+	LOAD_FAST             3	# "logical_position"
+	LOAD_CONST            2	# 0
+	BINARY_SUBSCR         
+	BINARY_SUBSCR         
+	LOAD_FAST             3	# "logical_position"
+	LOAD_CONST            3	# 1
+	BINARY_SUBSCR         
+	STORE_SUBSCR          
+.line 199
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             4
+	UNARY_NOT             
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            4
+	JUMP_FORWARD          label_1
+.line 202
+label_1:
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             9
+	CALL_FUNCTION         0
+	POP_JUMP_IF_FALSE     label_3
+.line 203
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             10
+	CALL_FUNCTION         0
+	POP_TOP               
+	JUMP_ABSOLUTE         label_3
+	JUMP_FORWARD          label_3
+.line 206
+label_2:
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             11
+	LOAD_ATTR             12
+	LOAD_CONST            4	# "all"
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 207
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             13
+	CALL_FUNCTION         0
+	POP_TOP               
+.line 208
+	LOAD_GLOBAL           14
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            3
+label_3:
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+
+.names
+	"__name__"
+	"__module__"
+	"__init__"
+	"mainloop"
+	"initialize_board"
+	"play_again"
+	"draw_O"
+	"draw_X"
+	"display_gameover"
+	"convert_logical_to_grid_position"
+	"convert_grid_to_logical_position"
+	"is_grid_occupied"
+	"is_winner"
+	"is_tie"
+	"is_gameover"
+	"click"
+
+.text
+.line 14
+	LOAD_NAME             0	# "__name__"
+	STORE_NAME            1	# "__module__"
+.line 18
+	LOAD_CONST            0	# <code:"__init__">
+	MAKE_FUNCTION         0
+	STORE_NAME            2	# "__init__"
+.line 41
+	LOAD_CONST            1	# <code:"mainloop">
+	MAKE_FUNCTION         0
+	STORE_NAME            3	# "mainloop"
+.line 44
+	LOAD_CONST            2	# <code:"initialize_board">
+	MAKE_FUNCTION         0
+	STORE_NAME            4	# "initialize_board"
+.line 51
+	LOAD_CONST            3	# <code:"play_again">
+	MAKE_FUNCTION         0
+	STORE_NAME            5	# "play_again"
+.line 62
+	LOAD_CONST            4	# <code:"draw_O">
+	MAKE_FUNCTION         0
+	STORE_NAME            6	# "draw_O"
+.line 71
+	LOAD_CONST            5	# <code:"draw_X">
+	MAKE_FUNCTION         0
+	STORE_NAME            7	# "draw_X"
+.line 80
+	LOAD_CONST            6	# <code:"display_gameover">
+	MAKE_FUNCTION         0
+	STORE_NAME            8	# "display_gameover"
+.line 118
+	LOAD_CONST            7	# <code:"convert_logical_to_grid_position">
+	MAKE_FUNCTION         0
+	STORE_NAME            9	# "convert_logical_to_grid_position"
+.line 122
+	LOAD_CONST            8	# <code:"convert_grid_to_logical_position">
+	MAKE_FUNCTION         0
+	STORE_NAME            10	# "convert_grid_to_logical_position"
+.line 126
+	LOAD_CONST            9	# <code:"is_grid_occupied">
+	MAKE_FUNCTION         0
+	STORE_NAME            11	# "is_grid_occupied"
+.line 132
+	LOAD_CONST            10	# <code:"is_winner">
+	MAKE_FUNCTION         0
+	STORE_NAME            12	# "is_winner"
+.line 152
+	LOAD_CONST            11	# <code:"is_tie">
+	MAKE_FUNCTION         0
+	STORE_NAME            13	# "is_tie"
+.line 161
+	LOAD_CONST            12	# <code:"is_gameover">
+	MAKE_FUNCTION         0
+	STORE_NAME            14	# "is_gameover"
+.line 185
+	LOAD_CONST            13	# <code:"click">
+	MAKE_FUNCTION         0
+	STORE_NAME            15	# "click"
+	LOAD_LOCALS           
+	RETURN_VALUE          
+.code_end
+	( )
+
+.names
+	"tkinter"
+	"numpy"
+	"np"
+	"size_of_board"
+	"symbol_size"
+	"symbol_thickness"
+	"symbol_X_color"
+	"symbol_O_color"
+	"Green_color"
+	"Tic_Tac_Toe"
+	"game_instance"
+	"mainloop"
+
+.text
+.line 3
+	LOAD_CONST            0	# -1
+	LOAD_CONST            1	# ( "*" )
+	IMPORT_NAME           0
+	IMPORT_STAR           
+.line 4
+	LOAD_CONST            0	# -1
+	LOAD_CONST            2	# None
+	IMPORT_NAME           1
+	STORE_NAME            2	# "np"
+.line 6
+	LOAD_CONST            3	# 600
+	STORE_NAME            3	# "size_of_board"
+.line 7
+	LOAD_NAME             3	# "size_of_board"
+	LOAD_CONST            4	# 3
+	BINARY_DIVIDE         
+	LOAD_NAME             3	# "size_of_board"
+	LOAD_CONST            5	# 8
+	BINARY_DIVIDE         
+	BINARY_SUBTRACT       
+	LOAD_CONST            6	# 2
+	BINARY_DIVIDE         
+	STORE_NAME            4	# "symbol_size"
+.line 8
+	LOAD_CONST            7	# 50
+	STORE_NAME            5	# "symbol_thickness"
+.line 9
+	LOAD_CONST            8	# "#EE4035"
+	STORE_NAME            6	# "symbol_X_color"
+.line 10
+	LOAD_CONST            9	# "#0492CF"
+	STORE_NAME            7	# "symbol_O_color"
+.line 11
+	LOAD_CONST            10	# "#7BC043"
+	STORE_NAME            8	# "Green_color"
+.line 14
+	LOAD_CONST            11	# "Tic_Tac_Toe"
+	LOAD_CONST            13	# ( )
+	LOAD_CONST            12	# <code:"Tic_Tac_Toe">
+	MAKE_FUNCTION         0
+	CALL_FUNCTION         0
+	BUILD_CLASS           
+	STORE_NAME            9	# "Tic_Tac_Toe"
+.line -45
+	LOAD_NAME             9	# "Tic_Tac_Toe"
+	CALL_FUNCTION         0
+	STORE_NAME            10	# "game_instance"
+.line -44
+	LOAD_NAME             10	# "game_instance"
+	LOAD_ATTR             11
+	CALL_FUNCTION         0
+	POP_TOP               
+	LOAD_CONST            2	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

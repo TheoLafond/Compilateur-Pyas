@@ -1,0 +1,1014 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/Web_Scraping_with_BeatifulSoup.py"
+.set name		 "<module>"
+.set stack_size		 9
+.set arg_count		 0
+
+.interned
+	"datetime"
+	"urlparse"
+	"BeautifulSoup"
+	"BeautifulTable"
+	"r"
+	"open"
+	"json"
+	"loads"
+	"read"
+	"dict"
+	"database_json_file"
+	"read_it"
+	"all_data_base"
+	"load_json"
+	"w"
+	"write"
+	"dumps"
+	"close"
+	"data"
+	"file_obj"
+	"save_scraped_data_in_json"
+	"scraped_data"
+	"get"
+	"None"
+	"json_db"
+	"existing_scraped_data_init"
+	"now"
+	"strftime"
+	"dt_string"
+	"scraped_time_is"
+	"html"
+	"requests"
+	"status_code"
+	"text"
+	"website_url"
+	"requets_data"
+	"soup"
+	"process_url_request"
+	"title"
+	"a"
+	"href"
+	"all_anchor_href"
+	"all_anchors"
+	"img"
+	"all_images_data"
+	"src"
+	"all_images_source_data"
+	"h1"
+	"all_h1_data"
+	"h2"
+	"all_h2_data"
+	"h3"
+	"all_h3_data"
+	"p"
+	"all_p_data"
+	"find"
+	"find_all"
+	"True"
+	"str"
+	"i"
+	"proccess_beautiful_soup_data"
+	"Status"
+	"alias"
+	"domain"
+	"scraped_at"
+	"status"
+	"url"
+	"name"
+	"urllib.parse"
+	"bs4"
+	"beautifultable"
+	"int"
+	"input"
+	"choice"
+	"local_json_db"
+	"scraped_websites_table"
+	"columns"
+	"header"
+	"set_style"
+	"STYLE_BOX_DOUBLED"
+	"enumerate"
+	"count"
+	"rows"
+	"append"
+	"url_for_scrap"
+	"is_accessable"
+	"scraped_data_packet"
+	"key_for_storing_data"
+	"format"
+	"netloc"
+	"<module>"
+
+.consts
+	-1
+	None
+	( "datetime" )
+	( "urlparse" )
+	( "BeautifulSoup" )
+	( "BeautifulTable" )
+	"scraped_data.json"
+.code_start 11
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/Web_Scraping_with_BeatifulSoup.py"
+.set name		 "load_json"
+.set stack_size		 6
+.set arg_count		 1
+
+.consts
+	"\n    This function will load json data from scraped_data.json file if it exist else crean an empty array\n    "
+	"r"
+	None
+
+.names
+	"open"
+	"json"
+	"loads"
+	"read"
+	"dict"
+
+.varnames
+	"database_json_file"
+	"read_it"
+	"all_data_base"
+
+.text
+.line 15
+	SETUP_EXCEPT          label_1
+.line 16
+	LOAD_GLOBAL           0
+	LOAD_FAST             0	# "database_json_file"
+	LOAD_CONST            1	# "r"
+	CALL_FUNCTION         2
+	SETUP_WITH            label_0
+	STORE_FAST            1	# "read_it"
+.line 17
+	LOAD_GLOBAL           1
+	LOAD_ATTR             2
+	LOAD_FAST             1	# "read_it"
+	LOAD_ATTR             3
+	CALL_FUNCTION         0
+	CALL_FUNCTION         1
+	STORE_FAST            2	# "all_data_base"
+.line 18
+	LOAD_FAST             2	# "all_data_base"
+	RETURN_VALUE          
+	POP_BLOCK             
+	LOAD_CONST            2	# None
+label_0:
+	WITH_CLEANUP          
+	END_FINALLY           
+	POP_BLOCK             
+	JUMP_FORWARD          label_2
+.line 19
+label_1:
+	POP_TOP               
+	POP_TOP               
+	POP_TOP               
+.line 20
+	LOAD_GLOBAL           4
+	CALL_FUNCTION         0
+	STORE_FAST            2	# "all_data_base"
+.line 21
+	LOAD_FAST             2	# "all_data_base"
+	RETURN_VALUE          
+	END_FINALLY           
+label_2:
+	LOAD_CONST            2	# None
+	RETURN_VALUE          
+.code_end
+.code_start 24
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/Web_Scraping_with_BeatifulSoup.py"
+.set name		 "save_scraped_data_in_json"
+.set stack_size		 3
+.set arg_count		 2
+
+.consts
+	"\n    This function Save the scraped data in json format. scraped_data.json file if it exist else create it.\n    if file already exist you can view previous scraped data\n    "
+	"w"
+	None
+
+.names
+	"open"
+	"write"
+	"json"
+	"dumps"
+	"close"
+
+.varnames
+	"data"
+	"database_json_file"
+	"file_obj"
+
+.text
+.line 29
+	LOAD_GLOBAL           0
+	LOAD_FAST             1	# "database_json_file"
+	LOAD_CONST            1	# "w"
+	CALL_FUNCTION         2
+	STORE_FAST            2	# "file_obj"
+.line 30
+	LOAD_FAST             2	# "file_obj"
+	LOAD_ATTR             1
+	LOAD_GLOBAL           2
+	LOAD_ATTR             3
+	LOAD_FAST             0	# "data"
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 31
+	LOAD_FAST             2	# "file_obj"
+	LOAD_ATTR             4
+	CALL_FUNCTION         0
+	POP_TOP               
+	LOAD_CONST            2	# None
+	RETURN_VALUE          
+.code_end
+.code_start 34
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/Web_Scraping_with_BeatifulSoup.py"
+.set name		 "existing_scraped_data_init"
+.set stack_size		 3
+.set arg_count		 1
+
+.consts
+	"\n    This function init data from json file if it exist have data else create an empty one \n    "
+	"scraped_data"
+	None
+
+.names
+	"get"
+	"None"
+	"dict"
+
+.varnames
+	"json_db"
+	"scraped_data"
+
+.text
+.line 38
+	LOAD_FAST             0	# "json_db"
+	LOAD_ATTR             0
+	LOAD_CONST            1	# "scraped_data"
+	CALL_FUNCTION         1
+	STORE_FAST            1	# "scraped_data"
+.line 39
+	LOAD_FAST             1	# "scraped_data"
+	LOAD_CONST            2	# None
+	COMPARE_OP            8	# "Unknown operator"
+	POP_JUMP_IF_FALSE     label_0
+.line 40
+	LOAD_GLOBAL           2
+	CALL_FUNCTION         0
+	LOAD_FAST             0	# "json_db"
+	LOAD_CONST            1	# "scraped_data"
+	STORE_SUBSCR          
+	JUMP_FORWARD          label_0
+.line 42
+label_0:
+	LOAD_CONST            2	# None
+	RETURN_VALUE          
+.code_end
+.code_start 45
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/Web_Scraping_with_BeatifulSoup.py"
+.set name		 "scraped_time_is"
+.set stack_size		 2
+.set arg_count		 0
+
+.consts
+	"\n    This function create time stamp for keep our book issue record trackable \n    "
+	"%d/%m/%Y %H:%M:%S"
+
+.names
+	"datetime"
+	"now"
+	"strftime"
+
+.varnames
+	"now"
+	"dt_string"
+
+.text
+.line 49
+	LOAD_GLOBAL           0
+	LOAD_ATTR             1
+	CALL_FUNCTION         0
+	STORE_FAST            0	# "now"
+.line 50
+	LOAD_FAST             0	# "now"
+	LOAD_ATTR             2
+	LOAD_CONST            1	# "%d/%m/%Y %H:%M:%S"
+	CALL_FUNCTION         1
+	STORE_FAST            1	# "dt_string"
+.line 51
+	LOAD_FAST             1	# "dt_string"
+	RETURN_VALUE          
+.code_end
+.code_start 53
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/Web_Scraping_with_BeatifulSoup.py"
+.set name		 "process_url_request"
+.set stack_size		 3
+.set arg_count		 1
+
+.consts
+	"\n    This function process provided URL get its data using requets module\n    and contrunct soup data using BeautifulSoup for scarping\n    "
+	200
+	"html"
+	None
+
+.names
+	"requests"
+	"get"
+	"status_code"
+	"BeautifulSoup"
+	"text"
+	"None"
+
+.varnames
+	"website_url"
+	"requets_data"
+	"soup"
+
+.text
+.line 58
+	LOAD_GLOBAL           0
+	LOAD_ATTR             1
+	LOAD_FAST             0	# "website_url"
+	CALL_FUNCTION         1
+	STORE_FAST            1	# "requets_data"
+.line 59
+	LOAD_FAST             1	# "requets_data"
+	LOAD_ATTR             2
+	LOAD_CONST            1	# 200
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_0
+.line 60
+	LOAD_GLOBAL           3
+	LOAD_FAST             1	# "requets_data"
+	LOAD_ATTR             4
+	LOAD_CONST            2	# "html"
+	CALL_FUNCTION         2
+	STORE_FAST            2	# "soup"
+.line 61
+	LOAD_FAST             2	# "soup"
+	RETURN_VALUE          
+.line 62
+label_0:
+	LOAD_CONST            3	# None
+	RETURN_VALUE          
+.code_end
+.code_start 64
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/Web_Scraping_with_BeatifulSoup.py"
+.set name		 "proccess_beautiful_soup_data"
+.set stack_size		 6
+.set arg_count		 1
+
+.consts
+	None
+	"title"
+	"a"
+	"href"
+	"all_anchor_href"
+	"all_anchors"
+	"img"
+	"all_images_data"
+	"src"
+	"all_images_source_data"
+	"h1"
+	"all_h1_data"
+	"h2"
+	"all_h2_data"
+	"h3"
+	"all_h3_data"
+	"p"
+	"all_p_data"
+
+.names
+	"find"
+	"text"
+	"find_all"
+	"True"
+	"str"
+
+.varnames
+	"soup"
+	"i"
+
+.text
+.line 65
+	BUILD_MAP             9
+.line 66
+	LOAD_FAST             0	# "soup"
+	LOAD_ATTR             0
+	LOAD_CONST            1	# "title"
+	CALL_FUNCTION         1
+	LOAD_ATTR             1
+	LOAD_CONST            1	# "title"
+	STORE_MAP             
+.line 67
+	BUILD_LIST            0
+	LOAD_FAST             0	# "soup"
+	LOAD_ATTR             2
+	LOAD_CONST            2	# "a"
+	LOAD_CONST            3	# "href"
+	LOAD_GLOBAL           3
+	CALL_FUNCTION         257
+	GET_ITER              
+label_0:
+	FOR_ITER              label_1
+	STORE_FAST            1	# "i"
+	LOAD_FAST             1	# "i"
+	LOAD_CONST            3	# "href"
+	BINARY_SUBSCR         
+	LIST_APPEND           2
+	JUMP_ABSOLUTE         label_0
+label_1:
+	LOAD_CONST            4	# "all_anchor_href"
+	STORE_MAP             
+.line 68
+	BUILD_LIST            0
+	LOAD_FAST             0	# "soup"
+	LOAD_ATTR             2
+	LOAD_CONST            2	# "a"
+	CALL_FUNCTION         1
+	GET_ITER              
+label_2:
+	FOR_ITER              label_3
+	STORE_FAST            1	# "i"
+	LOAD_GLOBAL           4
+	LOAD_FAST             1	# "i"
+	CALL_FUNCTION         1
+	LIST_APPEND           2
+	JUMP_ABSOLUTE         label_2
+label_3:
+	LOAD_CONST            5	# "all_anchors"
+	STORE_MAP             
+.line 69
+	BUILD_LIST            0
+	LOAD_FAST             0	# "soup"
+	LOAD_ATTR             2
+	LOAD_CONST            6	# "img"
+	CALL_FUNCTION         1
+	GET_ITER              
+label_4:
+	FOR_ITER              label_5
+	STORE_FAST            1	# "i"
+	LOAD_GLOBAL           4
+	LOAD_FAST             1	# "i"
+	CALL_FUNCTION         1
+	LIST_APPEND           2
+	JUMP_ABSOLUTE         label_4
+label_5:
+	LOAD_CONST            7	# "all_images_data"
+	STORE_MAP             
+.line 70
+	BUILD_LIST            0
+	LOAD_FAST             0	# "soup"
+	LOAD_ATTR             2
+	LOAD_CONST            6	# "img"
+	CALL_FUNCTION         1
+	GET_ITER              
+label_6:
+	FOR_ITER              label_7
+	STORE_FAST            1	# "i"
+	LOAD_FAST             1	# "i"
+	LOAD_CONST            8	# "src"
+	BINARY_SUBSCR         
+	LIST_APPEND           2
+	JUMP_ABSOLUTE         label_6
+label_7:
+	LOAD_CONST            9	# "all_images_source_data"
+	STORE_MAP             
+.line 71
+	BUILD_LIST            0
+	LOAD_FAST             0	# "soup"
+	LOAD_ATTR             2
+	LOAD_CONST            10	# "h1"
+	CALL_FUNCTION         1
+	GET_ITER              
+label_8:
+	FOR_ITER              label_9
+	STORE_FAST            1	# "i"
+	LOAD_FAST             1	# "i"
+	LOAD_ATTR             1
+	LIST_APPEND           2
+	JUMP_ABSOLUTE         label_8
+label_9:
+	LOAD_CONST            11	# "all_h1_data"
+	STORE_MAP             
+.line 72
+	BUILD_LIST            0
+	LOAD_FAST             0	# "soup"
+	LOAD_ATTR             2
+	LOAD_CONST            12	# "h2"
+	CALL_FUNCTION         1
+	GET_ITER              
+label_10:
+	FOR_ITER              label_11
+	STORE_FAST            1	# "i"
+	LOAD_FAST             1	# "i"
+	LOAD_ATTR             1
+	LIST_APPEND           2
+	JUMP_ABSOLUTE         label_10
+label_11:
+	LOAD_CONST            13	# "all_h2_data"
+	STORE_MAP             
+.line 73
+	BUILD_LIST            0
+	LOAD_FAST             0	# "soup"
+	LOAD_ATTR             2
+	LOAD_CONST            14	# "h3"
+	CALL_FUNCTION         1
+	GET_ITER              
+label_12:
+	FOR_ITER              label_13
+	STORE_FAST            1	# "i"
+	LOAD_FAST             1	# "i"
+	LOAD_ATTR             1
+	LIST_APPEND           2
+	JUMP_ABSOLUTE         label_12
+label_13:
+	LOAD_CONST            15	# "all_h3_data"
+	STORE_MAP             
+.line 74
+	BUILD_LIST            0
+	LOAD_FAST             0	# "soup"
+	LOAD_ATTR             2
+	LOAD_CONST            16	# "p"
+	CALL_FUNCTION         1
+	GET_ITER              
+label_14:
+	FOR_ITER              label_15
+	STORE_FAST            1	# "i"
+	LOAD_FAST             1	# "i"
+	LOAD_ATTR             1
+	LIST_APPEND           2
+	JUMP_ABSOLUTE         label_14
+label_15:
+	LOAD_CONST            17	# "all_p_data"
+	STORE_MAP             
+	RETURN_VALUE          
+.code_end
+	"  ================ Welcome to this scraping program =============\n    ==>> press 1 for checking existing scraped websites\n    ==>> press 2 for scrap a single website\n    ==>> press 3 for exit\n    "
+	"==>> Please enter your choice :"
+	1
+	"Sr no."
+	"Allias name "
+	"Website domain"
+	"title"
+	"Scraped at"
+	"Status"
+	"scraped_data"
+	"alias"
+	"domain"
+	"scraped_at"
+	"status"
+	"===> No existing data found !!!"
+	2
+	"===> Please enter url you want to scrap:"
+	" =====> Data scraped successfully !!!"
+	"enter alias name for saving scraped data :"
+	"url"
+	"name"
+	"Provided key is already exist so data stored as : {}"
+	"scraped data is:"
+	" =====> Data saved successfully !!!"
+	3
+	"Thank you for using !!!"
+	4
+	"enter a valid choice "
+	( )
+	( )
+	( )
+
+.names
+	"json"
+	"requests"
+	"datetime"
+	"urllib.parse"
+	"urlparse"
+	"bs4"
+	"BeautifulSoup"
+	"beautifultable"
+	"BeautifulTable"
+	"load_json"
+	"save_scraped_data_in_json"
+	"existing_scraped_data_init"
+	"scraped_time_is"
+	"process_url_request"
+	"proccess_beautiful_soup_data"
+	"True"
+	"int"
+	"input"
+	"choice"
+	"local_json_db"
+	"scraped_websites_table"
+	"columns"
+	"header"
+	"set_style"
+	"STYLE_BOX_DOUBLED"
+	"enumerate"
+	"count"
+	"data"
+	"rows"
+	"append"
+	"url_for_scrap"
+	"is_accessable"
+	"scraped_data_packet"
+	"key_for_storing_data"
+	"str"
+	"format"
+	"netloc"
+
+.text
+.line 2
+	LOAD_CONST            0	# -1
+	LOAD_CONST            1	# None
+	IMPORT_NAME           0
+	STORE_NAME            0	# "json"
+.line 3
+	LOAD_CONST            0	# -1
+	LOAD_CONST            1	# None
+	IMPORT_NAME           1
+	STORE_NAME            1	# "requests"
+.line 4
+	LOAD_CONST            0	# -1
+	LOAD_CONST            2	# ( "datetime" )
+	IMPORT_NAME           2
+	IMPORT_FROM           2
+	STORE_NAME            2	# "datetime"
+	POP_TOP               
+.line 5
+	LOAD_CONST            0	# -1
+	LOAD_CONST            3	# ( "urlparse" )
+	IMPORT_NAME           3
+	IMPORT_FROM           4
+	STORE_NAME            4	# "urlparse"
+	POP_TOP               
+.line 6
+	LOAD_CONST            0	# -1
+	LOAD_CONST            4	# ( "BeautifulSoup" )
+	IMPORT_NAME           5
+	IMPORT_FROM           6
+	STORE_NAME            6	# "BeautifulSoup"
+	POP_TOP               
+.line 7
+	LOAD_CONST            0	# -1
+	LOAD_CONST            5	# ( "BeautifulTable" )
+	IMPORT_NAME           7
+	IMPORT_FROM           8
+	STORE_NAME            8	# "BeautifulTable"
+	POP_TOP               
+.line 11
+	LOAD_CONST            6	# "scraped_data.json"
+	LOAD_CONST            7	# <code:"load_json">
+	MAKE_FUNCTION         1
+	STORE_NAME            9	# "load_json"
+.line 24
+	LOAD_CONST            6	# "scraped_data.json"
+	LOAD_CONST            8	# <code:"save_scraped_data_in_json">
+	MAKE_FUNCTION         1
+	STORE_NAME            10	# "save_scraped_data_in_json"
+.line 34
+	LOAD_CONST            9	# <code:"existing_scraped_data_init">
+	MAKE_FUNCTION         0
+	STORE_NAME            11	# "existing_scraped_data_init"
+.line 45
+	LOAD_CONST            10	# <code:"scraped_time_is">
+	MAKE_FUNCTION         0
+	STORE_NAME            12	# "scraped_time_is"
+.line 53
+	LOAD_CONST            11	# <code:"process_url_request">
+	MAKE_FUNCTION         0
+	STORE_NAME            13	# "process_url_request"
+.line 64
+	LOAD_CONST            12	# <code:"proccess_beautiful_soup_data">
+	MAKE_FUNCTION         0
+	STORE_NAME            14	# "proccess_beautiful_soup_data"
+.line 80
+	SETUP_LOOP            label_12
+label_0:
+	LOAD_NAME             15	# "True"
+	POP_JUMP_IF_FALSE     label_11
+.line 86
+	LOAD_CONST            13	# "  ================ Welcome to this scraping program =============\n    ==>> press 1 for checking existing scraped websites\n    ==>> press 2 for scrap a single website\n    ==>> press 3 for exit\n    "
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 88
+	LOAD_NAME             16	# "int"
+	LOAD_NAME             17	# "input"
+	LOAD_CONST            14	# "==>> Please enter your choice :"
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            18	# "choice"
+.line 91
+	LOAD_NAME             9	# "load_json"
+	CALL_FUNCTION         0
+	STORE_NAME            19	# "local_json_db"
+.line 92
+	LOAD_NAME             11	# "existing_scraped_data_init"
+	LOAD_NAME             19	# "local_json_db"
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 94
+	LOAD_NAME             18	# "choice"
+	LOAD_CONST            15	# 1
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_5
+.line 97
+	LOAD_NAME             8	# "BeautifulTable"
+	CALL_FUNCTION         0
+	STORE_NAME            20	# "scraped_websites_table"
+.line 98
+	LOAD_CONST            16	# "Sr no."
+	LOAD_CONST            17	# "Allias name "
+	LOAD_CONST            18	# "Website domain"
+	LOAD_CONST            19	# "title"
+	LOAD_CONST            20	# "Scraped at"
+	LOAD_CONST            21	# "Status"
+	BUILD_LIST            6
+	LOAD_NAME             20	# "scraped_websites_table"
+	LOAD_ATTR             21
+	STORE_ATTR            22
+.line 99
+	LOAD_NAME             20	# "scraped_websites_table"
+	LOAD_ATTR             23
+	LOAD_NAME             8	# "BeautifulTable"
+	LOAD_ATTR             24
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 102
+	LOAD_NAME             9	# "load_json"
+	CALL_FUNCTION         0
+	STORE_NAME            19	# "local_json_db"
+.line 103
+	SETUP_LOOP            label_3
+	LOAD_NAME             25	# "enumerate"
+	LOAD_NAME             19	# "local_json_db"
+	LOAD_CONST            22	# "scraped_data"
+	BINARY_SUBSCR         
+	CALL_FUNCTION         1
+	GET_ITER              
+label_1:
+	FOR_ITER              label_2
+	UNPACK_SEQUENCE       2
+	STORE_NAME            26	# "count"
+	STORE_NAME            27	# "data"
+.line 104
+	LOAD_NAME             20	# "scraped_websites_table"
+	LOAD_ATTR             28
+	LOAD_ATTR             29
+	LOAD_NAME             26	# "count"
+	LOAD_CONST            15	# 1
+	BINARY_ADD            
+.line 105
+	LOAD_NAME             19	# "local_json_db"
+	LOAD_CONST            22	# "scraped_data"
+	BINARY_SUBSCR         
+	LOAD_NAME             27	# "data"
+	BINARY_SUBSCR         
+	LOAD_CONST            23	# "alias"
+	BINARY_SUBSCR         
+.line 106
+	LOAD_NAME             19	# "local_json_db"
+	LOAD_CONST            22	# "scraped_data"
+	BINARY_SUBSCR         
+	LOAD_NAME             27	# "data"
+	BINARY_SUBSCR         
+	LOAD_CONST            24	# "domain"
+	BINARY_SUBSCR         
+.line 107
+	LOAD_NAME             19	# "local_json_db"
+	LOAD_CONST            22	# "scraped_data"
+	BINARY_SUBSCR         
+	LOAD_NAME             27	# "data"
+	BINARY_SUBSCR         
+	LOAD_CONST            19	# "title"
+	BINARY_SUBSCR         
+.line 108
+	LOAD_NAME             19	# "local_json_db"
+	LOAD_CONST            22	# "scraped_data"
+	BINARY_SUBSCR         
+	LOAD_NAME             27	# "data"
+	BINARY_SUBSCR         
+	LOAD_CONST            25	# "scraped_at"
+	BINARY_SUBSCR         
+.line 109
+	LOAD_NAME             19	# "local_json_db"
+	LOAD_CONST            22	# "scraped_data"
+	BINARY_SUBSCR         
+	LOAD_NAME             27	# "data"
+	BINARY_SUBSCR         
+	LOAD_CONST            26	# "status"
+	BINARY_SUBSCR         
+	BUILD_LIST            6
+	CALL_FUNCTION         1
+	POP_TOP               
+	JUMP_ABSOLUTE         label_1
+label_2:
+	POP_BLOCK             
+.line 111
+label_3:
+	LOAD_NAME             19	# "local_json_db"
+	LOAD_CONST            22	# "scraped_data"
+	BINARY_SUBSCR         
+	POP_JUMP_IF_TRUE      label_4
+.line 112
+	LOAD_CONST            27	# "===> No existing data found !!!"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_4
+.line 113
+label_4:
+	LOAD_NAME             20	# "scraped_websites_table"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_ABSOLUTE         label_0
+.line 115
+label_5:
+	LOAD_NAME             18	# "choice"
+	LOAD_CONST            28	# 2
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_7
+.line 116
+	LOAD_CONST            41	# ( )
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 117
+	LOAD_NAME             17	# "input"
+	LOAD_CONST            29	# "===> Please enter url you want to scrap:"
+	CALL_FUNCTION         1
+	STORE_NAME            30	# "url_for_scrap"
+.line 118
+	LOAD_NAME             13	# "process_url_request"
+	LOAD_NAME             30	# "url_for_scrap"
+	CALL_FUNCTION         1
+	STORE_NAME            31	# "is_accessable"
+.line 119
+	LOAD_NAME             31	# "is_accessable"
+	POP_JUMP_IF_FALSE     label_10
+.line 120
+	LOAD_NAME             14	# "proccess_beautiful_soup_data"
+	LOAD_NAME             31	# "is_accessable"
+	CALL_FUNCTION         1
+	STORE_NAME            32	# "scraped_data_packet"
+.line 121
+	LOAD_CONST            42	# ( )
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 122
+	LOAD_CONST            30	# " =====> Data scraped successfully !!!"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 123
+	LOAD_NAME             17	# "input"
+	LOAD_CONST            31	# "enter alias name for saving scraped data :"
+	CALL_FUNCTION         1
+	STORE_NAME            33	# "key_for_storing_data"
+.line 124
+	LOAD_NAME             30	# "url_for_scrap"
+	LOAD_NAME             32	# "scraped_data_packet"
+	LOAD_CONST            32	# "url"
+	STORE_SUBSCR          
+.line 125
+	LOAD_NAME             33	# "key_for_storing_data"
+	LOAD_NAME             32	# "scraped_data_packet"
+	LOAD_CONST            33	# "name"
+	STORE_SUBSCR          
+.line 126
+	LOAD_NAME             12	# "scraped_time_is"
+	CALL_FUNCTION         0
+	LOAD_NAME             32	# "scraped_data_packet"
+	LOAD_CONST            25	# "scraped_at"
+	STORE_SUBSCR          
+.line 127
+	LOAD_NAME             33	# "key_for_storing_data"
+	LOAD_NAME             19	# "local_json_db"
+	LOAD_CONST            22	# "scraped_data"
+	BINARY_SUBSCR         
+	COMPARE_OP            6	# "Unknown operator"
+	POP_JUMP_IF_FALSE     label_6
+.line 128
+	LOAD_NAME             33	# "key_for_storing_data"
+	LOAD_NAME             34	# "str"
+	LOAD_NAME             12	# "scraped_time_is"
+	CALL_FUNCTION         0
+	CALL_FUNCTION         1
+	BINARY_ADD            
+	STORE_NAME            33	# "key_for_storing_data"
+.line 129
+	LOAD_CONST            34	# "Provided key is already exist so data stored as : {}"
+	LOAD_ATTR             35
+	LOAD_NAME             33	# "key_for_storing_data"
+	CALL_FUNCTION         1
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_6
+.line 130
+label_6:
+	LOAD_NAME             33	# "key_for_storing_data"
+	LOAD_NAME             32	# "scraped_data_packet"
+	LOAD_CONST            23	# "alias"
+	STORE_SUBSCR          
+.line 131
+	LOAD_NAME             15	# "True"
+	LOAD_NAME             32	# "scraped_data_packet"
+	LOAD_CONST            26	# "status"
+	STORE_SUBSCR          
+.line 132
+	LOAD_NAME             4	# "urlparse"
+	LOAD_NAME             30	# "url_for_scrap"
+	CALL_FUNCTION         1
+	LOAD_ATTR             36
+	LOAD_NAME             32	# "scraped_data_packet"
+	LOAD_CONST            24	# "domain"
+	STORE_SUBSCR          
+.line 134
+	LOAD_NAME             32	# "scraped_data_packet"
+	LOAD_NAME             19	# "local_json_db"
+	LOAD_CONST            22	# "scraped_data"
+	BINARY_SUBSCR         
+	LOAD_NAME             33	# "key_for_storing_data"
+	STORE_SUBSCR          
+.line 136
+	LOAD_CONST            35	# "scraped data is:"
+	LOAD_NAME             19	# "local_json_db"
+	LOAD_CONST            22	# "scraped_data"
+	BINARY_SUBSCR         
+	LOAD_NAME             33	# "key_for_storing_data"
+	BINARY_SUBSCR         
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 138
+	LOAD_NAME             10	# "save_scraped_data_in_json"
+	LOAD_NAME             19	# "local_json_db"
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 140
+	LOAD_NAME             9	# "load_json"
+	CALL_FUNCTION         0
+	STORE_NAME            19	# "local_json_db"
+.line 141
+	LOAD_CONST            36	# " =====> Data saved successfully !!!"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 142
+	LOAD_CONST            43	# ( )
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_ABSOLUTE         label_10
+	JUMP_ABSOLUTE         label_0
+.line 143
+label_7:
+	LOAD_NAME             18	# "choice"
+	LOAD_CONST            37	# 3
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_8
+.line 144
+	LOAD_CONST            38	# "Thank you for using !!!"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 145
+	BREAK_LOOP            
+	JUMP_ABSOLUTE         label_0
+.line 147
+label_8:
+	LOAD_NAME             18	# "choice"
+	LOAD_CONST            39	# 4
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_9
+.line 148
+	LOAD_CONST            38	# "Thank you for using !!!"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 149
+	BREAK_LOOP            
+	JUMP_ABSOLUTE         label_0
+.line 152
+label_9:
+	LOAD_CONST            40	# "enter a valid choice "
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+label_10:
+	JUMP_ABSOLUTE         label_0
+label_11:
+	POP_BLOCK             
+label_12:
+	LOAD_CONST            1	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

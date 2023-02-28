@@ -1,0 +1,56 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/loop.py"
+.set name		 "<module>"
+.set stack_size		 3
+.set arg_count		 0
+
+.interned
+	"apple"
+	"banana"
+	"cherry"
+	"fruits"
+	"x"
+	"<module>"
+
+.consts
+	"apple"
+	"banana"
+	"cherry"
+	None
+
+.names
+	"fruits"
+	"x"
+
+.text
+.line 1
+	LOAD_CONST            0	# "apple"
+	LOAD_CONST            1	# "banana"
+	LOAD_CONST            2	# "cherry"
+	BUILD_LIST            3
+	STORE_NAME            0	# "fruits"
+.line 2
+	SETUP_LOOP            label_2
+	LOAD_NAME             0	# "fruits"
+	GET_ITER              
+label_0:
+	FOR_ITER              label_1
+	STORE_NAME            1	# "x"
+.line 3
+	LOAD_NAME             1	# "x"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_ABSOLUTE         label_0
+label_1:
+	POP_BLOCK             
+label_2:
+	LOAD_CONST            3	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

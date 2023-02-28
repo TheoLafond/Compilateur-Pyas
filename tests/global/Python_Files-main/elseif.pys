@@ -1,0 +1,49 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/elseif.py"
+.set name		 "<module>"
+.set stack_size		 2
+.set arg_count		 0
+
+.interned
+	"a"
+	"b"
+	"<module>"
+
+.consts
+	33
+	200
+	"b is greater than a"
+	None
+
+.names
+	"a"
+	"b"
+
+.text
+.line 1
+	LOAD_CONST            0	# 33
+	STORE_NAME            0	# "a"
+.line 2
+	LOAD_CONST            1	# 200
+	STORE_NAME            1	# "b"
+.line 4
+	LOAD_NAME             1	# "b"
+	LOAD_NAME             0	# "a"
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     label_0
+.line 5
+	LOAD_CONST            2	# "b is greater than a"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_0
+label_0:
+	LOAD_CONST            3	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

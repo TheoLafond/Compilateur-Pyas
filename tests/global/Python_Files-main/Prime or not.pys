@@ -1,0 +1,97 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/Prime or not.py"
+.set name		 "<module>"
+.set stack_size		 5
+.set arg_count		 0
+
+.interned
+	"num"
+	"range"
+	"int"
+	"i"
+	"<module>"
+
+.consts
+	11
+	1
+	2
+	0
+	"is not a prime number"
+	"is a prime number"
+	None
+
+.names
+	"num"
+	"range"
+	"int"
+	"i"
+
+.text
+.line 1
+	LOAD_CONST            0	# 11
+	STORE_NAME            0	# "num"
+.line 3
+	LOAD_NAME             0	# "num"
+	LOAD_CONST            1	# 1
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     label_2
+.line 5
+	SETUP_LOOP            label_3
+	LOAD_NAME             1	# "range"
+	LOAD_CONST            2	# 2
+	LOAD_NAME             2	# "int"
+	LOAD_NAME             0	# "num"
+	LOAD_CONST            2	# 2
+	BINARY_DIVIDE         
+	CALL_FUNCTION         1
+	LOAD_CONST            1	# 1
+	BINARY_ADD            
+	CALL_FUNCTION         2
+	GET_ITER              
+label_0:
+	FOR_ITER              label_1
+	STORE_NAME            3	# "i"
+.line 8
+	LOAD_NAME             0	# "num"
+	LOAD_NAME             3	# "i"
+	BINARY_MODULO         
+	LOAD_CONST            3	# 0
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_0
+.line 9
+	LOAD_NAME             0	# "num"
+	LOAD_CONST            4	# "is not a prime number"
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 10
+	BREAK_LOOP            
+	JUMP_ABSOLUTE         label_0
+	JUMP_ABSOLUTE         label_0
+label_1:
+	POP_BLOCK             
+.line 12
+	LOAD_NAME             0	# "num"
+	LOAD_CONST            5	# "is a prime number"
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_3
+.line 14
+label_2:
+	LOAD_NAME             0	# "num"
+	LOAD_CONST            4	# "is not a prime number"
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+label_3:
+	LOAD_CONST            6	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

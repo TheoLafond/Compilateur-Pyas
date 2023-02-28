@@ -1,0 +1,46 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/accesselement.py"
+.set name		 "<module>"
+.set stack_size		 3
+.set arg_count		 0
+
+.interned
+	"apple"
+	"banana"
+	"cherry"
+	"thislist"
+	"<module>"
+
+.consts
+	"apple"
+	"banana"
+	"cherry"
+	-1
+	None
+
+.names
+	"thislist"
+
+.text
+.line 1
+	LOAD_CONST            0	# "apple"
+	LOAD_CONST            1	# "banana"
+	LOAD_CONST            2	# "cherry"
+	BUILD_LIST            3
+	STORE_NAME            0	# "thislist"
+.line 2
+	LOAD_NAME             0	# "thislist"
+	LOAD_CONST            3	# -1
+	BINARY_SUBSCR         
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            4	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

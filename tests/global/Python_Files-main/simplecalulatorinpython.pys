@@ -1,0 +1,295 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/simplecalulatorinpython.py"
+.set name		 "<module>"
+.set stack_size		 7
+.set arg_count		 0
+
+.interned
+	"P"
+	"Q"
+	"add"
+	"subtract"
+	"multiply"
+	"divide"
+	"a"
+	"b"
+	"c"
+	"d"
+	"input"
+	"choice"
+	"int"
+	"num_1"
+	"num_2"
+	"num1"
+	"num2"
+	"<module>"
+
+.consts
+.code_start 1
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/simplecalulatorinpython.py"
+.set name		 "add"
+.set stack_size		 2
+.set arg_count		 2
+
+.consts
+	None
+
+.varnames
+	"P"
+	"Q"
+
+.text
+.line 3
+	LOAD_FAST             0	# "P"
+	LOAD_FAST             1	# "Q"
+	BINARY_ADD            
+	RETURN_VALUE          
+.code_end
+.code_start 4
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/simplecalulatorinpython.py"
+.set name		 "subtract"
+.set stack_size		 2
+.set arg_count		 2
+
+.consts
+	None
+
+.varnames
+	"P"
+	"Q"
+
+.text
+.line 6
+	LOAD_FAST             0	# "P"
+	LOAD_FAST             1	# "Q"
+	BINARY_SUBTRACT       
+	RETURN_VALUE          
+.code_end
+.code_start 7
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/simplecalulatorinpython.py"
+.set name		 "multiply"
+.set stack_size		 2
+.set arg_count		 2
+
+.consts
+	None
+
+.varnames
+	"P"
+	"Q"
+
+.text
+.line 9
+	LOAD_FAST             0	# "P"
+	LOAD_FAST             1	# "Q"
+	BINARY_MULTIPLY       
+	RETURN_VALUE          
+.code_end
+.code_start 10
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/simplecalulatorinpython.py"
+.set name		 "divide"
+.set stack_size		 2
+.set arg_count		 2
+
+.consts
+	None
+
+.varnames
+	"P"
+	"Q"
+
+.text
+.line 12
+	LOAD_FAST             0	# "P"
+	LOAD_FAST             1	# "Q"
+	BINARY_DIVIDE         
+	RETURN_VALUE          
+.code_end
+	"Please select the operation."
+	"a. Add"
+	"b. Subtract"
+	"c. Multiply"
+	"d. Divide"
+	"Please enter choice (a/ b/ c/ d): "
+	"Please enter the first number: "
+	"Please enter the second number: "
+	"a"
+	" + "
+	" = "
+	"b"
+	" - "
+	"c"
+	" * "
+	"d"
+	" / "
+	"This is an invalid input"
+	None
+
+.names
+	"add"
+	"subtract"
+	"multiply"
+	"divide"
+	"input"
+	"choice"
+	"int"
+	"num_1"
+	"num_2"
+	"num1"
+	"num2"
+
+.text
+.line 1
+	LOAD_CONST            0	# <code:"add">
+	MAKE_FUNCTION         0
+	STORE_NAME            0	# "add"
+.line 4
+	LOAD_CONST            1	# <code:"subtract">
+	MAKE_FUNCTION         0
+	STORE_NAME            1	# "subtract"
+.line 7
+	LOAD_CONST            2	# <code:"multiply">
+	MAKE_FUNCTION         0
+	STORE_NAME            2	# "multiply"
+.line 10
+	LOAD_CONST            3	# <code:"divide">
+	MAKE_FUNCTION         0
+	STORE_NAME            3	# "divide"
+.line 14
+	LOAD_CONST            4	# "Please select the operation."
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 15
+	LOAD_CONST            5	# "a. Add"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 16
+	LOAD_CONST            6	# "b. Subtract"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 17
+	LOAD_CONST            7	# "c. Multiply"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 18
+	LOAD_CONST            8	# "d. Divide"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 20
+	LOAD_NAME             4	# "input"
+	LOAD_CONST            9	# "Please enter choice (a/ b/ c/ d): "
+	CALL_FUNCTION         1
+	STORE_NAME            5	# "choice"
+.line 22
+	LOAD_NAME             6	# "int"
+	LOAD_NAME             4	# "input"
+	LOAD_CONST            10	# "Please enter the first number: "
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            7	# "num_1"
+.line 23
+	LOAD_NAME             6	# "int"
+	LOAD_NAME             4	# "input"
+	LOAD_CONST            11	# "Please enter the second number: "
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            8	# "num_2"
+.line 25
+	LOAD_NAME             5	# "choice"
+	LOAD_CONST            12	# "a"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_0
+.line 26
+	LOAD_NAME             7	# "num_1"
+	LOAD_CONST            13	# " + "
+	LOAD_NAME             8	# "num_2"
+	LOAD_CONST            14	# " = "
+	LOAD_NAME             0	# "add"
+	LOAD_NAME             7	# "num_1"
+	LOAD_NAME             8	# "num_2"
+	CALL_FUNCTION         2
+	BUILD_TUPLE           5
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_4
+.line 28
+label_0:
+	LOAD_NAME             5	# "choice"
+	LOAD_CONST            15	# "b"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_1
+.line 29
+	LOAD_NAME             7	# "num_1"
+	LOAD_CONST            16	# " - "
+	LOAD_NAME             8	# "num_2"
+	LOAD_CONST            14	# " = "
+	LOAD_NAME             1	# "subtract"
+	LOAD_NAME             7	# "num_1"
+	LOAD_NAME             8	# "num_2"
+	CALL_FUNCTION         2
+	BUILD_TUPLE           5
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_4
+.line 31
+label_1:
+	LOAD_NAME             5	# "choice"
+	LOAD_CONST            17	# "c"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_2
+.line 32
+	LOAD_NAME             9	# "num1"
+	LOAD_CONST            18	# " * "
+	LOAD_NAME             10	# "num2"
+	LOAD_CONST            14	# " = "
+	LOAD_NAME             2	# "multiply"
+	LOAD_NAME             9	# "num1"
+	LOAD_NAME             10	# "num2"
+	CALL_FUNCTION         2
+	BUILD_TUPLE           5
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_4
+.line 33
+label_2:
+	LOAD_NAME             5	# "choice"
+	LOAD_CONST            19	# "d"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_3
+.line 34
+	LOAD_NAME             7	# "num_1"
+	LOAD_CONST            20	# " / "
+	LOAD_NAME             8	# "num_2"
+	LOAD_CONST            14	# " = "
+	LOAD_NAME             3	# "divide"
+	LOAD_NAME             7	# "num_1"
+	LOAD_NAME             8	# "num_2"
+	CALL_FUNCTION         2
+	BUILD_TUPLE           5
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_4
+.line 36
+label_3:
+	LOAD_CONST            21	# "This is an invalid input"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+label_4:
+	LOAD_CONST            22	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

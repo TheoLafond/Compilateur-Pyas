@@ -1,0 +1,99 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/palindrumreverse.py"
+.set name		 "<module>"
+.set stack_size		 3
+.set arg_count		 0
+
+.interned
+	"int"
+	"input"
+	"n"
+	"temp"
+	"rev"
+	"dig"
+	"<module>"
+
+.consts
+	"Enter number:"
+	0
+	10
+	"The number is a palindrome!"
+	"The number isn't a palindrome!"
+	None
+
+.names
+	"int"
+	"input"
+	"n"
+	"temp"
+	"rev"
+	"dig"
+
+.text
+.line 1
+	LOAD_NAME             0	# "int"
+	LOAD_NAME             1	# "input"
+	LOAD_CONST            0	# "Enter number:"
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            2	# "n"
+.line 2
+	LOAD_NAME             2	# "n"
+	STORE_NAME            3	# "temp"
+.line 3
+	LOAD_CONST            1	# 0
+	STORE_NAME            4	# "rev"
+.line 4
+	SETUP_LOOP            label_2
+label_0:
+	LOAD_NAME             2	# "n"
+	LOAD_CONST            1	# 0
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     label_1
+.line 5
+	LOAD_NAME             2	# "n"
+	LOAD_CONST            2	# 10
+	BINARY_MODULO         
+	STORE_NAME            5	# "dig"
+.line 6
+	LOAD_NAME             4	# "rev"
+	LOAD_CONST            2	# 10
+	BINARY_MULTIPLY       
+	LOAD_NAME             5	# "dig"
+	BINARY_ADD            
+	STORE_NAME            4	# "rev"
+.line 7
+	LOAD_NAME             2	# "n"
+	LOAD_CONST            2	# 10
+	BINARY_FLOOR_DIVIDE   
+	STORE_NAME            2	# "n"
+	JUMP_ABSOLUTE         label_0
+label_1:
+	POP_BLOCK             
+.line 8
+label_2:
+	LOAD_NAME             3	# "temp"
+	LOAD_NAME             4	# "rev"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_3
+.line 9
+	LOAD_CONST            3	# "The number is a palindrome!"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_4
+.line 11
+label_3:
+	LOAD_CONST            4	# "The number isn't a palindrome!"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+label_4:
+	LOAD_CONST            5	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

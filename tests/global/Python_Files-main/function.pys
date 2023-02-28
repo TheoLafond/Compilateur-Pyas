@@ -1,0 +1,153 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/function.py"
+.set name		 "<module>"
+.set stack_size		 1
+.set arg_count		 0
+
+.interned
+	"coucou"
+	"range"
+	"b"
+	"c"
+	"d"
+	"i"
+	"coucou2"
+	"a"
+	"<module>"
+
+.consts
+.code_start 1
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/function.py"
+.set name		 "coucou"
+.set stack_size		 2
+.set arg_count		 0
+
+.consts
+	None
+	5
+	4
+	"coucou"
+
+.names
+	"range"
+
+.varnames
+	"b"
+	"c"
+	"d"
+	"i"
+
+.text
+.line 2
+	LOAD_CONST            1	# 5
+	STORE_FAST            0	# "b"
+.line 3
+	LOAD_CONST            2	# 4
+	STORE_FAST            1	# "c"
+.line 4
+	LOAD_CONST            1	# 5
+	STORE_FAST            2	# "d"
+.line 5
+	SETUP_LOOP            label_2
+	LOAD_GLOBAL           0
+	LOAD_FAST             0	# "b"
+	CALL_FUNCTION         1
+	GET_ITER              
+label_0:
+	FOR_ITER              label_1
+	STORE_FAST            3	# "i"
+.line 6
+	LOAD_CONST            3	# "coucou"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_ABSOLUTE         label_0
+label_1:
+	POP_BLOCK             
+label_2:
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+.code_start 7
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/function.py"
+.set name		 "coucou2"
+.set stack_size		 2
+.set arg_count		 0
+
+.consts
+	None
+	5
+	"coucou2"
+
+.names
+	"range"
+
+.varnames
+	"b"
+	"i"
+
+.text
+.line 8
+	LOAD_CONST            1	# 5
+	STORE_FAST            0	# "b"
+.line 9
+	SETUP_LOOP            label_2
+	LOAD_GLOBAL           0
+	LOAD_FAST             0	# "b"
+	CALL_FUNCTION         1
+	GET_ITER              
+label_0:
+	FOR_ITER              label_1
+	STORE_FAST            1	# "i"
+.line 10
+	LOAD_CONST            2	# "coucou2"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_ABSOLUTE         label_0
+label_1:
+	POP_BLOCK             
+label_2:
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+	5
+	None
+
+.names
+	"coucou"
+	"coucou2"
+	"a"
+
+.text
+.line 1
+	LOAD_CONST            0	# <code:"coucou">
+	MAKE_FUNCTION         0
+	STORE_NAME            0	# "coucou"
+.line 7
+	LOAD_CONST            1	# <code:"coucou2">
+	MAKE_FUNCTION         0
+	STORE_NAME            1	# "coucou2"
+.line 12
+	LOAD_CONST            2	# 5
+	STORE_NAME            2	# "a"
+.line 13
+	LOAD_NAME             2	# "a"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 14
+	LOAD_NAME             0	# "coucou"
+	CALL_FUNCTION         0
+	POP_TOP               
+	LOAD_CONST            3	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

@@ -1,0 +1,65 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/Python Calendar.py"
+.set name		 "<module>"
+.set stack_size		 3
+.set arg_count		 0
+
+.interned
+	"calendar"
+	"int"
+	"input"
+	"year"
+	"month"
+	"<module>"
+
+.consts
+	-1
+	None
+	"Please Enter the year Number: "
+	"Please Enter the month Number: "
+
+.names
+	"calendar"
+	"int"
+	"input"
+	"year"
+	"month"
+
+.text
+.line 1
+	LOAD_CONST            0	# -1
+	LOAD_CONST            1	# None
+	IMPORT_NAME           0
+	STORE_NAME            0	# "calendar"
+.line 4
+	LOAD_NAME             1	# "int"
+	LOAD_NAME             2	# "input"
+	LOAD_CONST            2	# "Please Enter the year Number: "
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            3	# "year"
+.line 5
+	LOAD_NAME             1	# "int"
+	LOAD_NAME             2	# "input"
+	LOAD_CONST            3	# "Please Enter the month Number: "
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            4	# "month"
+.line 7
+	LOAD_NAME             0	# "calendar"
+	LOAD_ATTR             4
+	LOAD_NAME             3	# "year"
+	LOAD_NAME             4	# "month"
+	CALL_FUNCTION         2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            1	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

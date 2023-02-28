@@ -1,0 +1,42 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/pythonuserinput.py"
+.set name		 "<module>"
+.set stack_size		 2
+.set arg_count		 0
+
+.interned
+	"input"
+	"username"
+	"<module>"
+
+.consts
+	"Enter username:"
+	"Username is: "
+	None
+
+.names
+	"input"
+	"username"
+
+.text
+.line 1
+	LOAD_NAME             0	# "input"
+	LOAD_CONST            0	# "Enter username:"
+	CALL_FUNCTION         1
+	STORE_NAME            1	# "username"
+.line 2
+	LOAD_CONST            1	# "Username is: "
+	LOAD_NAME             1	# "username"
+	BINARY_ADD            
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            2	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

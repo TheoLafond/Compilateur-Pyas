@@ -1,0 +1,105 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "complexe.py"
+.set name		 "<module>"
+.set stack_size		 2
+.set arg_count		 0
+
+.interned
+	"a"
+	"b"
+	"c"
+	"d"
+	"real"
+	"e"
+	"imag"
+	"f"
+	"<module>"
+
+.consts
+	2
+	0+3j
+	0+4j
+	12
+	0+5j
+	14
+	0+0j
+	None
+	2+3j
+	12-5j
+	14+0j
+
+.names
+	"a"
+	"b"
+	"c"
+	"d"
+	"real"
+	"e"
+	"imag"
+	"f"
+
+.text
+.line 1
+	LOAD_CONST            8	# 2+3j
+	STORE_NAME            0	# "a"
+.line 2
+	LOAD_CONST            2	# 0+4j
+	STORE_NAME            1	# "b"
+.line 3
+	LOAD_CONST            9	# 12-5j
+	STORE_NAME            2	# "c"
+.line 4
+	LOAD_CONST            10	# 14+0j
+	STORE_NAME            3	# "d"
+.line 5
+	LOAD_NAME             0	# "a"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 6
+	LOAD_NAME             1	# "b"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 7
+	LOAD_NAME             2	# "c"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 8
+	LOAD_NAME             3	# "d"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 9
+	LOAD_NAME             0	# "a"
+	LOAD_ATTR             4
+	STORE_NAME            5	# "e"
+.line 10
+	LOAD_NAME             1	# "b"
+	LOAD_ATTR             6
+	STORE_NAME            7	# "f"
+.line 11
+	LOAD_NAME             5	# "e"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 12
+	LOAD_NAME             7	# "f"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 13
+	LOAD_NAME             0	# "a"
+	LOAD_ATTR             4
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 14
+	LOAD_NAME             0	# "a"
+	LOAD_ATTR             6
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            7	# None
+	RETURN_VALUE          
+
+# Disassembled Fri Nov  4 15:01:10 2022
+

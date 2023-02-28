@@ -1,0 +1,52 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/Boolean Values.py"
+.set name		 "<module>"
+.set stack_size		 2
+.set arg_count		 0
+
+.interned
+	"Hello"
+	"x"
+	"y"
+	"bool"
+	"<module>"
+
+.consts
+	"Hello"
+	15
+	None
+
+.names
+	"x"
+	"y"
+	"bool"
+
+.text
+.line 1
+	LOAD_CONST            0	# "Hello"
+	STORE_NAME            0	# "x"
+.line 2
+	LOAD_CONST            1	# 15
+	STORE_NAME            1	# "y"
+.line 4
+	LOAD_NAME             2	# "bool"
+	LOAD_NAME             0	# "x"
+	CALL_FUNCTION         1
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 5
+	LOAD_NAME             2	# "bool"
+	LOAD_NAME             1	# "y"
+	CALL_FUNCTION         1
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            2	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

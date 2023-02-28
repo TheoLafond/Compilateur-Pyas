@@ -1,0 +1,60 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/Random.py"
+.set name		 "<module>"
+.set stack_size		 2
+.set arg_count		 0
+
+.interned
+	"random"
+	"seed"
+	"<module>"
+
+.consts
+	-1
+	None
+	5
+
+.names
+	"random"
+	"seed"
+
+.text
+.line 2
+	LOAD_CONST            0	# -1
+	LOAD_CONST            1	# None
+	IMPORT_NAME           0
+	STORE_NAME            0	# "random"
+.line 3
+	LOAD_NAME             0	# "random"
+	LOAD_ATTR             1
+	LOAD_CONST            2	# 5
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 5
+	LOAD_NAME             0	# "random"
+	LOAD_ATTR             0
+	CALL_FUNCTION         0
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 6
+	LOAD_NAME             0	# "random"
+	LOAD_ATTR             0
+	CALL_FUNCTION         0
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 7
+	LOAD_NAME             0	# "random"
+	LOAD_ATTR             0
+	CALL_FUNCTION         0
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            1	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

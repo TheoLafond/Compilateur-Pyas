@@ -1,0 +1,66 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/listdataype.py"
+.set name		 "<module>"
+.set stack_size		 5
+.set arg_count		 0
+
+.interned
+	"apple"
+	"banana"
+	"cherry"
+	"list1"
+	"list2"
+	"True"
+	"False"
+	"list3"
+	"<module>"
+
+.consts
+	"apple"
+	"banana"
+	"cherry"
+	1
+	5
+	7
+	9
+	3
+	None
+
+.names
+	"list1"
+	"list2"
+	"True"
+	"False"
+	"list3"
+
+.text
+.line 1
+	LOAD_CONST            0	# "apple"
+	LOAD_CONST            1	# "banana"
+	LOAD_CONST            2	# "cherry"
+	BUILD_LIST            3
+	STORE_NAME            0	# "list1"
+.line 2
+	LOAD_CONST            3	# 1
+	LOAD_CONST            4	# 5
+	LOAD_CONST            5	# 7
+	LOAD_CONST            6	# 9
+	LOAD_CONST            7	# 3
+	BUILD_LIST            5
+	STORE_NAME            1	# "list2"
+.line 3
+	LOAD_NAME             2	# "True"
+	LOAD_NAME             3	# "False"
+	LOAD_NAME             3	# "False"
+	BUILD_LIST            3
+	STORE_NAME            4	# "list3"
+	LOAD_CONST            8	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

@@ -1,0 +1,157 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/inheritance.py"
+.set name		 "<module>"
+.set stack_size		 3
+.set arg_count		 0
+
+.interned
+	"Person"
+	"firstname"
+	"lastname"
+	"self"
+	"fname"
+	"lname"
+	"__init__"
+	"printname"
+	"__name__"
+	"__module__"
+	"John"
+	"Doe"
+	"x"
+	"<module>"
+
+.consts
+	"Person"
+.code_start 1
+.set version_pyvm	 62211
+.set flags		 0x00000042
+.set filename		 "Python_Files-main/inheritance.py"
+.set name		 "Person"
+.set stack_size		 1
+.set arg_count		 0
+
+.consts
+.code_start 2
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/inheritance.py"
+.set name		 "__init__"
+.set stack_size		 2
+.set arg_count		 3
+
+.consts
+	None
+
+.names
+	"firstname"
+	"lastname"
+
+.varnames
+	"self"
+	"fname"
+	"lname"
+
+.text
+.line 3
+	LOAD_FAST             1	# "fname"
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            0
+.line 4
+	LOAD_FAST             2	# "lname"
+	LOAD_FAST             0	# "self"
+	STORE_ATTR            1
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+.code_start 6
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/inheritance.py"
+.set name		 "printname"
+.set stack_size		 2
+.set arg_count		 1
+
+.consts
+	None
+
+.names
+	"firstname"
+	"lastname"
+
+.varnames
+	"self"
+
+.text
+.line 7
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             0
+	LOAD_FAST             0	# "self"
+	LOAD_ATTR             1
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+
+.names
+	"__name__"
+	"__module__"
+	"__init__"
+	"printname"
+
+.text
+.line 1
+	LOAD_NAME             0	# "__name__"
+	STORE_NAME            1	# "__module__"
+.line 2
+	LOAD_CONST            0	# <code:"__init__">
+	MAKE_FUNCTION         0
+	STORE_NAME            2	# "__init__"
+.line 6
+	LOAD_CONST            1	# <code:"printname">
+	MAKE_FUNCTION         0
+	STORE_NAME            3	# "printname"
+	LOAD_LOCALS           
+	RETURN_VALUE          
+.code_end
+	"John"
+	"Doe"
+	None
+	( )
+
+.names
+	"Person"
+	"x"
+	"printname"
+
+.text
+.line 1
+	LOAD_CONST            0	# "Person"
+	LOAD_CONST            5	# ( )
+	LOAD_CONST            1	# <code:"Person">
+	MAKE_FUNCTION         0
+	CALL_FUNCTION         0
+	BUILD_CLASS           
+	STORE_NAME            0	# "Person"
+.line 11
+	LOAD_NAME             0	# "Person"
+	LOAD_CONST            2	# "John"
+	LOAD_CONST            3	# "Doe"
+	CALL_FUNCTION         2
+	STORE_NAME            1	# "x"
+.line 12
+	LOAD_NAME             1	# "x"
+	LOAD_ATTR             2
+	CALL_FUNCTION         0
+	POP_TOP               
+	LOAD_CONST            4	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

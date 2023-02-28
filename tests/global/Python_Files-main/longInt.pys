@@ -1,0 +1,31 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/longInt.py"
+.set name		 "<module>"
+.set stack_size		 1
+.set arg_count		 0
+
+.interned
+	"a"
+	"<module>"
+
+.consts
+	999999999999999
+	None
+
+.names
+	"a"
+
+.text
+.line 1
+	LOAD_CONST            0	# 999999999999999
+	STORE_NAME            0	# "a"
+	LOAD_CONST            1	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

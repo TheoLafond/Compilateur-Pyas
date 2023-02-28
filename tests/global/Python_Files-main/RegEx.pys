@@ -1,0 +1,67 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/RegEx.py"
+.set name		 "<module>"
+.set stack_size		 3
+.set arg_count		 0
+
+.interned
+	"re"
+	"txt"
+	"search"
+	"x"
+	"<module>"
+
+.consts
+	-1
+	None
+	"The rain in Spain"
+	"^The.*Spain$"
+	"YES! We have a match!"
+	"No match"
+
+.names
+	"re"
+	"txt"
+	"search"
+	"x"
+
+.text
+.line 1
+	LOAD_CONST            0	# -1
+	LOAD_CONST            1	# None
+	IMPORT_NAME           0
+	STORE_NAME            0	# "re"
+.line 5
+	LOAD_CONST            2	# "The rain in Spain"
+	STORE_NAME            1	# "txt"
+.line 6
+	LOAD_NAME             0	# "re"
+	LOAD_ATTR             2
+	LOAD_CONST            3	# "^The.*Spain$"
+	LOAD_NAME             1	# "txt"
+	CALL_FUNCTION         2
+	STORE_NAME            3	# "x"
+.line 8
+	LOAD_NAME             3	# "x"
+	POP_JUMP_IF_FALSE     label_0
+.line 9
+	LOAD_CONST            4	# "YES! We have a match!"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_1
+.line 11
+label_0:
+	LOAD_CONST            5	# "No match"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+label_1:
+	LOAD_CONST            1	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

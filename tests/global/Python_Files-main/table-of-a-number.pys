@@ -1,0 +1,74 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/table-of-a-number.py"
+.set name		 "<module>"
+.set stack_size		 7
+.set arg_count		 0
+
+.interned
+	"x"
+	"="
+	"int"
+	"input"
+	"num"
+	"range"
+	"i"
+	"<module>"
+
+.consts
+	"Enter number: "
+	1
+	11
+	"x"
+	"="
+	None
+
+.names
+	"int"
+	"input"
+	"num"
+	"range"
+	"i"
+
+.text
+.line 2
+	LOAD_NAME             0	# "int"
+	LOAD_NAME             1	# "input"
+	LOAD_CONST            0	# "Enter number: "
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            2	# "num"
+.line 4
+	SETUP_LOOP            label_2
+	LOAD_NAME             3	# "range"
+	LOAD_CONST            1	# 1
+	LOAD_CONST            2	# 11
+	CALL_FUNCTION         2
+	GET_ITER              
+label_0:
+	FOR_ITER              label_1
+	STORE_NAME            4	# "i"
+.line 5
+	LOAD_NAME             2	# "num"
+	LOAD_CONST            3	# "x"
+	LOAD_NAME             4	# "i"
+	LOAD_CONST            4	# "="
+	LOAD_NAME             2	# "num"
+	LOAD_NAME             4	# "i"
+	BINARY_MULTIPLY       
+	BUILD_TUPLE           5
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_ABSOLUTE         label_0
+label_1:
+	POP_BLOCK             
+label_2:
+	LOAD_CONST            5	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

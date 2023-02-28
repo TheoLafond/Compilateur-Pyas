@@ -1,0 +1,204 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "test.py"
+.set name		 "<module>"
+.set stack_size		 2
+.set arg_count		 0
+
+.interned
+	"a"
+	"<module>"
+
+.consts
+	65536
+	10
+	None
+
+.names
+	"a"
+
+.text
+.line 1
+	LOAD_CONST            0	# 65536
+	STORE_NAME            0	# "a"
+.line 2
+	LOAD_NAME             0	# "a"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 3
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_FALSE     34
+.line 4
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_MULTIPLY       
+	POP_TOP               
+	JUMP_FORWARD          0
+.line 5
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     57
+.line 6
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_FLOOR_DIVIDE   
+	POP_TOP               
+	JUMP_FORWARD          0
+.line 7
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_FALSE     80
+.line 8
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_MULTIPLY       
+	POP_TOP               
+	JUMP_FORWARD          0
+.line 9
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     103
+.line 10
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_FLOOR_DIVIDE   
+	POP_TOP               
+	JUMP_FORWARD          0
+.line 11
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_FALSE     126
+.line 12
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_MULTIPLY       
+	POP_TOP               
+	JUMP_FORWARD          0
+.line 13
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     154
+.line 14
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_FLOOR_DIVIDE   
+	POP_TOP               
+.line 15
+	LOAD_NAME             0	# "a"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          9
+.line 17
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_FLOOR_DIVIDE   
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 18
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_FALSE     186
+.line 19
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_MULTIPLY       
+	POP_TOP               
+	JUMP_FORWARD          0
+.line 20
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     209
+.line 21
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_FLOOR_DIVIDE   
+	POP_TOP               
+	JUMP_FORWARD          0
+.line 22
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_FALSE     232
+.line 23
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_MULTIPLY       
+	POP_TOP               
+	JUMP_FORWARD          0
+.line 24
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     255
+.line 25
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_FLOOR_DIVIDE   
+	POP_TOP               
+	JUMP_FORWARD          0
+.line 26
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_FALSE     278
+.line 27
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_MULTIPLY       
+	POP_TOP               
+	JUMP_FORWARD          0
+.line 28
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     301
+.line 29
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_FLOOR_DIVIDE   
+	POP_TOP               
+	JUMP_FORWARD          0
+.line 30
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_FALSE     324
+.line 31
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_MULTIPLY       
+	POP_TOP               
+	JUMP_FORWARD          0
+.line 32
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     347
+.line 33
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_FLOOR_DIVIDE   
+	POP_TOP               
+	JUMP_FORWARD          0
+.line 34
+	LOAD_NAME             0	# "a"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            2	# None
+	RETURN_VALUE          
+
+# Disassembled Fri Oct 14 16:04:02 2022
+

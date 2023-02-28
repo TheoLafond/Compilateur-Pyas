@@ -1,0 +1,92 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/power of funct.py"
+.set name		 "<module>"
+.set stack_size		 4
+.set arg_count		 0
+
+.interned
+	"int"
+	"input"
+	"number"
+	"exponent"
+	"power"
+	"range"
+	"i"
+	"format"
+	"<module>"
+
+.consts
+	" Please Enter any Positive Integer : "
+	" Please Enter Exponent Value : "
+	1
+	"The Result of {0} Power {1} = {2}"
+	None
+
+.names
+	"int"
+	"input"
+	"number"
+	"exponent"
+	"power"
+	"range"
+	"i"
+	"format"
+
+.text
+.line 1
+	LOAD_NAME             0	# "int"
+	LOAD_NAME             1	# "input"
+	LOAD_CONST            0	# " Please Enter any Positive Integer : "
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            2	# "number"
+.line 2
+	LOAD_NAME             0	# "int"
+	LOAD_NAME             1	# "input"
+	LOAD_CONST            1	# " Please Enter Exponent Value : "
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            3	# "exponent"
+.line 3
+	LOAD_CONST            2	# 1
+	STORE_NAME            4	# "power"
+.line 5
+	SETUP_LOOP            label_2
+	LOAD_NAME             5	# "range"
+	LOAD_CONST            2	# 1
+	LOAD_NAME             3	# "exponent"
+	LOAD_CONST            2	# 1
+	BINARY_ADD            
+	CALL_FUNCTION         2
+	GET_ITER              
+label_0:
+	FOR_ITER              label_1
+	STORE_NAME            6	# "i"
+.line 6
+	LOAD_NAME             4	# "power"
+	LOAD_NAME             2	# "number"
+	BINARY_MULTIPLY       
+	STORE_NAME            4	# "power"
+	JUMP_ABSOLUTE         label_0
+label_1:
+	POP_BLOCK             
+.line 8
+label_2:
+	LOAD_CONST            3	# "The Result of {0} Power {1} = {2}"
+	LOAD_ATTR             7
+	LOAD_NAME             2	# "number"
+	LOAD_NAME             3	# "exponent"
+	LOAD_NAME             4	# "power"
+	CALL_FUNCTION         3
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            4	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

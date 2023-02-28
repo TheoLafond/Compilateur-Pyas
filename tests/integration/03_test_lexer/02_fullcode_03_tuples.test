@@ -1,0 +1,46 @@
+
+
+# TEST START ###################################################################
+# Test args              : ../../definitionLexeme.txt 03_test_lexer/02_fullcode_03_tuples.pys
+# Test return code       : EXIT_SUCCESS
+# Test stdout and stderr :
+ [1:1:newline] 
+ [2:1:newline] 
+ [3:1:comment] # Start pyc-objdump output [3:27:newline] 
+ [4:1:newline] 
+ [5:1:dir::set] .set [5:5:blank]   [5:6:name] version_pyvm [5:18:blank] 	  [5:20:integer::dec] 62211 [5:25:newline] 
+ [6:1:dir::set] .set [6:5:blank]   [6:6:name] flags [6:11:blank] 		  [6:14:integer::hex] 0x00000040 [6:24:newline] 
+ [7:1:dir::set] .set [7:5:blank]   [7:6:name] filename [7:14:blank] 		  [7:17:string] "tuple.py" [7:27:newline] 
+ [8:1:dir::set] .set [8:5:blank]   [8:6:name] name [8:10:blank] 		  [8:13:string] "<module>" [8:23:newline] 
+ [9:1:dir::set] .set [9:5:blank]   [9:6:name] stack_size [9:16:blank] 		  [9:19:integer::dec] 3 [9:20:newline] 
+ [10:1:dir::set] .set [10:5:blank]   [10:6:name] arg_count [10:15:blank] 		  [10:18:integer::dec] 0 [10:19:newline] 
+ [11:1:newline] 
+ [12:1:dir::interned] .interned [12:10:newline] 
+ [13:1:blank] 	 [13:2:string] "a" [13:5:newline] 
+ [14:1:blank] 	 [14:2:string] "<module>" [14:12:newline] 
+ [15:1:newline] 
+ [16:1:dir::consts] .consts [16:8:newline] 
+ [17:1:blank] 	 [17:2:integer::dec] 1 [17:3:newline] 
+ [18:1:blank] 	 [18:2:integer::dec] 2 [18:3:newline] 
+ [19:1:blank] 	 [19:2:integer::dec] 3 [19:3:newline] 
+ [20:1:blank] 	 [20:2:Pycst::None] None [20:6:newline] 
+ [21:1:blank] 	 [21:2:paren::left] ( [21:3:blank]   [21:4:integer::dec] 1 [21:5:blank]   [21:6:integer::dec] 2 [21:7:blank]   [21:8:integer::dec] 3 [21:9:blank]   [21:10:paren::right] ) [21:11:newline] 
+ [22:1:newline] 
+ [23:1:dir::names] .names [23:7:newline] 
+ [24:1:blank] 	 [24:2:string] "a" [24:5:newline] 
+ [25:1:newline] 
+ [26:1:dir::text] .text [26:6:newline] 
+ [27:1:dir::line] .line [27:6:blank]   [27:7:integer::dec] 1 [27:8:newline] 
+ [28:1:blank] 	 [28:2:insn::1] LOAD_CONST [28:12:blank]              [28:24:integer::dec] 4 [28:25:blank] 	 [28:26:comment] # ( 1 2 3 ) [28:37:newline] 
+ [29:1:blank] 	 [29:2:insn::1] STORE_NAME [29:12:blank]              [29:24:integer::dec] 0 [29:25:blank] 	 [29:26:comment] # "a" [29:31:newline] 
+ [30:1:dir::line] .line [30:6:blank]   [30:7:integer::dec] 2 [30:8:newline] 
+ [31:1:blank] 	 [31:2:insn::1] LOAD_NAME [31:11:blank]               [31:24:integer::dec] 0 [31:25:blank] 	 [31:26:comment] # "a" [31:31:newline] 
+ [32:1:blank] 	 [32:2:insn::0] PRINT_ITEM [32:12:newline] 
+ [33:1:blank] 	 [33:2:insn::0] PRINT_NEWLINE [33:15:newline] 
+ [34:1:blank] 	 [34:2:insn::1] LOAD_CONST [34:12:blank]              [34:24:integer::dec] 3 [34:25:blank] 	 [34:26:comment] # None [34:32:newline] 
+ [35:1:blank] 	 [35:2:insn::0] RETURN_VALUE [35:14:newline] 
+ [36:1:newline] 
+ [37:1:comment] # Disassembled Mon Nov  1 05:15:41 2021 [37:40:newline] 
+ 
+# END Test stdout and stderr
+# TEST END   ###################################################################

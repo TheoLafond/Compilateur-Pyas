@@ -1,0 +1,66 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/Iterators.py"
+.set name		 "<module>"
+.set stack_size		 3
+.set arg_count		 0
+
+.interned
+	"apple"
+	"banana"
+	"cherry"
+	"mytuple"
+	"iter"
+	"myit"
+	"next"
+	"<module>"
+
+.consts
+	"apple"
+	"banana"
+	"cherry"
+	None
+	( "apple" "banana" "cherry" )
+
+.names
+	"mytuple"
+	"iter"
+	"myit"
+	"next"
+
+.text
+.line 1
+	LOAD_CONST            4	# ( "apple" "banana" "cherry" )
+	STORE_NAME            0	# "mytuple"
+.line 2
+	LOAD_NAME             1	# "iter"
+	LOAD_NAME             0	# "mytuple"
+	CALL_FUNCTION         1
+	STORE_NAME            2	# "myit"
+.line 4
+	LOAD_NAME             3	# "next"
+	LOAD_NAME             2	# "myit"
+	CALL_FUNCTION         1
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 5
+	LOAD_NAME             3	# "next"
+	LOAD_NAME             2	# "myit"
+	CALL_FUNCTION         1
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 6
+	LOAD_NAME             3	# "next"
+	LOAD_NAME             2	# "myit"
+	CALL_FUNCTION         1
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            3	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

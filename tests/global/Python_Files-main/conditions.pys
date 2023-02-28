@@ -1,0 +1,565 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/conditions.py"
+.set name		 "<module>"
+.set stack_size		 2
+.set arg_count		 0
+
+.interned
+	"a"
+	"sign"
+	"b"
+	"c"
+	"median"
+	"max"
+	"min"
+	"median_other_way"
+	"median_using_arithmetic"
+	"m"
+	"leap_year"
+	"days_in_month"
+	"False"
+	"True"
+	"y"
+	"is_leap_year"
+	"is_leap_year_another_way"
+	"range"
+	"is_leap_year_with_logic"
+	"a1"
+	"a2"
+	"a3"
+	"test_leap_year"
+	"<module>"
+
+.consts
+.code_start 1
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/conditions.py"
+.set name		 "sign"
+.set stack_size		 2
+.set arg_count		 1
+
+.consts
+	None
+	0
+	-1
+	1
+
+.varnames
+	"a"
+
+.text
+.line 2
+	LOAD_FAST             0	# "a"
+	LOAD_CONST            1	# 0
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_FALSE     label_0
+.line 3
+	LOAD_CONST            2	# -1
+	RETURN_VALUE          
+.line 4
+label_0:
+	LOAD_FAST             0	# "a"
+	LOAD_CONST            1	# 0
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     label_1
+.line 5
+	LOAD_CONST            3	# 1
+	UNARY_POSITIVE        
+	RETURN_VALUE          
+.line 7
+label_1:
+	LOAD_CONST            1	# 0
+	RETURN_VALUE          
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+.code_start 14
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/conditions.py"
+.set name		 "median"
+.set stack_size		 8
+.set arg_count		 3
+
+.consts
+	None
+
+.varnames
+	"a"
+	"b"
+	"c"
+
+.text
+.line 15
+	LOAD_FAST             0	# "a"
+	LOAD_FAST             1	# "b"
+	DUP_TOP               
+	ROT_THREE             
+	COMPARE_OP            1	# "<="
+	JUMP_IF_FALSE_OR_POP  label_0
+	LOAD_FAST             2	# "c"
+	COMPARE_OP            1	# "<="
+	JUMP_FORWARD          label_1
+label_0:
+	ROT_TWO               
+	POP_TOP               
+label_1:
+	POP_JUMP_IF_TRUE      label_4
+	LOAD_FAST             2	# "c"
+	LOAD_FAST             1	# "b"
+	DUP_TOP               
+	ROT_THREE             
+	COMPARE_OP            1	# "<="
+	JUMP_IF_FALSE_OR_POP  label_2
+	LOAD_FAST             0	# "a"
+	COMPARE_OP            1	# "<="
+	JUMP_FORWARD          label_3
+label_2:
+	ROT_TWO               
+	POP_TOP               
+label_3:
+	POP_JUMP_IF_FALSE     label_5
+.line 16
+label_4:
+	LOAD_FAST             1	# "b"
+	RETURN_VALUE          
+.line 17
+label_5:
+	LOAD_FAST             1	# "b"
+	LOAD_FAST             0	# "a"
+	DUP_TOP               
+	ROT_THREE             
+	COMPARE_OP            1	# "<="
+	JUMP_IF_FALSE_OR_POP  label_6
+	LOAD_FAST             2	# "c"
+	COMPARE_OP            1	# "<="
+	JUMP_FORWARD          label_7
+label_6:
+	ROT_TWO               
+	POP_TOP               
+label_7:
+	POP_JUMP_IF_TRUE      label_10
+	LOAD_FAST             2	# "c"
+	LOAD_FAST             0	# "a"
+	DUP_TOP               
+	ROT_THREE             
+	COMPARE_OP            1	# "<="
+	JUMP_IF_FALSE_OR_POP  label_8
+	LOAD_FAST             1	# "b"
+	COMPARE_OP            1	# "<="
+	JUMP_FORWARD          label_9
+label_8:
+	ROT_TWO               
+	POP_TOP               
+label_9:
+	POP_JUMP_IF_FALSE     label_11
+.line 18
+label_10:
+	LOAD_FAST             0	# "a"
+	RETURN_VALUE          
+.line 20
+label_11:
+	LOAD_FAST             2	# "c"
+	RETURN_VALUE          
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+.code_start 23
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/conditions.py"
+.set name		 "median_other_way"
+.set stack_size		 5
+.set arg_count		 3
+
+.consts
+	None
+
+.names
+	"max"
+	"min"
+
+.varnames
+	"a"
+	"b"
+	"c"
+
+.text
+.line 24
+	LOAD_FAST             0	# "a"
+	LOAD_FAST             1	# "b"
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     label_0
+	LOAD_FAST             0	# "a"
+	LOAD_FAST             2	# "c"
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     label_0
+.line 25
+	LOAD_GLOBAL           0
+	LOAD_FAST             1	# "b"
+	LOAD_FAST             2	# "c"
+	CALL_FUNCTION         2
+	RETURN_VALUE          
+.line 26
+label_0:
+	LOAD_FAST             0	# "a"
+	LOAD_FAST             1	# "b"
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_FALSE     label_1
+	LOAD_FAST             0	# "a"
+	LOAD_FAST             2	# "c"
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_FALSE     label_1
+.line 27
+	LOAD_GLOBAL           1
+	LOAD_FAST             1	# "b"
+	LOAD_FAST             2	# "c"
+	CALL_FUNCTION         2
+	RETURN_VALUE          
+.line 29
+label_1:
+	LOAD_FAST             0	# "a"
+	RETURN_VALUE          
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+.code_start 35
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/conditions.py"
+.set name		 "median_using_arithmetic"
+.set stack_size		 5
+.set arg_count		 3
+
+.consts
+	None
+
+.names
+	"min"
+	"max"
+
+.varnames
+	"a"
+	"b"
+	"c"
+
+.text
+.line 36
+	LOAD_FAST             0	# "a"
+	LOAD_FAST             1	# "b"
+	BINARY_ADD            
+	LOAD_FAST             2	# "c"
+	BINARY_ADD            
+	LOAD_GLOBAL           0
+	LOAD_FAST             0	# "a"
+	LOAD_FAST             1	# "b"
+	LOAD_FAST             2	# "c"
+	CALL_FUNCTION         3
+	BINARY_SUBTRACT       
+	LOAD_GLOBAL           1
+	LOAD_FAST             0	# "a"
+	LOAD_FAST             1	# "b"
+	LOAD_FAST             2	# "c"
+	CALL_FUNCTION         3
+	BINARY_SUBTRACT       
+	RETURN_VALUE          
+.code_end
+.code_start 41
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/conditions.py"
+.set name		 "days_in_month"
+.set stack_size		 3
+.set arg_count		 2
+
+.consts
+	None
+	1
+	12
+	0
+	2
+	29
+	28
+
+.varnames
+	"m"
+	"leap_year"
+
+.text
+.line 42
+	LOAD_FAST             0	# "m"
+	LOAD_CONST            1	# 1
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_TRUE      label_0
+	LOAD_FAST             0	# "m"
+	LOAD_CONST            2	# 12
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     label_1
+.line 43
+label_0:
+	LOAD_CONST            3	# 0
+	RETURN_VALUE          
+.line 44
+label_1:
+	LOAD_FAST             0	# "m"
+	LOAD_CONST            4	# 2
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_3
+.line 46
+	LOAD_FAST             1	# "leap_year"
+	POP_JUMP_IF_FALSE     label_2
+	LOAD_CONST            5	# 29
+	RETURN_VALUE          
+label_2:
+	LOAD_CONST            6	# 28
+	RETURN_VALUE          
+.line 49
+label_3:
+	LOAD_CONST            1	# 1
+	RETURN_VALUE          
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+.code_start 55
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/conditions.py"
+.set name		 "is_leap_year"
+.set stack_size		 2
+.set arg_count		 1
+
+.consts
+	None
+	4
+	0
+	100
+	400
+
+.names
+	"False"
+	"True"
+
+.varnames
+	"y"
+
+.text
+.line 56
+	LOAD_FAST             0	# "y"
+	LOAD_CONST            1	# 4
+	BINARY_MODULO         
+	LOAD_CONST            2	# 0
+	COMPARE_OP            3	# "!="
+	POP_JUMP_IF_FALSE     label_0
+.line 57
+	LOAD_GLOBAL           0
+	RETURN_VALUE          
+.line 58
+label_0:
+	LOAD_FAST             0	# "y"
+	LOAD_CONST            3	# 100
+	BINARY_MODULO         
+	LOAD_CONST            2	# 0
+	COMPARE_OP            3	# "!="
+	POP_JUMP_IF_FALSE     label_1
+.line 59
+	LOAD_GLOBAL           1
+	RETURN_VALUE          
+.line 60
+label_1:
+	LOAD_FAST             0	# "y"
+	LOAD_CONST            4	# 400
+	BINARY_MODULO         
+	LOAD_CONST            2	# 0
+	COMPARE_OP            2	# "=="
+	RETURN_VALUE          
+.code_end
+.code_start 63
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/conditions.py"
+.set name		 "is_leap_year_another_way"
+.set stack_size		 2
+.set arg_count		 1
+
+.consts
+	None
+	400
+	0
+	100
+	4
+
+.names
+	"True"
+	"False"
+
+.varnames
+	"y"
+
+.text
+.line 64
+	LOAD_FAST             0	# "y"
+	LOAD_CONST            1	# 400
+	BINARY_MODULO         
+	LOAD_CONST            2	# 0
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_0
+.line 65
+	LOAD_GLOBAL           0
+	RETURN_VALUE          
+.line 66
+label_0:
+	LOAD_FAST             0	# "y"
+	LOAD_CONST            3	# 100
+	BINARY_MODULO         
+	LOAD_CONST            2	# 0
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_1
+.line 67
+	LOAD_GLOBAL           1
+	RETURN_VALUE          
+.line 68
+label_1:
+	LOAD_FAST             0	# "y"
+	LOAD_CONST            4	# 4
+	BINARY_MODULO         
+	LOAD_CONST            2	# 0
+	COMPARE_OP            2	# "=="
+	RETURN_VALUE          
+.code_end
+.code_start 74
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "Python_Files-main/conditions.py"
+.set name		 "test_leap_year"
+.set stack_size		 4
+.set arg_count		 0
+
+.consts
+	None
+	2525
+	9596
+
+.names
+	"range"
+	"is_leap_year"
+	"is_leap_year_another_way"
+	"is_leap_year_with_logic"
+	"False"
+	"True"
+
+.varnames
+	"y"
+	"a1"
+	"a2"
+	"a3"
+
+.text
+.line 75
+	SETUP_LOOP            label_4
+	LOAD_GLOBAL           0
+	LOAD_CONST            1	# 2525
+	LOAD_CONST            2	# 9596
+	CALL_FUNCTION         2
+	GET_ITER              
+label_0:
+	FOR_ITER              label_3
+	STORE_FAST            0	# "y"
+.line 76
+	LOAD_GLOBAL           1
+	LOAD_FAST             0	# "y"
+	CALL_FUNCTION         1
+	STORE_FAST            1	# "a1"
+.line 77
+	LOAD_GLOBAL           2
+	LOAD_FAST             0	# "y"
+	CALL_FUNCTION         1
+	STORE_FAST            2	# "a2"
+.line 78
+	LOAD_GLOBAL           3
+	LOAD_FAST             0	# "y"
+	CALL_FUNCTION         1
+	STORE_FAST            3	# "a3"
+.line 80
+	LOAD_FAST             1	# "a1"
+	LOAD_FAST             2	# "a2"
+	DUP_TOP               
+	ROT_THREE             
+	COMPARE_OP            2	# "=="
+	JUMP_IF_FALSE_OR_POP  label_1
+	LOAD_FAST             3	# "a3"
+	COMPARE_OP            2	# "=="
+	JUMP_FORWARD          label_2
+label_1:
+	ROT_TWO               
+	POP_TOP               
+label_2:
+	POP_JUMP_IF_TRUE      label_0
+.line 81
+	LOAD_GLOBAL           4
+	RETURN_VALUE          
+	JUMP_ABSOLUTE         label_0
+label_3:
+	POP_BLOCK             
+.line 82
+label_4:
+	LOAD_GLOBAL           5
+	RETURN_VALUE          
+.code_end
+	None
+
+.names
+	"sign"
+	"median"
+	"median_other_way"
+	"median_using_arithmetic"
+	"False"
+	"days_in_month"
+	"is_leap_year"
+	"is_leap_year_another_way"
+	"test_leap_year"
+
+.text
+.line 1
+	LOAD_CONST            0	# <code:"sign">
+	MAKE_FUNCTION         0
+	STORE_NAME            0	# "sign"
+.line 14
+	LOAD_CONST            1	# <code:"median">
+	MAKE_FUNCTION         0
+	STORE_NAME            1	# "median"
+.line 23
+	LOAD_CONST            2	# <code:"median_other_way">
+	MAKE_FUNCTION         0
+	STORE_NAME            2	# "median_other_way"
+.line 35
+	LOAD_CONST            3	# <code:"median_using_arithmetic">
+	MAKE_FUNCTION         0
+	STORE_NAME            3	# "median_using_arithmetic"
+.line 41
+	LOAD_NAME             4	# "False"
+	LOAD_CONST            4	# <code:"days_in_month">
+	MAKE_FUNCTION         1
+	STORE_NAME            5	# "days_in_month"
+.line 55
+	LOAD_CONST            5	# <code:"is_leap_year">
+	MAKE_FUNCTION         0
+	STORE_NAME            6	# "is_leap_year"
+.line 63
+	LOAD_CONST            6	# <code:"is_leap_year_another_way">
+	MAKE_FUNCTION         0
+	STORE_NAME            7	# "is_leap_year_another_way"
+.line 74
+	LOAD_CONST            7	# <code:"test_leap_year">
+	MAKE_FUNCTION         0
+	STORE_NAME            8	# "test_leap_year"
+	LOAD_CONST            8	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

@@ -1,0 +1,147 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/matplotlib.py"
+.set name		 "<module>"
+.set stack_size		 5
+.set arg_count		 0
+
+.interned
+	"Agg"
+	"A"
+	"B"
+	"C"
+	"D"
+	"sys"
+	"matplotlib"
+	"use"
+	"matplotlib.pyplot"
+	"pyplot"
+	"plt"
+	"numpy"
+	"np"
+	"array"
+	"x"
+	"y"
+	"bar"
+	"show"
+	"savefig"
+	"stdout"
+	"buffer"
+	"flush"
+	"<module>"
+
+.consts
+	-1
+	None
+	"Agg"
+	"A"
+	"B"
+	"C"
+	"D"
+	3
+	8
+	1
+	10
+
+.names
+	"sys"
+	"matplotlib"
+	"use"
+	"matplotlib.pyplot"
+	"pyplot"
+	"plt"
+	"numpy"
+	"np"
+	"array"
+	"x"
+	"y"
+	"bar"
+	"show"
+	"savefig"
+	"stdout"
+	"buffer"
+	"flush"
+
+.text
+.line 2
+	LOAD_CONST            0	# -1
+	LOAD_CONST            1	# None
+	IMPORT_NAME           0
+	STORE_NAME            0	# "sys"
+.line 3
+	LOAD_CONST            0	# -1
+	LOAD_CONST            1	# None
+	IMPORT_NAME           1
+	STORE_NAME            1	# "matplotlib"
+.line 4
+	LOAD_NAME             1	# "matplotlib"
+	LOAD_ATTR             2
+	LOAD_CONST            2	# "Agg"
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 6
+	LOAD_CONST            0	# -1
+	LOAD_CONST            1	# None
+	IMPORT_NAME           3
+	LOAD_ATTR             4
+	STORE_NAME            5	# "plt"
+.line 7
+	LOAD_CONST            0	# -1
+	LOAD_CONST            1	# None
+	IMPORT_NAME           6
+	STORE_NAME            7	# "np"
+.line 9
+	LOAD_NAME             7	# "np"
+	LOAD_ATTR             8
+	LOAD_CONST            3	# "A"
+	LOAD_CONST            4	# "B"
+	LOAD_CONST            5	# "C"
+	LOAD_CONST            6	# "D"
+	BUILD_LIST            4
+	CALL_FUNCTION         1
+	STORE_NAME            9	# "x"
+.line 10
+	LOAD_NAME             7	# "np"
+	LOAD_ATTR             8
+	LOAD_CONST            7	# 3
+	LOAD_CONST            8	# 8
+	LOAD_CONST            9	# 1
+	LOAD_CONST            10	# 10
+	BUILD_LIST            4
+	CALL_FUNCTION         1
+	STORE_NAME            10	# "y"
+.line 12
+	LOAD_NAME             5	# "plt"
+	LOAD_ATTR             11
+	LOAD_NAME             9	# "x"
+	LOAD_NAME             10	# "y"
+	CALL_FUNCTION         2
+	POP_TOP               
+.line 13
+	LOAD_NAME             5	# "plt"
+	LOAD_ATTR             12
+	CALL_FUNCTION         0
+	POP_TOP               
+.line 16
+	LOAD_NAME             5	# "plt"
+	LOAD_ATTR             13
+	LOAD_NAME             0	# "sys"
+	LOAD_ATTR             14
+	LOAD_ATTR             15
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 17
+	LOAD_NAME             0	# "sys"
+	LOAD_ATTR             14
+	LOAD_ATTR             16
+	CALL_FUNCTION         0
+	POP_TOP               
+	LOAD_CONST            1	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

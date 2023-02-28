@@ -1,0 +1,10 @@
+
+
+# TEST START ###################################################################
+# Test args              : ../../definitionLexeme.txt 05_test_parser/04_fullcode_01_test_sujet.pys
+# Test return code       : EXIT_SUCCESS
+# Test stdout and stderr :
+Parsing du fichier réussi
+()
+# END Test stdout and stderr
+# TEST END   ###################################################################

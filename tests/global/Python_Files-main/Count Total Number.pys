@@ -1,0 +1,95 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/Count Total Number.py"
+.set name		 "<module>"
+.set stack_size		 5
+.set arg_count		 0
+
+.interned
+	" "
+	"input"
+	"str1"
+	"total"
+	"range"
+	"len"
+	"i"
+	"<module>"
+
+.consts
+	"Please Enter your Own String : "
+	1
+	" "
+	"\n"
+	"\t"
+	"Total Number of Words in this String = "
+	None
+
+.names
+	"input"
+	"str1"
+	"total"
+	"range"
+	"len"
+	"i"
+
+.text
+.line 3
+	LOAD_NAME             0	# "input"
+	LOAD_CONST            0	# "Please Enter your Own String : "
+	CALL_FUNCTION         1
+	STORE_NAME            1	# "str1"
+.line 4
+	LOAD_CONST            1	# 1
+	STORE_NAME            2	# "total"
+.line 6
+	SETUP_LOOP            label_3
+	LOAD_NAME             3	# "range"
+	LOAD_NAME             4	# "len"
+	LOAD_NAME             1	# "str1"
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	GET_ITER              
+label_0:
+	FOR_ITER              label_2
+	STORE_NAME            5	# "i"
+.line 7
+	LOAD_NAME             1	# "str1"
+	LOAD_NAME             5	# "i"
+	BINARY_SUBSCR         
+	LOAD_CONST            2	# " "
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_TRUE      label_1
+	LOAD_NAME             1	# "str1"
+	LOAD_CONST            3	# "\n"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_TRUE      label_1
+	LOAD_NAME             1	# "str1"
+	LOAD_CONST            4	# "\t"
+	COMPARE_OP            2	# "=="
+	POP_JUMP_IF_FALSE     label_0
+.line 8
+label_1:
+	LOAD_NAME             2	# "total"
+	LOAD_CONST            1	# 1
+	BINARY_ADD            
+	STORE_NAME            2	# "total"
+	JUMP_ABSOLUTE         label_0
+	JUMP_ABSOLUTE         label_0
+label_2:
+	POP_BLOCK             
+.line 10
+label_3:
+	LOAD_CONST            5	# "Total Number of Words in this String = "
+	LOAD_NAME             2	# "total"
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            6	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

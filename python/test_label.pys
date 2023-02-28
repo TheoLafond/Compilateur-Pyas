@@ -1,0 +1,219 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "test.py"
+.set name		 "<module>"
+.set stack_size		 2
+.set arg_count		 0
+
+.interned
+	"a"
+	"<module>"
+
+.consts
+	65536
+	10
+	None
+
+.names
+	"a"
+
+.text
+.line 1
+	LOAD_CONST            0	# 65536
+	STORE_NAME            0	# "a"
+.line 2
+	LOAD_NAME             0	# "a"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 3
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_FALSE     label_0
+.line 4
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_MULTIPLY       
+	POP_TOP               
+	JUMP_FORWARD          label_0
+.line 5
+label_0:
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     label_1
+.line 6
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_FLOOR_DIVIDE   
+	POP_TOP               
+	JUMP_FORWARD          label_1
+.line 7
+label_1:
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_FALSE     label_2
+.line 8
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_MULTIPLY       
+	POP_TOP               
+	JUMP_FORWARD          label_2
+.line 9
+label_2:
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     label_3
+.line 10
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_FLOOR_DIVIDE   
+	POP_TOP               
+	JUMP_FORWARD          label_3
+.line 11
+label_3:
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_FALSE     label_4
+.line 12
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_MULTIPLY       
+	POP_TOP               
+	JUMP_FORWARD          label_4
+.line 13
+label_4:
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     label_5
+.line 14
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_FLOOR_DIVIDE   
+	POP_TOP               
+.line 15
+	LOAD_NAME             0	# "a"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_6
+.line 17
+label_5:
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_FLOOR_DIVIDE   
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 18
+label_6:
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_FALSE     label_7
+.line 19
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_MULTIPLY       
+	POP_TOP               
+	JUMP_FORWARD          label_7
+.line 20
+label_7:
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     label_8
+.line 21
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_FLOOR_DIVIDE   
+	POP_TOP               
+	JUMP_FORWARD          label_8
+.line 22
+label_8:
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_FALSE     label_9
+.line 23
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_MULTIPLY       
+	POP_TOP               
+	JUMP_FORWARD          label_9
+.line 24
+label_9:
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     label_10
+.line 25
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_FLOOR_DIVIDE   
+	POP_TOP               
+	JUMP_FORWARD          label_10
+.line 26
+label_10:
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_FALSE     label_11
+.line 27
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_MULTIPLY       
+	POP_TOP               
+	JUMP_FORWARD          label_11
+.line 28
+label_11:
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     label_12
+.line 29
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_FLOOR_DIVIDE   
+	POP_TOP               
+	JUMP_FORWARD          label_12
+.line 30
+label_12:
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_FALSE     label_13
+.line 31
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_MULTIPLY       
+	POP_TOP               
+	JUMP_FORWARD          label_13
+.line 32
+label_13:
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	COMPARE_OP            4	# ">"
+	POP_JUMP_IF_FALSE     label_14
+.line 33
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 10
+	BINARY_FLOOR_DIVIDE   
+	POP_TOP               
+	JUMP_FORWARD          label_14
+.line 34
+label_14:
+	LOAD_NAME             0	# "a"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            2	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Oct 31 09:33:32 2022
+

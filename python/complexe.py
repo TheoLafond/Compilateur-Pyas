@@ -1,0 +1,14 @@
+a=2+3j
+b=4j
+c=12-5j
+d=14-0j
+print(a)
+print(b)
+print(c)
+print(d)
+e=a.real
+f=b.imag
+print(e)
+print(f)
+print(a.real)
+print(a.imag)

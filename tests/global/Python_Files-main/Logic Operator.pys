@@ -1,0 +1,305 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/Logic Operator.py"
+.set name		 "<module>"
+.set stack_size		 13
+.set arg_count		 0
+
+.interned
+	"or"
+	"="
+	"xor"
+	"__doc__"
+	"True"
+	"a"
+	"False"
+	"b"
+	"c"
+	"<module>"
+
+.consts
+	"\nNot\n"
+	"===== Not =====\n"
+	"Data a ="
+	"Data b ="
+	"\n===== And =====\n"
+	"Hasil True and True ="
+	"Hasil True and False ="
+	"Hasil False and True ="
+	"Hasil False and False ="
+	"\n===== Or =====\n"
+	"or"
+	"="
+	"\n===== Xor =====\n"
+	"xor"
+	None
+
+.names
+	"__doc__"
+	"True"
+	"a"
+	"False"
+	"b"
+	"c"
+
+.text
+.line 4
+	LOAD_CONST            0	# "\nNot\n"
+	STORE_NAME            0	# "__doc__"
+.line 5
+	LOAD_CONST            1	# "===== Not =====\n"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 6
+	LOAD_NAME             1	# "True"
+	STORE_NAME            2	# "a"
+.line 7
+	LOAD_CONST            2	# "Data a ="
+	LOAD_NAME             2	# "a"
+	UNARY_NOT             
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 8
+	LOAD_NAME             3	# "False"
+	STORE_NAME            4	# "b"
+.line 9
+	LOAD_CONST            3	# "Data b ="
+	LOAD_NAME             4	# "b"
+	UNARY_NOT             
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 14
+	LOAD_CONST            4	# "\n===== And =====\n"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 15
+	LOAD_NAME             1	# "True"
+	STORE_NAME            2	# "a"
+.line 16
+	LOAD_NAME             1	# "True"
+	STORE_NAME            4	# "b"
+.line 17
+	LOAD_CONST            5	# "Hasil True and True ="
+	LOAD_NAME             2	# "a"
+	JUMP_IF_FALSE_OR_POP  label_0
+	LOAD_NAME             4	# "b"
+label_0:
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 19
+	LOAD_NAME             1	# "True"
+	STORE_NAME            2	# "a"
+.line 20
+	LOAD_NAME             3	# "False"
+	STORE_NAME            4	# "b"
+.line 21
+	LOAD_CONST            6	# "Hasil True and False ="
+	LOAD_NAME             2	# "a"
+	JUMP_IF_FALSE_OR_POP  label_1
+	LOAD_NAME             4	# "b"
+label_1:
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 23
+	LOAD_NAME             3	# "False"
+	STORE_NAME            2	# "a"
+.line 24
+	LOAD_NAME             1	# "True"
+	STORE_NAME            4	# "b"
+.line 25
+	LOAD_CONST            7	# "Hasil False and True ="
+	LOAD_NAME             2	# "a"
+	JUMP_IF_FALSE_OR_POP  label_2
+	LOAD_NAME             4	# "b"
+label_2:
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 27
+	LOAD_NAME             3	# "False"
+	STORE_NAME            2	# "a"
+.line 28
+	LOAD_NAME             3	# "False"
+	STORE_NAME            4	# "b"
+.line 29
+	LOAD_CONST            8	# "Hasil False and False ="
+	LOAD_NAME             2	# "a"
+	JUMP_IF_FALSE_OR_POP  label_3
+	LOAD_NAME             4	# "b"
+label_3:
+	BUILD_TUPLE           2
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 34
+	LOAD_CONST            9	# "\n===== Or =====\n"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 35
+	LOAD_NAME             1	# "True"
+	STORE_NAME            2	# "a"
+.line 36
+	LOAD_NAME             1	# "True"
+	STORE_NAME            4	# "b"
+.line 37
+	LOAD_NAME             2	# "a"
+	LOAD_CONST            10	# "or"
+	LOAD_NAME             4	# "b"
+	LOAD_CONST            11	# "="
+	LOAD_NAME             2	# "a"
+	JUMP_IF_TRUE_OR_POP 
+	LOAD_NAME             4	# "b"
+label_4:
+	BUILD_TUPLE           5
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 39
+	LOAD_NAME             1	# "True"
+	STORE_NAME            2	# "a"
+.line 40
+	LOAD_NAME             3	# "False"
+	STORE_NAME            4	# "b"
+.line 41
+	LOAD_NAME             2	# "a"
+	LOAD_CONST            10	# "or"
+	LOAD_NAME             4	# "b"
+	LOAD_CONST            11	# "="
+	LOAD_NAME             2	# "a"
+	JUMP_IF_TRUE_OR_POP 
+	LOAD_NAME             4	# "b"
+label_5:
+	BUILD_TUPLE           5
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 43
+	LOAD_NAME             3	# "False"
+	STORE_NAME            2	# "a"
+.line 44
+	LOAD_NAME             1	# "True"
+	STORE_NAME            4	# "b"
+.line 45
+	LOAD_NAME             2	# "a"
+	LOAD_CONST            10	# "or"
+	LOAD_NAME             4	# "b"
+	LOAD_CONST            11	# "="
+	LOAD_NAME             2	# "a"
+	JUMP_IF_TRUE_OR_POP 
+	LOAD_NAME             4	# "b"
+label_6:
+	BUILD_TUPLE           5
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 47
+	LOAD_NAME             3	# "False"
+	STORE_NAME            2	# "a"
+.line 48
+	LOAD_NAME             3	# "False"
+	STORE_NAME            4	# "b"
+.line 49
+	LOAD_NAME             2	# "a"
+	LOAD_CONST            10	# "or"
+	LOAD_NAME             4	# "b"
+	LOAD_CONST            11	# "="
+	LOAD_NAME             2	# "a"
+	JUMP_IF_TRUE_OR_POP 
+	LOAD_NAME             4	# "b"
+label_7:
+	BUILD_TUPLE           5
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 54
+	LOAD_CONST            12	# "\n===== Xor =====\n"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 56
+	LOAD_NAME             1	# "True"
+	STORE_NAME            2	# "a"
+.line 57
+	LOAD_NAME             1	# "True"
+	STORE_NAME            4	# "b"
+.line 58
+	LOAD_NAME             2	# "a"
+	LOAD_NAME             4	# "b"
+	BINARY_XOR            
+	STORE_NAME            5	# "c"
+.line 59
+	LOAD_NAME             2	# "a"
+	LOAD_CONST            13	# "xor"
+	LOAD_NAME             4	# "b"
+	LOAD_CONST            11	# "="
+	LOAD_NAME             5	# "c"
+	BUILD_TUPLE           5
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 61
+	LOAD_NAME             1	# "True"
+	STORE_NAME            2	# "a"
+.line 62
+	LOAD_NAME             3	# "False"
+	STORE_NAME            4	# "b"
+.line 63
+	LOAD_NAME             2	# "a"
+	LOAD_NAME             4	# "b"
+	BINARY_XOR            
+	STORE_NAME            5	# "c"
+.line 64
+	LOAD_NAME             2	# "a"
+	LOAD_CONST            13	# "xor"
+	LOAD_NAME             4	# "b"
+	LOAD_CONST            11	# "="
+	LOAD_NAME             5	# "c"
+	BUILD_TUPLE           5
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 66
+	LOAD_NAME             3	# "False"
+	STORE_NAME            2	# "a"
+.line 67
+	LOAD_NAME             1	# "True"
+	STORE_NAME            4	# "b"
+.line 68
+	LOAD_NAME             2	# "a"
+	LOAD_NAME             4	# "b"
+	BINARY_XOR            
+	STORE_NAME            5	# "c"
+.line 69
+	LOAD_NAME             2	# "a"
+	LOAD_CONST            13	# "xor"
+	LOAD_NAME             4	# "b"
+	LOAD_CONST            11	# "="
+	LOAD_NAME             5	# "c"
+	BUILD_TUPLE           5
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 71
+	LOAD_NAME             3	# "False"
+	STORE_NAME            2	# "a"
+.line 72
+	LOAD_NAME             3	# "False"
+	STORE_NAME            4	# "b"
+.line 73
+	LOAD_NAME             2	# "a"
+	LOAD_NAME             4	# "b"
+	BINARY_XOR            
+	STORE_NAME            5	# "c"
+.line 74
+	LOAD_NAME             2	# "a"
+	LOAD_CONST            13	# "xor"
+	LOAD_NAME             4	# "b"
+	LOAD_CONST            11	# "="
+	LOAD_NAME             5	# "c"
+	BUILD_TUPLE           5
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            14	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

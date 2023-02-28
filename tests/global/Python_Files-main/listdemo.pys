@@ -1,0 +1,373 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/listdemo.py"
+.set name		 "<module>"
+.set stack_size		 6
+.set arg_count		 0
+
+.interned
+	"coucou"
+	"Hello"
+	"Namesdefinedinglobalnamespaceare"
+	"Namesdefinedinsidetheemptylistobjectare"
+	"Namesdefinedinsidethedirfunctionare"
+	"Namesdefinedintheglobalnamespaceare"
+	"a"
+	"len"
+	"s"
+	"append"
+	"more"
+	"extend"
+	"remove"
+	"reverse"
+	"sort"
+	"b"
+	"c"
+	"type"
+	"d"
+	"dir"
+	"__call__"
+	"<module>"
+
+.consts
+	1
+	2
+	3
+	4
+	5
+	"coucou"
+	0
+	-1
+	13
+	6
+	7
+	8
+	9
+	"Hello"
+	17
+	-84.123
+	42
+	None
+	"Namesdefinedinglobalnamespaceare"
+	"Namesdefinedinsidetheemptylistobjectare"
+	"Namesdefinedinsidethedirfunctionare"
+	"Namesdefinedintheglobalnamespaceare"
+
+.names
+	"a"
+	"len"
+	"s"
+	"append"
+	"more"
+	"extend"
+	"remove"
+	"reverse"
+	"sort"
+	"b"
+	"c"
+	"type"
+	"d"
+	"dir"
+	"__call__"
+
+.text
+.line 5
+	LOAD_CONST            0	# 1
+	LOAD_CONST            1	# 2
+	LOAD_CONST            2	# 3
+	LOAD_CONST            3	# 4
+	LOAD_CONST            4	# 5
+	BUILD_LIST            5
+	STORE_NAME            0	# "a"
+.line 12
+	LOAD_NAME             1	# "len"
+	LOAD_NAME             0	# "a"
+	CALL_FUNCTION         1
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 13
+	LOAD_CONST            5	# "coucou"
+	STORE_NAME            2	# "s"
+.line 21
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            6	# 0
+	BINARY_SUBSCR         
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 22
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            2	# 3
+	BINARY_SUBSCR         
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 23
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            7	# -1
+	BINARY_SUBSCR         
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 29
+	LOAD_CONST            2	# 3
+	LOAD_NAME             0	# "a"
+	COMPARE_OP            6	# "Unknown operator"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 30
+	LOAD_CONST            8	# 13
+	LOAD_NAME             0	# "a"
+	COMPARE_OP            6	# "Unknown operator"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 35
+	LOAD_NAME             0	# "a"
+	LOAD_ATTR             3
+	LOAD_CONST            9	# 6
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 36
+	LOAD_CONST            10	# 7
+	LOAD_CONST            11	# 8
+	LOAD_CONST            12	# 9
+	BUILD_LIST            3
+	STORE_NAME            4	# "more"
+.line 37
+	LOAD_NAME             0	# "a"
+	LOAD_ATTR             5
+	LOAD_NAME             4	# "more"
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 38
+	LOAD_NAME             0	# "a"
+	LOAD_ATTR             6
+	LOAD_CONST            1	# 2
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 39
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 2
+	DELETE_SUBSCR         
+.line 41
+	LOAD_NAME             0	# "a"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 43
+	LOAD_NAME             0	# "a"
+	LOAD_ATTR             7
+	CALL_FUNCTION         0
+	POP_TOP               
+.line 44
+	LOAD_NAME             0	# "a"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 46
+	LOAD_NAME             0	# "a"
+	LOAD_ATTR             8
+	CALL_FUNCTION         0
+	POP_TOP               
+.line 47
+	LOAD_NAME             0	# "a"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 54
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            1	# 2
+	LOAD_CONST            3	# 4
+	SLICE_PLUS_3          
+	STORE_NAME            9	# "b"
+.line 55
+	LOAD_NAME             9	# "b"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 56
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            2	# 3
+	SLICE_PLUS_1          
+	STORE_NAME            10	# "c"
+.line 57
+	LOAD_NAME             10	# "c"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 58
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            2	# 3
+	SLICE_PLUS_2          
+	STORE_NAME            10	# "c"
+.line 59
+	LOAD_NAME             10	# "c"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 65
+	LOAD_CONST            13	# "Hello"
+	LOAD_CONST            14	# 17
+	LOAD_CONST            15	# -84.123
+	LOAD_NAME             11	# "type"
+	LOAD_CONST            16	# 42
+	CALL_FUNCTION         1
+	BUILD_LIST            4
+	STORE_NAME            12	# "d"
+.line 66
+	LOAD_NAME             12	# "d"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 67
+	LOAD_NAME             12	# "d"
+	LOAD_ATTR             3
+	LOAD_CONST            0	# 1
+	LOAD_CONST            1	# 2
+	LOAD_CONST            2	# 3
+	LOAD_CONST            3	# 4
+	LOAD_CONST            4	# 5
+	BUILD_LIST            5
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 68
+	LOAD_NAME             12	# "d"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 69
+	LOAD_NAME             12	# "d"
+	LOAD_CONST            2	# 3
+	BINARY_SUBSCR         
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 77
+	LOAD_CONST            0	# 1
+	LOAD_CONST            1	# 2
+	LOAD_CONST            2	# 3
+	BUILD_LIST            3
+	STORE_NAME            0	# "a"
+.line 78
+	LOAD_NAME             0	# "a"
+	STORE_NAME            9	# "b"
+.line 79
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            0	# 1
+	DELETE_SUBSCR         
+.line 80
+	LOAD_NAME             9	# "b"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 86
+	LOAD_CONST            1	# 2
+	STORE_NAME            0	# "a"
+.line 87
+	LOAD_CONST            0	# 1
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            2	# 3
+	BUILD_LIST            3
+	STORE_NAME            9	# "b"
+.line 88
+	LOAD_NAME             9	# "b"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 89
+	LOAD_CONST            16	# 42
+	STORE_NAME            0	# "a"
+.line 90
+	LOAD_NAME             9	# "b"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 94
+	LOAD_CONST            0	# 1
+	LOAD_CONST            1	# 2
+	BUILD_LIST            2
+	STORE_NAME            10	# "c"
+.line 95
+	LOAD_NAME             10	# "c"
+	LOAD_ATTR             3
+	LOAD_NAME             10	# "c"
+	CALL_FUNCTION         1
+	POP_TOP               
+.line 96
+	LOAD_NAME             10	# "c"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 102
+	LOAD_CONST            0	# 1
+	LOAD_CONST            1	# 2
+	LOAD_CONST            2	# 3
+	BUILD_LIST            3
+	STORE_NAME            0	# "a"
+.line 103
+	LOAD_NAME             0	# "a"
+	SLICE                 
+	STORE_NAME            9	# "b"
+.line 104
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            0	# 1
+	DELETE_SUBSCR         
+.line 105
+	LOAD_NAME             0	# "a"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 106
+	LOAD_NAME             9	# "b"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 109
+	LOAD_CONST            0	# 1
+	LOAD_CONST            1	# 2
+	LOAD_CONST            2	# 3
+	BUILD_LIST            3
+	STORE_NAME            0	# "a"
+.line 110
+	LOAD_NAME             0	# "a"
+	LOAD_CONST            17	# None
+	LOAD_CONST            17	# None
+	LOAD_CONST            7	# -1
+	BUILD_SLICE           3
+	BINARY_SUBSCR         
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 111
+	LOAD_NAME             0	# "a"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 117
+	LOAD_CONST            18	# "Namesdefinedinglobalnamespaceare"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 118
+	LOAD_NAME             13	# "dir"
+	CALL_FUNCTION         0
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 119
+	LOAD_CONST            19	# "Namesdefinedinsidetheemptylistobjectare"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 120
+	LOAD_NAME             13	# "dir"
+	BUILD_LIST            0
+	CALL_FUNCTION         1
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 121
+	LOAD_CONST            20	# "Namesdefinedinsidethedirfunctionare"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 122
+	LOAD_NAME             13	# "dir"
+	LOAD_NAME             13	# "dir"
+	CALL_FUNCTION         1
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 125
+	LOAD_CONST            21	# "Namesdefinedintheglobalnamespaceare"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+.line 126
+	LOAD_NAME             13	# "dir"
+	LOAD_ATTR             14
+	CALL_FUNCTION         0
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            17	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+

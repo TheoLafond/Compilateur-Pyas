@@ -1,0 +1,92 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "test_condition_JUMP_IF_TRUE_OR_POP.py"
+.set name		 "<module>"
+.set stack_size		 3
+.set arg_count		 0
+
+.interned
+	"a"
+	"b"
+	"c"
+	"test"
+	"<module>"
+
+.consts
+.code_start 1
+.set version_pyvm	 62211
+.set flags		 0x00000043
+.set filename		 "test_condition_JUMP_IF_TRUE_OR_POP.py"
+.set name		 "test"
+.set stack_size		 3
+.set arg_count		 2
+
+.consts
+	None
+
+.varnames
+	"a"
+	"b"
+	"c"
+
+.text
+.line 2
+	LOAD_FAST             0	# "a"
+	JUMP_IF_TRUE_OR_POP 
+	LOAD_FAST             1	# "b"
+label_0:
+	STORE_FAST            2	# "c"
+.line 3
+	LOAD_FAST             2	# "c"
+	LOAD_FAST             1	# "b"
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_FALSE     label_1
+.line 4
+	LOAD_FAST             0	# "a"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	JUMP_FORWARD          label_2
+.line 6
+label_1:
+	LOAD_FAST             1	# "b"
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+label_2:
+	LOAD_CONST            0	# None
+	RETURN_VALUE          
+.code_end
+	2
+	4
+	None
+
+.names
+	"test"
+	"a"
+	"b"
+
+.text
+.line 1
+	LOAD_CONST            0	# <code:"test">
+	MAKE_FUNCTION         0
+	STORE_NAME            0	# "test"
+.line 7
+	LOAD_CONST            1	# 2
+	STORE_NAME            1	# "a"
+.line 8
+	LOAD_CONST            2	# 4
+	STORE_NAME            2	# "b"
+.line 9
+	LOAD_NAME             0	# "test"
+	LOAD_NAME             1	# "a"
+	LOAD_NAME             2	# "b"
+	CALL_FUNCTION         2
+	POP_TOP               
+	LOAD_CONST            3	# None
+	RETURN_VALUE          
+
+# Disassembled Wed Nov  2 18:18:02 2022
+

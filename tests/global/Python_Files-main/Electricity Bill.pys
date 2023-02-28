@@ -1,0 +1,140 @@
+
+
+# Start pyc-objdump output
+
+.set version_pyvm	 62211
+.set flags		 0x00000040
+.set filename		 "Python_Files-main/Electricity Bill.py"
+.set name		 "<module>"
+.set stack_size		 3
+.set arg_count		 0
+
+.interned
+	"int"
+	"input"
+	"units"
+	"amount"
+	"surcharge"
+	"total"
+	"<module>"
+
+.consts
+	" Please enter Number of Units you Consumed : "
+	50
+	2.6
+	25
+	100
+	130
+	3.25
+	35
+	200
+	162.5
+	5.26
+	45
+	526
+	8.45
+	75
+	"\nElectricity Bill = %.2f"
+	None
+	292.5
+	292.5
+	818.5
+
+.names
+	"int"
+	"input"
+	"units"
+	"amount"
+	"surcharge"
+	"total"
+
+.text
+.line 3
+	LOAD_NAME             0	# "int"
+	LOAD_NAME             1	# "input"
+	LOAD_CONST            0	# " Please enter Number of Units you Consumed : "
+	CALL_FUNCTION         1
+	CALL_FUNCTION         1
+	STORE_NAME            2	# "units"
+.line 5
+	LOAD_NAME             2	# "units"
+	LOAD_CONST            1	# 50
+	COMPARE_OP            0	# "<"
+	POP_JUMP_IF_FALSE     label_0
+.line 6
+	LOAD_NAME             2	# "units"
+	LOAD_CONST            2	# 2.6
+	BINARY_MULTIPLY       
+	STORE_NAME            3	# "amount"
+.line 7
+	LOAD_CONST            3	# 25
+	STORE_NAME            4	# "surcharge"
+	JUMP_FORWARD          label_3
+.line 8
+label_0:
+	LOAD_NAME             2	# "units"
+	LOAD_CONST            4	# 100
+	COMPARE_OP            1	# "<="
+	POP_JUMP_IF_FALSE     label_1
+.line 9
+	LOAD_CONST            5	# 130
+	LOAD_NAME             2	# "units"
+	LOAD_CONST            1	# 50
+	BINARY_SUBTRACT       
+	LOAD_CONST            6	# 3.25
+	BINARY_MULTIPLY       
+	BINARY_ADD            
+	STORE_NAME            3	# "amount"
+.line 10
+	LOAD_CONST            7	# 35
+	STORE_NAME            4	# "surcharge"
+	JUMP_FORWARD          label_3
+.line 11
+label_1:
+	LOAD_NAME             2	# "units"
+	LOAD_CONST            8	# 200
+	COMPARE_OP            1	# "<="
+	POP_JUMP_IF_FALSE     label_2
+.line 12
+	LOAD_CONST            17	# 292.5
+	LOAD_NAME             2	# "units"
+	LOAD_CONST            4	# 100
+	BINARY_SUBTRACT       
+	LOAD_CONST            10	# 5.26
+	BINARY_MULTIPLY       
+	BINARY_ADD            
+	STORE_NAME            3	# "amount"
+.line 13
+	LOAD_CONST            11	# 45
+	STORE_NAME            4	# "surcharge"
+	JUMP_FORWARD          label_3
+.line 15
+label_2:
+	LOAD_CONST            19	# 818.5
+	LOAD_NAME             2	# "units"
+	LOAD_CONST            8	# 200
+	BINARY_SUBTRACT       
+	LOAD_CONST            13	# 8.45
+	BINARY_MULTIPLY       
+	BINARY_ADD            
+	STORE_NAME            3	# "amount"
+.line 16
+	LOAD_CONST            14	# 75
+	STORE_NAME            4	# "surcharge"
+.line 18
+label_3:
+	LOAD_NAME             3	# "amount"
+	LOAD_NAME             4	# "surcharge"
+	BINARY_ADD            
+	STORE_NAME            5	# "total"
+.line 19
+	LOAD_CONST            15	# "\nElectricity Bill = %.2f"
+	LOAD_NAME             5	# "total"
+	BINARY_MODULO         
+	PRINT_ITEM            
+	PRINT_NEWLINE         
+	LOAD_CONST            16	# None
+	RETURN_VALUE          
+
+# Disassembled Mon Nov  7 05:20:17 2022
+
